@@ -7,8 +7,22 @@ class Model_Register extends Model {
 		* инициатора
 	*/
 
+
+	private $data;
+	private $lastname;
+	private $name;
+	private $email;
+
+
 	public function __construct($data = array())
 	{
+		$this->data = $data;
+	}
+
+	public function AddOrganization()
+	{
+		$data = $this->data;
+
 		$org_name = Arr::get($data, 'org_name');
 		$lastname = Arr::get($data, 'lastname');
 		$name = Arr::get($data, 'name');
@@ -20,10 +34,25 @@ class Model_Register extends Model {
 		$phone = Arr::get($data, 'phone');
 		$email = Arr::get($data, 'email');
 
+
+		/**
+			* @param LASTNAME
+			* @param NAME
+			* @param EMAIL
+		*/
+		$this->lastname = $lastname;
+		$this->name = $name;
+		$this->email = $email;
+
+
+		/**
+			* SQL REQUESTS
+		*/
+
 		$sql = "INSERT INTO organization(org_name, city, email)
 						VALUES(:org_name, :city, :email)";
 
-		$sql1 = "INSERT INTO users(lastname, name, surname, address, city, login, password, 					phone, email, id_organization)
+		$sql1 = "INSERT INTO users(lastname, name, surname, address, city, login, password, phone, email, id_organization)
 						VALUES(:lastname, :name, :surname, :address, :city, :login, :password,
 								:phone, :email, :id_organization)";
 
@@ -67,7 +96,40 @@ class Model_Register extends Model {
 				->parameters(array(
 					':id_user' => $id,
 					':role' => 1
-				))->execute();
+				))->execute(); 
+	}
 
+	public function sendConfirmation($lastname, $name, $email)
+	{
+		
+		$config = Kohana::$config->load('email');
+		//echo $config;
+		Email::connect($config);
+
+		$to = $email;
+		$subject = 'Подтверждение регистрации';
+		$from = 'support@pronwe.ru';
+		
+
+		$message = "<pre>
+					Здравствуйте, $lastname $name!!
+					Мы рады приветствовать Вас на сайте Professional Note Worthy Event (ProNWE).
+
+					Для активации вашего Личного кабинета перейдите по ссылке (<ссылка одноразовая>).
+
+					Для повторного входа в Личный кабинет и дальнейшей работы используйте адрес https://pronwe.ru/auth/
+					(логином для входа является email: <****@**.**>).
+					<a href='http://pronwe.ru/registration/confirm/?confirm=$email'>АКТИВИРОВАТЬ КАБИНЕТ</a>
+					Если у Вас возникли какие-либо вопросы, свяжитесь с нашей службой поддержки: support@pronwe.ru.
+					С уважением, 
+					Компания ProNWE.</pre>";
+
+		Email::send($to, $from, $subject, $message, $html = true);
+	}
+
+	public function execute()
+	{
+		$this->AddOrganization();
+		$this->sendConfirmation($this->lastname, $this->name, $this->email);
 	}
 }

@@ -13,6 +13,14 @@ class Controller_Registration extends Front {
 	{
 		
 		$register = new Model_Register($_POST);
-		$this->redirect('app');
+
+		$register->execute();
+		$this->redirect('auth');
+	}
+
+	public function action_confirm()
+	{
+		$email = Arr::get($_GET, 'confirm');
+		echo $email;
 	}
 }
