@@ -8,4 +8,11 @@ class Controller_Registration extends Front {
 	{
 		
 	}
+
+	public function action_add()
+	{
+		
+		$register = new Model_Register($_POST);
+		$this->redirect('app');
+	}
 }

@@ -469,3 +469,93 @@
 2015-09-10 16:49:15 --- CRITICAL: ErrorException [ 1 ]: Call to a member function render() on a non-object ~ SYSPATH\classes\Kohana\Controller\Template.php [ 44 ] in file:line
 2015-09-10 16:49:15 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
 #1 {main} in file:line
+2015-09-10 17:02:52 --- CRITICAL: ErrorException [ 8 ]: Undefined variable: id ~ APPPATH\views\app.php [ 8 ] in C:\OpenServer\domains\localhost\proNWE\application\views\app.php:8
+2015-09-10 17:02:52 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\views\app.php(8): Kohana_Core::error_handler(8, 'Undefined varia...', 'C:\\OpenServer\\d...', 8, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\View.php(61): include('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\View.php(348): Kohana_View::capture('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller\Template.php(44): Kohana_View->render()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(87): Kohana_Controller_Template->after()
+#5 [internal function]: Kohana_Controller->execute()
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_App))
+#7 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#8 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#9 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#10 {main} in C:\OpenServer\domains\localhost\proNWE\application\views\app.php:8
+2015-09-10 17:03:15 --- CRITICAL: ErrorException [ 4 ]: syntax error, unexpected '->' (T_OBJECT_OPERATOR) ~ APPPATH\classes\Controller\App.php [ 14 ] in file:line
+2015-09-10 17:03:15 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-09-10 19:48:27 --- CRITICAL: ErrorException [ 4 ]: syntax error, unexpected '=', expecting ')' ~ APPPATH\classes\Model\Register.php [ 48 ] in file:line
+2015-09-10 19:48:27 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-09-10 19:54:13 --- CRITICAL: ErrorException [ 4 ]: syntax error, unexpected '=', expecting ')' ~ APPPATH\classes\Model\Register.php [ 48 ] in file:line
+2015-09-10 19:54:13 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-09-10 19:57:57 --- CRITICAL: ErrorException [ 4 ]: syntax error, unexpected '=', expecting ')' ~ APPPATH\classes\Model\Register.php [ 48 ] in file:line
+2015-09-10 19:57:57 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-09-10 19:58:09 --- CRITICAL: Database_Exception [ 1048 ]: Column 'org_name' cannot be null [ INSERT INTO organization(org_name, city, email)
+						VALUES(NULL, NULL, NULL) ] ~ MODPATH\database\classes\Kohana\Database\MySQL.php [ 194 ] in C:\OpenServer\domains\localhost\proNWE\modules\database\classes\Kohana\Database\Query.php:251
+2015-09-10 19:58:09 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQL->query(2, 'INSERT INTO org...', false, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Register.php(38): Kohana_Database_Query->execute()
+#2 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Registration.php(15): Model_Register->__construct(Array)
+#3 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Registration->action_add()
+#4 [internal function]: Kohana_Controller->execute()
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Registration))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#9 {main} in C:\OpenServer\domains\localhost\proNWE\modules\database\classes\Kohana\Database\Query.php:251
+2015-09-10 20:00:00 --- CRITICAL: ErrorException [ 4 ]: syntax error, unexpected '=', expecting ')' ~ APPPATH\classes\Model\Register.php [ 48 ] in file:line
+2015-09-10 20:00:00 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-09-10 20:00:57 --- CRITICAL: Database_Exception [ 1048 ]: Column 'org_name' cannot be null [ INSERT INTO organization(org_name, city, email)
+						VALUES(NULL, NULL, NULL) ] ~ MODPATH\database\classes\Kohana\Database\MySQL.php [ 194 ] in C:\OpenServer\domains\localhost\proNWE\modules\database\classes\Kohana\Database\Query.php:251
+2015-09-10 20:00:57 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQL->query(2, 'INSERT INTO org...', false, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Register.php(38): Kohana_Database_Query->execute()
+#2 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Registration.php(15): Model_Register->__construct(Array)
+#3 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Registration->action_add()
+#4 [internal function]: Kohana_Controller->execute()
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Registration))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#9 {main} in C:\OpenServer\domains\localhost\proNWE\modules\database\classes\Kohana\Database\Query.php:251
+2015-09-10 20:01:18 --- CRITICAL: Database_Exception [ 1136 ]: Column count doesn't match value count at row 1 [ INSERT INTO users(lastname, name, surname, address, city, login, password, 					phone, email, id_organization)
+						VALUES('jnlk', 'nlkhv', 'jk', ';kjbh', 'jnlkn', 'nljhb', 'nk',
+								'jnljbh', 'lnkkn') ] ~ MODPATH\database\classes\Kohana\Database\MySQL.php [ 194 ] in C:\OpenServer\domains\localhost\proNWE\modules\database\classes\Kohana\Database\Query.php:251
+2015-09-10 20:01:18 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQL->query(2, 'INSERT INTO use...', false, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Register.php(58): Kohana_Database_Query->execute()
+#2 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Registration.php(15): Model_Register->__construct(Array)
+#3 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Registration->action_add()
+#4 [internal function]: Kohana_Controller->execute()
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Registration))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#9 {main} in C:\OpenServer\domains\localhost\proNWE\modules\database\classes\Kohana\Database\Query.php:251
+2015-09-10 20:03:01 --- CRITICAL: Database_Exception [ 1136 ]: Column count doesn't match value count at row 1 [ INSERT INTO users(lastname, name, surname, address, city, login, password, 					phone, email, id_organization)
+						VALUES('jnlhgkvb', 'kljbgvi', 'jknbgoj', 'kjnuv', 'kjngv', 'kjnlgvvu', 'jnljgkv',
+								'bjnhvu', 'kjbjhbv') ] ~ MODPATH\database\classes\Kohana\Database\MySQL.php [ 194 ] in C:\OpenServer\domains\localhost\proNWE\modules\database\classes\Kohana\Database\Query.php:251
+2015-09-10 20:03:01 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQL->query(2, 'INSERT INTO use...', false, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Register.php(58): Kohana_Database_Query->execute()
+#2 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Registration.php(15): Model_Register->__construct(Array)
+#3 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Registration->action_add()
+#4 [internal function]: Kohana_Controller->execute()
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Registration))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#9 {main} in C:\OpenServer\domains\localhost\proNWE\modules\database\classes\Kohana\Database\Query.php:251
+2015-09-10 20:04:18 --- CRITICAL: Database_Exception [ 1136 ]: Column count doesn't match value count at row 1 [ INSERT INTO users(lastname, name, surname, address, city, login, password, 					phone, email, id_organization)
+						VALUES('hjbkjgv', 'k;lm', 'lhvgbh', 'kjknboub', 'klmhbg', 'kjngv', 'jhbvg',
+								'iuvhbb', 'gvu') ] ~ MODPATH\database\classes\Kohana\Database\MySQL.php [ 194 ] in C:\OpenServer\domains\localhost\proNWE\modules\database\classes\Kohana\Database\Query.php:251
+2015-09-10 20:04:18 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQL->query(2, 'INSERT INTO use...', false, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Register.php(58): Kohana_Database_Query->execute()
+#2 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Registration.php(15): Model_Register->__construct(Array)
+#3 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Registration->action_add()
+#4 [internal function]: Kohana_Controller->execute()
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Registration))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#9 {main} in C:\OpenServer\domains\localhost\proNWE\modules\database\classes\Kohana\Database\Query.php:251

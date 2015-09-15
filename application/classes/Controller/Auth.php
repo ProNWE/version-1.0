@@ -6,6 +6,7 @@ class Controller_Auth extends Front {
 
 	public function action_index()
 	{
+		$auth = Authorization::Instance()->logout();
 
 	}
 

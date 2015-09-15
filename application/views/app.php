@@ -5,6 +5,6 @@
 	<title>Document</title>
 </head>
 <body>
-	GGGGOGOGOOGO;
+	Привет: <?=$id.' '.$lastname.' '.$username.' '.$surname; ?>
 </body>
 </html>

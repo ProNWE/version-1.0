@@ -15,7 +15,7 @@ class FrontController extends Controller_Template {
 		$success = $auth->logged_in();
 		
 		if ($success == 0)
-			$this->redirect('auth/auth');
+			$this->redirect('auth');
 
 		return parent::before();
 	}
