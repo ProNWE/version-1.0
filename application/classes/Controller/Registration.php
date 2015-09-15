@@ -21,6 +21,10 @@ class Controller_Registration extends Front {
 	public function action_confirm()
 	{
 		$email = Arr::get($_GET, 'confirm');
-		echo $email;
+		
+		$register = new Model_Register();
+		$register->confirmEmail($email);
+
+		$this->redirect('auth');
 	}
 }

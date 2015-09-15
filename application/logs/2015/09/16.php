@@ -13,3 +13,6 @@
 #8 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
 #9 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
 #10 {main} in C:\OpenServer\domains\localhost\proNWE\modules\database\classes\Kohana\Database\Query.php:251
+2015-09-16 00:30:53 --- CRITICAL: ErrorException [ 1 ]: Call to undefined method Model_Register::confrimEmail() ~ APPPATH\classes\Controller\Registration.php [ 26 ] in file:line
+2015-09-16 00:30:53 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line

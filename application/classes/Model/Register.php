@@ -132,4 +132,14 @@ class Model_Register extends Model {
 		$this->AddOrganization();
 		$this->sendConfirmation($this->lastname, $this->name, $this->email);
 	}
+
+
+	public function confirmEmail($email)
+	{
+		$sql = "UPDATE organization SET confirm = '1' WHERE email = :email";
+
+		$query = DB::query(Database::UPDATE, $sql, FALSE)
+			->param(':email', $email)
+			->execute();
+	}
 }
