@@ -1,0 +1,51 @@
+	body
+	{
+		background: fixed url(../imgs/logo.png) center top no-repeat,black;
+		color: #333;
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+	}
+	a
+	{
+		text-decoration:none;
+	}
+	.main-box
+	{
+		width:40%;
+		border:1px solid #ccc;
+		border-radius:10px;
+		background-color:white;
+		margin:auto;
+		margin-top:20%;
+		padding: 10px;
+	}
+	.button2
+	{
+		display:inline-block;
+		border:1px solid black;
+		margin: auto;
+		width:200px;
+		margin-left:7%;
+	}
+	.button2>a{
+		color:#333;
+		display:block;
+	}
+	#login:hover .signin
+	{
+		display:block;
+	}
+	#register:hover .signup
+	{
+		display:block;
+	}
+	.signin,.signup
+	{
+		margin-top:1px;
+		width:200px;
+		position:absolute;
+		display:none;
+		background:white;
+		border-radius:5px;
+		padding:10px;
+	}
+	
