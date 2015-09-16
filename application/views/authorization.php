@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Авторизация</title>
 	
-	<link rel="stylesheet" type="text/css" href="css/auth.css">
+	<link rel="stylesheet" type="text/css" href="<?=$assets; ?>css/auth.css">
 </head>
 <body>
 	
