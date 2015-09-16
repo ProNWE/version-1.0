@@ -55,7 +55,7 @@
 	</div>
 
 	<!-- SECTION 2 -->
-	<div class="section" id="section1">
+	<div class="section" id="section0">
 		<?=$section2; ?>
 	</div>
 
