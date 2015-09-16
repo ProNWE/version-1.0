@@ -3,10 +3,10 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<titleСайт мероприятий</title>
-	<meta name="author" content="" />
-	<meta name="description" content=" " />
-	<meta name="keywords"  content="" />
+	<title>Noteworthy event - События, заслуживающие внимания</title>
+	<meta name="author" content="Noteworty event" />
+	<meta name="description" content="Сайт, который помогает организаторам обслуживать мероприятия" />
+	<meta name="keywords"  content="event,событие,встреча,мероприятие" />
 	<meta name="Resource-type" content="Document" />
 
 
