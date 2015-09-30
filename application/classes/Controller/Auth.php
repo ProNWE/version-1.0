@@ -8,6 +8,8 @@ class Controller_Auth extends Front {
 	{
 		$auth = Authorization::Instance()->logout();
 
+		$this->template->assets = $this->assets;
+
 	}
 
 	public function action_auth()
@@ -22,6 +24,15 @@ class Controller_Auth extends Front {
 
 		if ($auth->logged_in())
 			$this->redirect('app');
+	}
+
+	public function action_logout()
+	{
+		$this->template->assets = $this->assets;
+
+		$auth = Authorization::Instance()->logout();
+
+		$this->redirect = 'welcome';
 	}
 
 }

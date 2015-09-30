@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="<?=$assets; ?>css/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="<?=$assets; ?>css/examples.css" />
 	<link rel="stylesheet" type="text/css" href="<?=$assets; ?>css/main.css">
+	<link rel="stylesheet" href="<?=$assets; ?>bootstrap/bootstrap.css">
 
 	<!--[if IE]>
 		<script type="text/javascript">
@@ -22,7 +23,7 @@
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
+	<script src="<?=$assets; ?>bootstrap/js/bootstrap.js"></script>
 	<script type="text/javascript" src="<?=$assets; ?>js/jquery.fullPage.js"></script>
 	<script type="text/javascript" src="<?=$assets; ?>js/examples.js"></script>
 
