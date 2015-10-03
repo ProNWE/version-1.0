@@ -45,5 +45,12 @@ class Controller_Events extends FrontController {
 			->set('information', 'zlsjhgjkhzbdkfjhbkjzhbdfkvkzjdhfbzbkjhbvzahbfhjvdbkfjbhvskjhdb')
 			->set('email', 'moscow@mail.ru')
 			->set('event', 'Miss ITMO University');	
+
+
+		$this->template
+			->set('tables', '<div class="row">
+			<div class="marks">	
+			</div>
+		</div>');
 	}
 }

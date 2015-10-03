@@ -154,7 +154,8 @@ Route::set('welcome', '(<controller>)', array('controller' => 'welcome'))
 		'action' => 'index',
 	));
 
-Route::set('auth', '(<controller>(/<action>))', array('controller' => 'auth'))
+
+Route::set('auth', '(<controller>(/<action>))', array('controller' => 'auth|registration'))
 	->defaults(array(
 		'controller' => 'auth',
 		'action' => 'index',

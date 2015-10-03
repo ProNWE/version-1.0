@@ -32,7 +32,7 @@ class Model_Register extends Model {
 		$login = Arr::get($data, 'login');
 		$password = Arr::get($data, 'password');
 		$phone = Arr::get($data, 'phone');
-		$email = Arr::get($data, 'email');
+		$email = Arr::get($data, 'login');
 
 
 		/**

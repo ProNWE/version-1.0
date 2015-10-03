@@ -47,8 +47,9 @@
 					<input type="text" class="form-control input-sm" name="lastname" placeholder="Фамилия" required>
 					<input type="text" class="form-control input-sm" name="name" placeholder="Имя" required>
 					<input type="text" class="form-control input-sm" name="surname" placeholder="Отчество" required>
+					<input type="hidden" name="address" value="Spb">
 					<input type="text" class="form-control input-sm" name="city" placeholder="Город" required>
-					<input type="text" class="form-control input-sm" name="email" placeholder="Email" required>
+					<input type="text" class="form-control input-sm" name="login" placeholder="Email" required>
 					<input type="password" class="form-control input-sm" name="password" placeholder="Пароль" required>
 					<input type="password" class="form-control input-sm" name="confirm_password" placeholder="Подтвердите пароль" required>
 					<input type="text" class="form-control input-sm" name="phone" placeholder="Телефон" required>
