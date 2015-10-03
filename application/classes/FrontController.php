@@ -14,7 +14,7 @@ class FrontController extends Controller_Template {
 		
 		$success = $auth->logged_in();
 		
-		if ($success == 0)
+		if ($success == 0 && SESSION::instance()->get('attempt') <= 3)
 			$this->redirect('auth');
 
 		return parent::before();

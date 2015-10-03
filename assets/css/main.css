@@ -317,3 +317,74 @@ body{
 	#fp-nav li .active span, .fp-slidesNav .active span{
 		background: #AAA;
 	}
+
+
+/* NAVBAR */
+.topnavigation {
+	list-style: none;
+	height: 50px;
+	display: block;
+	border: 1px solid #80DEEA;
+	background: #80DEEA;
+}
+
+ul.topnavigation {
+	height: 56px;
+}
+.topnavigation li {
+	float: left;
+
+	padding-left: 30px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-right: 30px;
+}
+
+.topnavigation a {
+	font-weight: bold;
+	font-family: Helvetica;
+	font-style: italic;
+	font-size: 18px;
+	color: #212121;
+}
+
+.topnavigation li:hover {
+	box-shadow: inset 2px 3px 4px rgba(0, 0, 0, .3);
+	cursor: pointer;
+}
+
+/* maincontainer */
+
+.maincontainer {
+	margin-top: 10px;
+}
+
+ul.teams {
+	list-style: none;
+}
+
+.teams li:first-child {
+	margin-top: 0px;
+}
+.teams li {
+	margin-top: 5px;
+	padding: 15px 10px 10px 15px;
+	border: 1px solid #0288D1;
+
+	font-family: Roboto;
+	font-weight: bold;
+	color: #000;
+}
+
+.teams li:hover {
+	cursor: pointer;
+	background: #29B6F6;
+	border: 1px solid #29B6F6;
+}
+.marks {
+	padding-left: 10px;
+	height: 300px;
+	border: 1px solid #424242;
+
+	overflow: scroll;
+}

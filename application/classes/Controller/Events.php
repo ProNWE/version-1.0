@@ -1,8 +1,8 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_App extends FrontController {
+class Controller_Events extends FrontController {
 
-	public $template = 'app';
+	public $template = 'events';
 
 	public function action_index()
 	{
@@ -18,13 +18,18 @@ class Controller_App extends FrontController {
 		$this->template
 			->set('org_name', 'Университет ИТМО')
 			->set('information', 'zlsjhgjkhzbdkfjhbkjzhbdfkvkzjdhfbzbkjhbvzahbfhjvdbkfjbhvskjhdb')
-			->set('email', 'moscow@mail.ru');	
+			->set('email', 'moscow@mail.ru')
+			->set('event', 'Miss ITMO University');	
 
+		$this->template
+			->set('tables', '<div class="row">
+			<div class="marks">	
+			</div>
+		</div>');
 
-		$this->template->table = View::factory('tables/allevents');	
 	}
 
-	public function action_event()
+	public function action_teams()
 	{
 		$session = Session::Instance();
 
@@ -38,11 +43,7 @@ class Controller_App extends FrontController {
 		$this->template
 			->set('org_name', 'Университет ИТМО')
 			->set('information', 'zlsjhgjkhzbdkfjhbkjzhbdfkvkzjdhfbzbkjhbvzahbfhjvdbkfjbhvskjhdb')
-			->set('email', 'moscow@mail.ru');	
-
-
-		$this->template->table = View::factory('tables/addevent');		
-
+			->set('email', 'moscow@mail.ru')
+			->set('event', 'Miss ITMO University');	
 	}
-
 }

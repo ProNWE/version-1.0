@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="<?=$assets; ?>css/fakeloader.css">
 	<link rel="stylesheet" href="<?=$assets; ?>bootstrap/css/app.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="<?=$assets; ?>css/main.css">
 	
 </head>
 
@@ -35,7 +36,7 @@
 						<div class="col-lg-5">
 							<div class="organization">
 								<a href="" class="">
-									<img class="logo_img" src="<?=$assets; ?>imgs/att-logo.jpg" alt="">
+									<img class="logo_img" src="<?=$assets; ?>imgs/2.png" alt="">
 								</a>
 							</div>
 						</div>
@@ -43,10 +44,7 @@
 							<div class="slogan">
 								<span><b>Название организации:</b> <?=$org_name; ?> </span><Br>
 								<span><b>Email: </b> <?=$email; ?></span> <br>
-								<br>
-								<div>
-									<input type="text" class="input-sm form-control" placeholder="Поиск мероприятий"> <br>
-								</div>
+								<span><b>Название мероприятия: <?=$event; ?></b></span><br>
 							</div>
 						</div>
 					</div>
@@ -82,22 +80,37 @@
 		</div>
 	</div>
 </div>
-
-<div style="margin-top: 10px;"></div>
-<div class="container-fluid">
+<br>
+<header>
 	<div class="row">
-		<div class="col-lg-3">
-			<ul class="nav nav-pills nav-stacked">
-				<li id="allevents" class="active"><a href="<?=URL::site('app'); ?>"><i class="fa fa-bars"></i> Все мероприятия</a></li>
-				<li><a href=""><i class="fa fa-paper-plane"></i> Текущие мероприятия</a></li>
-				<li id="lastevents"><a href=""><i class="fa fa-history"></i> Прошедшие мероприятия</a></li>
-				<li id="addevent"><a href="<?=URL::site('app/event'); ?>"><i class="fa fa-plus"></i> Новое мероприятие</a></li>
+		<div class="col-lg-12">
+			<ul class="topnavigation">
+				<li><a href="">Оценивание</a></li>
+				<li><a href="<?=URL::site('events/teams');?>">Команды</a></li>
+				<li><a href="">Состав жюри</a></li>
+				<li><a href="">Результаты</a></li>
 			</ul>
 		</div>
-		<div class="col-lg-9">
-			<?=$table; ?>
+	</div>
+</header>
+
+
+<div class="container-fluid maincontainer">
+	<div class="col-lg-3">
+		<div class="row">
+			<ul class="teams">
+				<li>Команда ФОИСТ</li>
+				<li>Команда ФИТИП</li>
+				<li>Команда ФЛИСИ</li>
+				<li>Команда ФИОИ</li>
+				<li>Команда ИФФ</li>
+			</ul>
 		</div>
-	</div>	
+	</div>
+	<div class="col-lg-8" style="margin-left: 10px;">
+		<?=$tables; ?>
+	</div>
+	</div>
 </div>
 
 </body>

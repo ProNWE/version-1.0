@@ -141,8 +141,33 @@ Kohana::modules(array(
 Cookie::$salt = 'ProNwe';
 
 
-Route::set('default', '(<controller>(/<action>(/<id>)))')
+/*Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
 		'controller' => 'welcome',
 		'action'     => 'index',
+	));
+*/
+
+Route::set('welcome', '(<controller>)', array('controller' => 'welcome'))
+	->defaults(array(
+		'controller' => 'welcome',
+		'action' => 'index',
+	));
+
+Route::set('auth', '(<controller>(/<action>))', array('controller' => 'auth'))
+	->defaults(array(
+		'controller' => 'auth',
+		'action' => 'index',
+	));
+
+Route::set('app', 'app(/<action>)')
+	->defaults(array(
+		'controller' => 'app',
+		'action' => 'index',
+	));
+
+Route::set('events', 'events(/<id>(/<action>))', array('id' => '[0-9]+$'))
+	->defaults(array(
+		'controller' => 'events',
+		'action' => 'index',
 	));
