@@ -35,7 +35,7 @@
 						<div class="col-lg-5">
 							<div class="organization">
 								<a href="" class="">
-									<img class="logo_img" src="<?=$assets; ?>imgs/att-logo.jpg" alt="">
+									<img class="logo_img" src="<?=$uploads; ?><?=$logo;?>" alt="">
 								</a>
 							</div>
 						</div>
@@ -89,9 +89,9 @@
 		<div class="col-lg-3">
 			<ul class="nav nav-pills nav-stacked">
 				<li id="allevents" class="active"><a href="<?=URL::site('app'); ?>"><i class="fa fa-bars"></i> Все мероприятия</a></li>
-				<li><a href=""><i class="fa fa-paper-plane"></i> Текущие мероприятия</a></li>
-				<li id="lastevents"><a href=""><i class="fa fa-history"></i> Прошедшие мероприятия</a></li>
-				<li id="addevent"><a href="<?=URL::site('app/event'); ?>"><i class="fa fa-plus"></i> Новое мероприятие</a></li>
+				<li><a href="<?=URL::site('app/current'); ?>"><i class="fa fa-paper-plane"></i> Текущие мероприятия</a></li>
+				<li id="lastevents"><a href="<?=URL::site('pastevents'); ?>"><i class="fa fa-history"></i> Прошедшие мероприятия</a></li>
+				<li id="addevent"><a href="<?=URL::site('app/newevent'); ?>"><i class="fa fa-plus"></i> Новое мероприятие</a></li>
 			</ul>
 		</div>
 		<div class="col-lg-9">

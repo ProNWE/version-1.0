@@ -29,12 +29,21 @@ class Model_Register extends Model {
 		$surname = Arr::get($data, 'surname');
 		$address = Arr::get($data, 'address');
 		$city = Arr::get($data, 'city');
-		$login = Arr::get($data, 'login');
+		$login = Arr::get($data, 'email');
 		$password = Arr::get($data, 'password');
 		$phone = Arr::get($data, 'phone');
-		$email = Arr::get($data, 'login');
+		$email = Arr::get($data, 'email');
 
+		/**
+			* Upload Image - Logo
+		*/
 
+		if (isset($_FILES['logo']))
+		{
+			$filename = $this->_save_image($_FILES['logo']);
+			$file_name = $_FILES['logo']['name'];
+
+		}
 		/**
 			* @param LASTNAME
 			* @param NAME
@@ -49,8 +58,8 @@ class Model_Register extends Model {
 			* SQL REQUESTS
 		*/
 
-		$sql = "INSERT INTO organization(org_name, city, email)
-						VALUES(:org_name, :city, :email)";
+		$sql = "INSERT INTO organization(org_name, city, logo, email)
+						VALUES(:org_name, :city, :logo, :email)";
 
 		$sql1 = "INSERT INTO users(lastname, name, surname, address, city, login, password, phone, email, id_organization)
 						VALUES(:lastname, :name, :surname, :address, :city, :login, :password,
@@ -63,6 +72,7 @@ class Model_Register extends Model {
 				->parameters(array(
 					':org_name' => $org_name,
 					':city' => $city,
+					':logo' => $file_name,
 					':email' => $email
 				))->execute();
 
@@ -142,4 +152,33 @@ class Model_Register extends Model {
 			->param(':email', $email)
 			->execute();
 	}
+
+	protected function _save_image($image)
+    {
+        if (
+            ! Upload::valid($image) OR
+            ! Upload::not_empty($image) OR
+            ! Upload::type($image, array('jpg', 'jpeg', 'png', 'gif')))
+        {
+            return FALSE;
+        }
+ 
+        $directory = DOCROOT.'uploads/';
+ 
+        if ($file = Upload::save($image, NULL, $directory))
+        {
+            $filename = $image['name'];
+ 
+            Image::factory($file)
+                ->resize(200, 200, Image::AUTO)
+                ->save($directory.$filename);
+ 
+            // Delete the temporary file
+            unlink($file);
+ 
+            return $filename;
+        }
+ 
+        return FALSE;
+    }
 }

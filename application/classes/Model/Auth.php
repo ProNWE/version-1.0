@@ -18,8 +18,10 @@ class Model_Auth extends Model {
 
 	public function login() 
 	{
-		$sql = "SELECT * FROM users JOIN users_role, organization 
-				WHERE users.login = :login AND users.password = :password";
+		$sql = "SELECT users.id, users.lastname, users.surname, users.name,
+						users.login, users.email, users_role.role, organization.logo, organization.city, organization.org_name
+		FROM users JOIN users_role, organization 
+				WHERE users.login = :login AND users.password = :password AND users.id_organization = organization.id";
 
 		$query = DB::query(Database::SELECT, $sql, FALSE)
 			->parameters(array(

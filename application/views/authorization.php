@@ -84,7 +84,7 @@
 		</div>
 		
 		<div class="signup" id="sp_2">
-			<form action="<?=URL::site('registration/add'); ?>" method="post">
+			<form action="<?=URL::site('registration/add'); ?>" method="post" enctype="multipart/form-data">
 				<input type="text" required name="org_name" id="i3"><br>
 				<div class="label-box" id="lb3">
 					<label>Название организации</label>
@@ -104,6 +104,11 @@
 				<input type="text" required name="city" id="i7"><br>
 				<div class="label-box" id="lb7">
 					<label>Город</label>
+				</div>
+				<input type="hidden" name="address" value="spb">
+				<label>Логотип организации</label>
+				<input type="file" required name="logo"><br>
+				<div class="label-box" id="lb7">
 				</div>
 				<input type="text" required name="email" id="i8"><br>
 				<div class="label-box" id="lb8">

@@ -9,11 +9,10 @@
 	<meta name="keywords"  content="event,событие,встреча,мероприятие" />
 	<meta name="Resource-type" content="Document" />
 
-
+	<link rel="stylesheet" href="<?=$assets; ?>bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="<?=$assets; ?>css/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="<?=$assets; ?>css/examples.css" />
 	<link rel="stylesheet" type="text/css" href="<?=$assets; ?>css/main.css">
-	<link rel="stylesheet" href="<?=$assets; ?>bootstrap/bootstrap.css">
 
 	<!--[if IE]>
 		<script type="text/javascript">

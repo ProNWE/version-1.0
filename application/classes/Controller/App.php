@@ -8,37 +8,49 @@ class Controller_App extends FrontController {
 	{
 		$session = Session::Instance();
 
+		// BASE INFO
 		$this->template
 			->set('assets', $this->assets)
+			->set('uploads', $this->uploads)
 			->set('id', $session->get('id_user'))
 			->set('username', $session->get('username'))
 			->set('lastname', $session->get('lastname'))
 			->set('surname', $session->get('surname'));
 
+		// ORGANIZATION INFO 
+		$organization = new Model_Organization();
+		$info = $organization->getOrgInfoFromUserId($session->get('id_user'));
+
 		$this->template
-			->set('org_name', 'Университет ИТМО')
-			->set('information', 'zlsjhgjkhzbdkfjhbkjzhbdfkvkzjdhfbzbkjhbvzahbfhjvdbkfjbhvskjhdb')
-			->set('email', 'moscow@mail.ru');	
+			->set('org_name', $info[0]['org_name'])
+			->set('email', $info[0]['email'])
+			->set('logo', $session->get('logo'));
 
-
-		$this->template->table = View::factory('tables/allevents');	
+		// ORGANIZATION EVENTS
+		$this->template->table = View::factory('tables/allevents');
 	}
 
-	public function action_event()
+	public function action_newevent()
 	{
 		$session = Session::Instance();
 
+		// BASE INFO
 		$this->template
 			->set('assets', $this->assets)
+			->set('uploads', $this->uploads)
 			->set('id', $session->get('id_user'))
 			->set('username', $session->get('username'))
 			->set('lastname', $session->get('lastname'))
 			->set('surname', $session->get('surname'));
 
+		// ORGANIZATION INFO 
+		$organization = new Model_Organization();
+		$info = $organization->getOrgInfoFromUserId($session->get('id_user'));
+
 		$this->template
-			->set('org_name', 'Университет ИТМО')
-			->set('information', 'zlsjhgjkhzbdkfjhbkjzhbdfkvkzjdhfbzbkjhbvzahbfhjvdbkfjbhvskjhdb')
-			->set('email', 'moscow@mail.ru');	
+			->set('org_name', $info[0]['org_name'])
+			->set('email', $info[0]['email'])
+			->set('logo', $session->get('logo'));
 
 
 		$this->template->table = View::factory('tables/addevent');		

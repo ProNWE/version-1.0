@@ -2,7 +2,7 @@
 
 class Controller_Registration extends Front {
 
-	public $template = 'registration';
+	public $template = NULL;
 	
 	public function action_index()
 	{
