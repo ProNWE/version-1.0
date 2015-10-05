@@ -1,0 +1,187 @@
+body
+{
+	background-color: #fdf4e3;
+	font: normal 12px Verdana,Arial,Helvetica,sans-serif;
+}
+@font-face {
+    font-family: 'Alfa Slab One';
+    src: url('alfaslabone-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.logo
+{
+	min-width:300px;
+	max-height:150px;
+	max-width:60%;
+}
+.tlogo
+{
+	max-width:300px;
+	max-height:100px;
+	display:block;
+	float:left;
+}
+.profile
+{
+	position:absolute;
+	right:20px;
+	top:20px;
+	background-color:f5ce87;
+	width:25%;
+	height: 50px;
+	border:1px solid black;
+	padding:5px;
+	padding-bottom:0px;
+	font-weight:bold;
+}
+.profile>span
+{
+	margin:5%;
+}
+.profile>a
+{
+	text-decoration:none;
+	margin-left:10%;
+	color:#00008b;
+}
+.profile>a:hover
+{
+	color:#fff;
+}
+.content
+{
+	width:100%;
+	margin-top:1em;
+	margin-left:-2em;
+}
+.teams
+{
+	width:30%;
+	float:left;
+}
+.teams>center>span
+{
+	display:inline-block;
+	background-color:#f5ce87;
+	padding:5px;
+	font-weight:bold;
+	font-size:2em;
+	border:1px solid #000;
+	border-radius:2px;
+}
+.teams>ul
+{
+	list-style-type:none;
+}
+.teams>ul>li
+{
+	display:block;
+	border:1px solid #000;
+	border-radius:2px;
+	margin-top:10px;
+	text-align:center;
+	font-weight:bold;
+	background:#fff;
+	width: 90%;
+}
+.teams>ul>li>a
+{
+	width: inherit;
+	display:inline-block;
+	min-height:1.5em;
+	padding:5%;
+	text-decoration:none;
+	color:#000;
+}
+.teams>ul>li:hover
+{
+	background:#f5ce87;
+}
+.teams>ul>.active
+{
+	background:#f5ce87;
+}
+.rating
+{
+	width:69%;
+	position:relative;
+	float:left;
+}
+.tdescription
+{
+	float:left;
+	width:60%;
+	margin-left:10px;
+}
+.rating table
+{
+	border:0px solid #000;
+	border-radius:2px;
+	font-size:2em;
+	background-color:#fff;
+}
+.rating table td
+{
+	padding:5px;
+	border-bottom:0px;
+	border-top:0px;
+}
+.rating table tr:nth-child(2)>td
+{
+	border-top:1px solid #000;
+}
+.rating table td:first-child
+{
+	border-right:0px;
+}
+.rating table td:last-child
+{
+	border-left:0px;
+}
+.rating table tr:last-child>td
+{
+	border-bottom:1px solid #000;
+}
+.rating table td:nth-child(2n)
+{
+	text-align:center;
+}
+.rating table tr:first-child>td
+{
+	background-color:#fdf4e3;
+	border:0px;
+	font-weight:bold;
+}
+table ul
+{
+	list-style-type:none;
+}
+table li
+{
+	display:inline-block;
+	
+}
+input[type="radio"]
+{
+	display:none;
+}
+label
+{
+	display:inline-block;
+	width:20px;
+	padding:10px;
+	border:1px solid #000;
+}
+label:hover
+{
+	background-color:#f5ce87;
+	cursor:pointer;
+}
+.nactive {
+	background-color:#fff;
+}
+.active
+{
+	background-color:#f5ce87;
+}
