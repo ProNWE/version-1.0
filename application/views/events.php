@@ -53,7 +53,7 @@
 				<div class="col-lg-4 relative bleft mright">
 					<div class="mrightmargin">
 						<ul class="top_navigation">
-							<p>Добро пожаловать, <br> <?=$username.' '.$lastname.' '.$surname; ?></p>
+							<p>Добро пожаловать, <br> <?=$username.' '.$surname.' '.$lastname; ?></p>
 						</ul>
 						<div class="row" >
 							<div class="col-lg-12 mlist">
@@ -85,7 +85,7 @@
 	<div class="row">
 		<div class="col-lg-12">
 			<ul class="topnavigation">
-				<li><a href="">Оценивание</a></li>
+				<li class="active"><a href="">Оценивание</a></li>
 				<li><a href="<?=URL::site('events/teams');?>">Команды</a></li>
 				<li><a href="">Состав жюри</a></li>
 				<li><a href="">Результаты</a></li>

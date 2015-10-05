@@ -7,8 +7,27 @@
 	<link rel="stylesheet" href="<?=$assets; ?>bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="<?=$assets; ?>css/auth.css">
 	
-
+	<script src="<?=$assets; ?>js/jquery-1.11.3.min.js"></script>
 	<script src="<?=$assets; ?>bootstrap/js/bootstrap.js"></script>
+	<script>
+	$(document).ready(function() {
+	    $('#email').blur(function() {
+	        if($(this).val() != '') {
+	            var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+	            if(pattern.test($(this).val())){
+	                $(this).css({'border' : '1px solid #569b44'});
+	                $('#valid').text('Верно');
+	            } else {
+	                $(this).css({'border' : '1px solid #ff0000'});
+	                $('#valid').text('Не верно');
+	            }
+	        } else {
+	            $(this).css({'border' : '1px solid #ff0000'});
+	            $('#valid').text('Поле email не должно быть пустым');
+	        }
+	    });
+});
+</script>
 </head>
 <body>
 <? if ($attempt != 0): ?>
@@ -49,7 +68,7 @@
 					<input type="text" class="form-control input-sm" name="surname" placeholder="Отчество" required>
 					<input type="hidden" name="address" value="Spb">
 					<input type="text" class="form-control input-sm" name="city" placeholder="Город" required>
-					<input type="text" class="form-control input-sm" name="login" placeholder="Email" required>
+					<input type="text" class="form-control input-sm" name="login" id="email" placeholder="Email" required>
 					<input type="password" class="form-control input-sm" name="password" placeholder="Пароль" required>
 					<input type="password" class="form-control input-sm" name="confirm_password" placeholder="Подтвердите пароль" required>
 					<input type="text" class="form-control input-sm" name="phone" placeholder="Телефон" required>

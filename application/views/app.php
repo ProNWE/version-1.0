@@ -55,7 +55,7 @@
 				<div class="col-lg-4 relative bleft mright">
 					<div class="mrightmargin">
 						<ul class="top_navigation">
-							<p>Добро пожаловать, <br> <?=$username.' '.$lastname.' '.$surname; ?></p>
+							<p>Добро пожаловать, <br> <?=$username.' '.$surname.' '.$lastname; ?></p>
 						</ul>
 						<div class="row" >
 							<div class="col-lg-12 mlist">

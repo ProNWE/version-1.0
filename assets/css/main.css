@@ -346,11 +346,17 @@ ul.topnavigation {
 	font-style: italic;
 	font-size: 18px;
 	color: #212121;
+
+	text-decoration: none;
 }
 
 .topnavigation li:hover {
 	box-shadow: inset 2px 3px 4px rgba(0, 0, 0, .3);
 	cursor: pointer;
+}
+
+.topnavigation .active {
+	box-shadow: inset 2px 3px 4px rgba(0, 0, 0, .3);
 }
 
 /* maincontainer */
