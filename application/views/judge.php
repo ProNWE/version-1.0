@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Мероприятие - ... - Жюри Иван Иванович</title>
+<title>Мероприятие - Жюри Иван Иванович</title>
 <link rel="stylesheet" type="text/css" href="<?=$assets;?>css/judge.css">
 
 <script type="text/javascript">
