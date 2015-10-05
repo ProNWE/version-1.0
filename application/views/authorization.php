@@ -10,6 +10,22 @@
 	<script src="<?=$assets; ?>js/jquery-1.11.3.min.js"></script>
 	<script src="<?=$assets; ?>bootstrap/js/bootstrap.js"></script>
 	<script>
+	function sh(num)
+	{
+		document.getElementById("sp_"+"1").style.display = "none";
+		document.getElementById("sp_"+"2").style.display = "none";
+		document.getElementById("sp_"+num).style.display = "block";
+		if (num == 1)
+		{
+			document.getElementById("login").style.fontWeight = "bold";
+			document.getElementById("register").style.fontWeight = "400";
+		}
+		else
+		{
+			document.getElementById("register").style.fontWeight = "bold";
+			document.getElementById("login").style.fontWeight = "400";
+		}
+	}
 	$(document).ready(function() {
 	    $('#email').blur(function() {
 	        if($(this).val() != '') {
@@ -50,31 +66,63 @@
 	</div>
 <? endif ?>
 	<div class="main-box">
-		<div class="button2" id="login"><a href="#"><center>Вход</center></a>
-			<div class="signin">
-				<form action="<?=URL::site('auth/auth'); ?>" method="post" role="form">
-					<input type="text" name="login" class="form-control input-sm" placeholder="Email" required>
-					<input type="password" name="password" class="form-control input-sm" placeholder="Пароль" required>
-					<input type="submit" name="submit" value="Войти" class="form-control btn btn-sm btn-info">
-				</form>
-			</div>
+		<div class="button2" id="login"><a href="javascript:sh('1')"><center>Вход</center></a></div>
+		<div class="button2" id="register"><a href="javascript:sh('2')"><center>Регистрация</center></a></div>
+		
+		<div class="signin" id="sp_1">
+			<form action="<?=URL::site('auth/auth'); ?>" method="post">
+				<input type="text" required name="login" id="i1">
+				<div class="label-box" id="lb1">
+					<label>E-mail</label>
+				</div>
+				<input type="password" required name="password" id="i2">
+				<div class="label-box" id="lb2">
+					<label>Пароль</label>
+				</div>
+				<input type="submit" name="submit" value="Войти">
+			</form>
 		</div>
-		<div class="button2" id="register"><a href="#"><center>Регистрация</center></a>
-			<div class="signup">
-				<form action="<?=URL::site('registration/add'); ?>" method="post" role="form">
-					<input type="text" class="form-control input-sm" name="org_name" placeholder="Название организации" required>
-					<input type="text" class="form-control input-sm" name="lastname" placeholder="Фамилия" required>
-					<input type="text" class="form-control input-sm" name="name" placeholder="Имя" required>
-					<input type="text" class="form-control input-sm" name="surname" placeholder="Отчество" required>
-					<input type="hidden" name="address" value="Spb">
-					<input type="text" class="form-control input-sm" name="city" placeholder="Город" required>
-					<input type="text" class="form-control input-sm" name="login" id="email" placeholder="Email" required>
-					<input type="password" class="form-control input-sm" name="password" placeholder="Пароль" required>
-					<input type="password" class="form-control input-sm" name="confirm_password" placeholder="Подтвердите пароль" required>
-					<input type="text" class="form-control input-sm" name="phone" placeholder="Телефон" required>
-					<input type="submit" class="form-control btn btn-sm btn-success" name="submit" value="Регистрация">
-				</form>
-			</div>		
+		
+		<div class="signup" id="sp_2">
+			<form action="<?=URL::site('registration/add'); ?>" method="post">
+				<input type="text" required name="org_name" id="i3"><br>
+				<div class="label-box" id="lb3">
+					<label>Название организации</label>
+				</div>
+				<input type="text" required name="lastname" id="i4"><br>
+				<div class="label-box" id="lb4">
+					<label>Фамилия</label>
+				</div>
+				<input type="text" required name="name" id="i5"><br>
+				<div class="label-box" id="lb5">
+					<label>Имя</label>
+				</div>
+				<input type="text" required name="surname" id="i6"><br>
+				<div class="label-box" id="lb6">
+					<label>Отчество</label>
+				</div>
+				<input type="text" required name="city" id="i7"><br>
+				<div class="label-box" id="lb7">
+					<label>Город</label>
+				</div>
+				<input type="text" required name="email" id="i8"><br>
+				<div class="label-box" id="lb8">
+					<label>Email</label>
+				</div>
+				<input type="password" required name="password" id="i9"><br>
+				<div class="label-box" id="lb9">
+					<label>Пароль</label>
+				</div>
+				<input type="password" required name="confirm_password" id="i10"><br>
+				<div class="label-box" id="lb10">
+					<label>Подтвердите пароль</label>
+				</div>
+				<input type="text" required name="phone" id="i11"><br>
+				<div class="label-box" id="lb11">
+					<label>Телефон</label>
+				</div>
+				<input type="submit" name="submit" value="Регистрация">
+			</form>
 		</div>
 	</div>
 </body>
