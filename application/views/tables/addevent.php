@@ -1,58 +1,39 @@
-<script>
-	 $(document).ready(function(){
-  		//Active classes
-  		$('#allevents').removeClass('active');
-  		$('#addevent').addClass('active');
+<div>
 
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist" id="myTab">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Добавление мероприятия</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Общая информация о мероприятии</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab">Условия соглашения</a></li>
+  </ul>
 
+  <!-- Tab panes -->
+<form action="<?=URL::site('events/addevent'); ?>" method="post" role="form" enctype="multipart/form-data">
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="home">
+    	<div class="row">
+    		<div class="col-lg-12">
+    			<div class="sth" style="padding: 20px;">sdkjksjfdgkjdfngkjn</div>
 
-	  	$('#wizard').smartWizard();
-	      
-	    function onFinishCallback(){
-	      	$('#wizard').smartWizard('showMessage','Finish Clicked');
-	    }     
-	});
-</script>
-<div class="">
-	<div id="wizard" class="swMain">
-  			<ul>
-  				<li>
-  					<a href="#step-1">
-		                <label class="stepNumber">1</label>
-		                <span class="stepDesc">
-		                   Шаг 1<br />
-		                   <small> Общая информация</small>
-		                </span>
-		            </a>
-		        </li>
-  				
-  				<li>
-		  			<a href="#step-2">
-		                <span class="stepDesc" style="color: #000; font-weight: bold;">
-		                   <small>Условия пользования данным сайтом</small>
-		                </span>
-		            </a>
-		        </li>  				
-  			</ul>
-
-  			<div id="step-1">	
-            	<div class="">
-			         <div class="alert alert-info">
-			         	<b>Общая информация</b>
-			         </div>
-			         <div class="col-lg-8 col-md-offset-1">
-				        <form action="" mathod="post" role="form">
+    			<button onclick="return false; " class="btn btn-sm btn-info" id="next-1">Дальше</button>
+    		</div>
+    	</div>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="profile" disabled>
+    	<div class="row">
+    		<div class="col-lg-12">
+    			<div class="sth" style="padding: 20px;">
 				        	<div class="row">
 				        		<label for=""></label>
-				        		<input type="text" class="input-sm form-control" placeholder="Название мероприятия">
+				        		<input type="text" class="input-sm form-control" name="eventname" placeholder="Название мероприятия" required>
 				        	</div> 	
 				        	<div class="row">
 				        		<label for=""></label>
-				        		<input type="text" class="input-sm form-control" placeholder="Город проведения">
+				        		<input type="text" class="input-sm form-control" name="city" placeholder="Город проведения" required>
 				        	</div> 	
 				        	<div class="row">
 				        		<label for=""></label>
-				        		<select name="" id="" class="form-control">
+				        		<select name="level" id="" class="form-control">
 				        			<option value="">Школьное</option>
 				        			<option value="">Университетское</option>
 				        			<option value="">Городское</option>
@@ -63,37 +44,89 @@
 				        	</div>
 				        	<div class="row">
 				        		<label for=""></label>
-				        		<input type="text" class="input-sm form-control" placeholder="Дата проведения">
+				        		<input type="text" class="input-sm form-control" name="start_data" placeholder="Дата проведения" required>
 				        	</div>
 				        	<div class="row">
 				        		<label for="">Логотип мероприятия</label>
-				        		<input type="file" class="form-control">
+				        		<input type="file" name="logo" class="">
 				        	</div> 	
 				        	<div class="row">
 				        		<label for=""></label>
-				        		<input type="text" class="input-sm form-control" placeholder="Сайт мероприятия">
+				        		<input type="text" class="input-sm form-control" name="website" placeholder="Сайт мероприятия" required>
 				        	</div>
 				        	<br>
 				        	<div class="row">
 				        		<label for="">На начало мероприятия существует ли рейтинг?</label>
-				        		<input type="radio" name="start"></radio>
-				        		<input type="radio" name="start"></radio>
+				        		<input type="radio" name="start" value="1">Да</radio>
+				        		<input type="radio" name="start" value="2" checked>Нет</radio>
 				        	</div>
-				        </form>
-			         </div>
+
+				        <button onclick="return false; " class="pull pull-left btn btn-sm btn-info" id="prev-1">Назад</button>
+				        <button onclick="return false; " class="pull pull-right btn btn-sm btn-info" id="next-2">Дальше</button>
     			</div>
-       		</div>
-  			
-  			<div id="step-2">
-           		<h2 class="StepTitle">Step 2 Content</h2>	
-            
-	            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-	            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-	            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-	            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-	            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	            </p>
-       	     
-        	</div>                      
-  	</div>
+    		</div>
+    	</div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="settings">
+    	<div class="row">
+    		<div class="col-lg-12">
+    			<div class="sth" style="padding: 20px;">
+    				Текстовое поле с условиями. Также есть кнопка: скачать в формате pdf
+    			</div>
+    			<button onclick="return false; " class="pull pull-left btn btn-sm btn-info" id="prev-2">Назад</button>
+    			<button type="submit" class="pull pull-right btn btn-sm btn-success" id="ready">Готово!</button>
+    		</div>
+    	</div>
+    </div>
+  </div>
+</form>
 </div>
+
+<script>
+	$(document).ready(function() {
+		$('#allevents').removeClass('active');
+		$('#addevent').addClass('active');
+
+
+		$('#next-1').click(function(){
+			$("#myTab a[href='#profile']").tab('show');
+		});
+
+		$('#prev-1').click(function(){
+			$("#myTab a[href='#home']").tab('show');
+		});
+
+		$('#next-2').on('click', function() {
+			$('.sth').find("input[type=text]").each(function()
+			{
+
+				$('.sth').find("input[type=text]").on('change', function() {
+					var val = $(this).val();
+					if (val != '')
+						$(this).css('border', '1px solid green');
+				});
+
+				var value = $(this).val();
+
+				if (value != '')
+				{
+					$("#myTab a[href='#settings']").tab('show');
+				}
+				else
+				{
+					$('.sth').find('input[type=text]').css('border','1px solid red');
+					return false;
+				}
+			});
+			
+		});
+
+		$('#prev-2').click(function() {
+			$("#myTab a[href='#profile']").tab('show');
+		});
+
+		$('#ready').click(function() {
+			// AJAX;
+		});
+	});
+</script>

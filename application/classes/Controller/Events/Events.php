@@ -6,7 +6,10 @@ class Controller_Events_Events extends FrontController {
 
 	public function action_addevent()
 	{
-
+		if (HTTP_Request::POST == $this->request->method())
+		{
+			
+		}
 	}
 
 	public function action_index()
