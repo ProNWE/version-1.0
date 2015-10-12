@@ -34,12 +34,12 @@
 				        	<div class="row">
 				        		<label for=""></label>
 				        		<select name="level" id="" class="form-control">
-				        			<option value="">Школьное</option>
-				        			<option value="">Университетское</option>
-				        			<option value="">Городское</option>
-				        			<option value="">Региональное</option>
-				        			<option value="">Всероссийское</option>
-				        			<option value="">Международное</option>
+				        			<option value="1">Школьное</option>
+				        			<option value="2">Университетское</option>
+				        			<option value="3">Городское</option>
+				        			<option value="4">Региональное</option>
+				        			<option value="5">Всероссийское</option>
+				        			<option value="6">Международное</option>
 				        		</select>
 				        	</div>
 				        	<div class="row">

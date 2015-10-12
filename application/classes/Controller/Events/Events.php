@@ -6,9 +6,28 @@ class Controller_Events_Events extends FrontController {
 
 	public function action_addevent()
 	{
+		$this->template
+			->set('assets', '')
+			->set('uploads', '')
+			->set('id', '')
+			->set('username', '')
+			->set('lastname', '')
+			->set('surname', '');
+
+		$this->template
+			->set('org_name', '')
+			->set('information', '')
+			->set('email', '')
+			->set('event', '')
+			->set('tables', '');
+
+
 		if (HTTP_Request::POST == $this->request->method())
 		{
-			
+			$event = Model_Event::Instance();
+			$event->getDataAndSave($_POST);
+
+			$this->request->redirect('events/index/$id_event');
 		}
 	}
 
@@ -26,8 +45,8 @@ class Controller_Events_Events extends FrontController {
 
 		$this->template
 			->set('org_name', $session->get('org_name'))
-			->set('information', 'zlsjhgjkhzbdkfjhbkjzhbdfkvkzjdhfbzbkjhbvzahbfhjvdbkfjbhvskjhdb')
-			->set('email', $session->get('email'))
+			->set('information', $session->get('info'))
+			->set('email', 'sds')
 			->set('event', 'Miss ITMO University');	
 
 		$this->template
