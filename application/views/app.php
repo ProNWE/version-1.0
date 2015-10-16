@@ -12,6 +12,16 @@
 	<script src="<?=$assets;?>bootstrap/js/npm.js"></script>
 	<script src="<?=$assets;?>angular/angular.min.js"></script>
 	<script src="<?=$assets;?>js/fakeloader.js"></script>
+	<script>
+    $(document).ready(function(){
+        $(".fakeloader").fakeLoader({
+            timeToHide: 1300,
+            bgColor:"#3498db",
+            spinner:"spinner6"
+        });
+    });
+
+</script>
 
 	<!--styles -->
 	<link rel="stylesheet" href="<?=$assets; ?>bootstrap/css/bootstrap.css">
@@ -88,9 +98,9 @@
 	<div class="row">
 		<div class="col-lg-3">
 			<ul class="nav nav-pills nav-stacked">
-				<li id="allevents" class="active"><a href="<?=URL::site('app'); ?>"><i class="fa fa-bars"></i> Все мероприятия</a></li>
-				<li><a href="<?=URL::site('app/current'); ?>"><i class="fa fa-paper-plane"></i> Текущие мероприятия</a></li>
-				<li id="lastevents"><a href="<?=URL::site('pastevents'); ?>"><i class="fa fa-history"></i> Прошедшие мероприятия</a></li>
+				<li id="allevents"><a href="<?=URL::site('app'); ?>"><i class="fa fa-bars"></i> Все мероприятия</a></li>
+				<li id="current"><a href="<?=URL::site('app/current'); ?>"><i class="fa fa-paper-plane"></i> Текущие мероприятия</a></li>
+				<li id="lastevents"><a href="<?=URL::site('app/pastevents'); ?>"><i class="fa fa-history"></i> Прошедшие мероприятия</a></li>
 				<li id="addevent"><a href="<?=URL::site('app/newevent'); ?>"><i class="fa fa-plus"></i> Новое мероприятие</a></li>
 			</ul>
 		</div>
@@ -101,19 +111,5 @@
 </div>
 
 </body>
-
-
-<script>
-    $(document).ready(function(){
-        $(".fakeloader").fakeLoader({
-            timeToHide: 1000,
-            bgColor:"#3498db",
-            spinner:"spinner4"
-        });
-    });
-
-</script>
-
-
 
 </html>

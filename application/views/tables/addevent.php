@@ -84,7 +84,6 @@
 
 <script>
 	$(document).ready(function() {
-		$('#allevents').removeClass('active');
 		$('#addevent').addClass('active');
 
 

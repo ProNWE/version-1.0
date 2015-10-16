@@ -1,5 +1,5 @@
 <div class="window">
-				<div class="alert table_title"><b>Список мероприятий</b></div>
+				<div class="alert table_title"><b>Список текущих мероприятий</b></div>
 				<table class="table table-considered allevents">
 					<tr>
 						<th>#</th>
@@ -14,13 +14,13 @@
 							<td><b><?=$events[$i]['event_name']; ?></b></td>
 							<td><b>0</b></td>
 							<td><b><?=$events[$i]['start_data']; ?></b></td>
-							<td><b>Не оплачен</b></td>
+							<td><b>Оплачен</b></td>
 						</tr>
 					<? } ?>
 				</table>
 </div>
 <script>
-	$(document).ready(function() {
-		$('#allevents').addClass('active');
+	$(document).ready(function(){
+		$('#current').addClass('active');
 	});
 </script>

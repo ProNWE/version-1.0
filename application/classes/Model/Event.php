@@ -106,4 +106,40 @@ Class Model_Event extends Model {
 	}
 
 	
+	public function getEventsByOrgId($id)
+	{
+		$sql = "SELECT 
+						event.id, event.event_name, event.city, event.level, 
+						event.start_data, event.website,
+						event.logo, event.start_scores 
+				FROM 
+						event, OEvents 
+				WHERE 
+					OEvents.id_organization = '$id' AND 
+					OEvents.id_event = event.id";
+
+		$query = DB::query(Database::SELECT, $sql, false)->execute();
+
+		return $query->as_array();
+
+	}
+
+	public function getEventsByOrgIdAndStatus($id, $status = false)
+	{
+		$sql = "SELECT 
+						event.id, event.event_name, event.city, event.level, 
+						event.start_data, event.website,
+						event.logo, event.start_scores 
+				FROM 
+						event, OEvents 
+				WHERE 
+					OEvents.id_organization = '$id' AND 
+					OEvents.id_event = event.id AND
+					event.status = '$status'";
+
+		$query = DB::query(Database::SELECT, $sql, false)->execute();
+
+		return $query->as_array();
+
+	}
 }
