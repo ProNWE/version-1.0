@@ -9,6 +9,7 @@
 Class Model_Event extends Model {
 
 	private static $_instance;
+	public $event;
 
 	/* Everything is closed */
 	private function __construct() {
@@ -102,7 +103,11 @@ Class Model_Event extends Model {
 			))->execute();
 
 
-		return $id_event;
+		$this->event = $id_event;
+	}
+
+	public function lastEvent() {
+		return $this->event;
 	}
 
 	
