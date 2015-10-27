@@ -11,7 +11,7 @@
 					<? for($i = 0; $i < count($events); $i++) { ?>
 						<tr>
 							<td><b><?=$i+1; ?></b></td>
-							<td><b><?=$events[$i]['event_name']; ?></b></td>
+							<td><b><a href="<?=URL::site("events/index/".$events[$i]['id']); ?>"><?=$events[$i]['event_name']; ?></a></b></td>
 							<td><b>0</b></td>
 							<td><b><?=$events[$i]['start_data']; ?></b></td>
 							<td><b>Не оплачен</b></td>

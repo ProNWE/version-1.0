@@ -1,24 +1,55 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Мероприятие - Жюри Иван Иванович</title>
-<link rel="stylesheet" type="text/css" href="<?=$assets;?>css/judge.css">
+	<meta charset="UTF-8">
+	<title>Мероприятие - Жюри Иван Иванович</title>
 
-<script type="text/javascript">
-	function smena(line,number)
-	{
-		for(i=0; i<6; i++)
+	<script type="text/javascript">
+		function smena(line,number)
 		{
-			document.getElementById('r'+line+i).className = 'nactive';
+			for(i=0; i<6; i++)
+			{
+				document.getElementById('r'+line+i).className = 'nactive';
+			}
+			document.getElementById('r'+line+number).className = 'active';
 		}
-		document.getElementById('r'+line+number).className = 'active';
-	}
-</script> <!-- line - номер критерия -->
+	</script> <!-- line - номер критерия -->
+	
+	<script src="<?=$assets;?>js/jquery-1.11.3.min.js"></script>
+	<script src="<?=$assets;?>js/jquery.smartWizard.js"></script>
+	<script src="<?=$assets;?>bootstrap/js/bootstrap.min.js"></script>
+	<script src="<?=$assets;?>bootstrap/js/npm.js"></script>
+	<script src="<?=$assets;?>angular/angular.min.js"></script>
+	<script src="<?=$assets;?>js/fakeloader.js"></script>
+	
+	<script>
+    $(document).ready(function(){
+        $(".fakeloader").fakeLoader({
+            timeToHide: 1300,
+            bgColor:"#FCC036",
+            spinner:"spinner6"
+        });
+    });
+
+</script>
+
+	<!--styles -->
+	<link rel="stylesheet" href="<?=$assets; ?>bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="<?=$assets; ?>css/smart_wizard.css">
+	<link rel="stylesheet" href="<?=$assets; ?>css/fakeloader.css">
+	<link rel="stylesheet" href="<?=$assets; ?>bootstrap/css/app.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="<?=$assets;?>css/judge.css">
 </head>
+
 <body>
+
+
+<div class="fakeloader"></div>
 
 <div class="main">
 	<div class="logo">
-		<img src="<?=$assets;?>imgs/logo.png" class="logo"> <!--- лого мероприятия -->
+		<img src="<?=$uploads.'/'.$logo;?>" class="logo"> <!--- лого мероприятия -->
 		
 		<div class="profile">
 			<span>Добро пожаловать, Иван Иванович</span>
@@ -31,15 +62,18 @@
 		<div class="teams">
 			<center><span>Команды</span></center>
 			<ul>
-				<li><a href="#">Факультет информационных технологий и программирования</a></li>
+				<li><a href="#">ФИТИП</a></li>
 				<li><a href="#">ФЛИСИ</a></li>
 				<li class="active"><a href="#">ФИКТ</a></li>
 			</ul>
 		</div>
 		<div class="rating">
-			<img src="<?=$assets;?>imgs/logo.png" class="logo tlogo">  <!--team logo -->
+			<img src="<?=$uploads.'/'.$logo;?>" class="logo tlogo">  <!--team logo -->
 			<div class="tdescription">
-				Для центрирования div только по горизонтали, необходимо указать ширину и автоматическое значение для левого и правого margins (это сокращенная форма написания CSS-свойств). Этот метод работает на блочных элементов (div, p, h1 и т. п.). Чтобы применить его для линейных элементов (например, гиперссылок и изображений), необходимо написать еще одно правило — display:block.
+				<p><b><i>Мероприятие: <?=$event; ?></i></b></p>
+				<p><b><i>Город: <?=$city; ?></i></b></p>
+				<p><b><i>Начало мероприятия: <?=$start; ?></i></b></p>
+				<p><b><i>Город: <?=$city; ?></i></b></p>
 			</div>
 			<form action="">
 			<table width="100%" border="1" cellspacing="0">

@@ -2,7 +2,7 @@
 
 class Controller_Events_Events extends FrontController {
 
-	public $template = 'events';
+	public $template = 'judge';
 
 	public function action_addevent()
 	{
@@ -43,18 +43,23 @@ class Controller_Events_Events extends FrontController {
 			->set('lastname', $session->get('lastname'))
 			->set('surname', $session->get('surname'));
 
-		$this->template
-			->set('org_name', $session->get('org_name'))
-			->set('information', $session->get('info'))
-			->set('email', 'sds')
-			->set('event', 'Miss ITMO University');	
+		// ORGANIZATION INFO 
+		$organization = new Model_Organization();
+		$info_organization = $organization->getOrgInfoFromUserId($session->get('id_user'));
+		$id = $info_organization[0]['id'];
+
+		// EVENT INFO
+		$event = Model_Event::Instance();
+		$info = $event->getEventsByOrgId($id);
 
 		$this->template
-			->set('tables', '<div class="row">
-			<div class="marks">	
-			</div>
-		</div>');
-
+			->set('logo', $info[0]['logo'])
+			->set('event', $info[0]['event_name'])
+			->set('city', $info[0]['city'])
+			->set('level', $info[0]['level'])
+			->set('start', $info[0]['start_data'])
+			->set('website', $info[0]['website'])
+			->set('start_scores', $info[0]['start_scores']);
 	}
 
 	public function action_teams()
@@ -67,19 +72,6 @@ class Controller_Events_Events extends FrontController {
 			->set('username', $session->get('username'))
 			->set('lastname', $session->get('lastname'))
 			->set('surname', $session->get('surname'));
-
-		$this->template
-			->set('org_name', 'Университет ИТМО')
-			->set('information', 'zlsjhgjkhzbdkfjhbkjzhbdfkvkzjdhfbzbkjhbvzahbfhjvdbkfjbhvskjhdb')
-			->set('email', 'moscow@mail.ru')
-			->set('event', 'Miss ITMO University');	
-
-
-		$this->template
-			->set('tables', '<div class="row">
-			<div class="marks">	
-			</div>
-		</div>');
 	}
 
 	public function action_judge()
@@ -92,18 +84,5 @@ class Controller_Events_Events extends FrontController {
 			->set('username', $session->get('username'))
 			->set('lastname', $session->get('lastname'))
 			->set('surname', $session->get('surname'));
-
-		$this->template
-			->set('org_name', 'Университет ИТМО')
-			->set('information', 'zlsjhgjkhzbdkfjhbkjzhbdfkvkzjdhfbzbkjhbvzahbfhjvdbkfjbhvskjhdb')
-			->set('email', 'moscow@mail.ru')
-			->set('event', 'Miss ITMO University');	
-
-
-		$this->template
-			->set('tables', '<div class="row">
-			<div class="marks">	
-			</div>
-		</div>');
 	}
 }
