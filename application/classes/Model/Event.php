@@ -147,4 +147,17 @@ Class Model_Event extends Model {
 		return $query->as_array();
 
 	}
+
+	public function getEventInfoById($id)
+	{
+		$sql = "SELECT
+					*
+				FROM event
+				WHERE 
+					event.id = '$id'";
+
+		$query = DB::query(Database::SELECT, $sql, false)->execute();
+
+		return $query->as_array();
+	}
 }

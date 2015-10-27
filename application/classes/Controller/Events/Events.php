@@ -46,11 +46,17 @@ class Controller_Events_Events extends FrontController {
 		// ORGANIZATION INFO 
 		$organization = new Model_Organization();
 		$info_organization = $organization->getOrgInfoFromUserId($session->get('id_user'));
-		$id = $info_organization[0]['id'];
+
+		$this->template
+			->set('org_name', $info_organization[0]['org_name'])
+			->set('email', $info_organization[0]['email']);
 
 		// EVENT INFO
+		//$id = $this->request->post('id'); 
+		$id = $this->request->param('id');
+
 		$event = Model_Event::Instance();
-		$info = $event->getEventsByOrgId($id);
+		$info = $event->getEventInfoById($id);
 
 		$this->template
 			->set('logo', $info[0]['logo'])

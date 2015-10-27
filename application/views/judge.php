@@ -47,18 +47,71 @@
 
 <div class="fakeloader"></div>
 
-<div class="main">
-	<div class="logo">
-		<img src="<?=$uploads.'/'.$logo;?>" class="logo"> <!--- лого мероприятия -->
-		
-		<div class="profile">
-			<span>Добро пожаловать, Иван Иванович</span>
-			<br>
-			<a href="#">Настройки</a>
-			<a href="#">Выход</a>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-12 header">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="row">
+						<div class="col-lg-5">
+							<div class="organization">
+								<a href="" class="">
+									<img class="logo_img" src="<?=$uploads; ?><?=$logo;?>" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="col-lg-7">
+							<div class="slogan">
+								<span><b>Название организации:</b> <?=$org_name; ?> </span><Br>
+								<span><b>Email: </b> <?=$email; ?></span> <br>
+								<span><b><i>Мероприятие: <?=$event; ?></i></b></span><br>
+								<span><b><i>Город: <?=$city; ?></i></b></span><br>
+								<span><b><i>Начало мероприятия: <?=$start; ?></i></b></span><br>
+								<span><b><i>Веб-сайт: <?=$website; ?></i></b></span>
+								<br>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 relative bleft mright">
+					<div class="mrightmargin">
+						<ul class="top_navigation">
+							<p>Добро пожаловать, <br> <?=$username.' '.$surname.' '.$lastname; ?></p>
+						</ul>
+						<div class="row" >
+							<div class="col-lg-12 mlist">
+								<ul>
+									<li>
+										<i class="center1 fa fa fa-cogs fa-2x "></i>
+										<div class="after">Настройки</div>
+									</li>
+									<li>
+										<i class="center2 fa fa-info fa-2x"></i>
+										<div class="after">Помощь</div>
+									</li>
+									<li><a href="<?=URL::site('app'); ?>">
+										<i class="center3 fa fa-backward fa-2x"></i>
+										<div class="after">Назад</div>
+									</a>
+									</li>
+									<li><a href="<?=URL::site('auth/logout'); ?>">
+										<i class="center3 fa fa-sign-out fa-2x"></i>
+										<div class="after">Выход</div>
+									</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
 		</div>
 	</div>
-	<div class="content">
+</div>
+<hr>	
+<div class="content">
 		<div class="teams">
 			<center><span>Команды</span></center>
 			<ul>
@@ -68,15 +121,8 @@
 			</ul>
 		</div>
 		<div class="rating">
-			<img src="<?=$uploads.'/'.$logo;?>" class="logo tlogo">  <!--team logo -->
-			<div class="tdescription">
-				<p><b><i>Мероприятие: <?=$event; ?></i></b></p>
-				<p><b><i>Город: <?=$city; ?></i></b></p>
-				<p><b><i>Начало мероприятия: <?=$start; ?></i></b></p>
-				<p><b><i>Город: <?=$city; ?></i></b></p>
-			</div>
 			<form action="">
-			<table width="100%" border="1" cellspacing="0">
+				<table width="100%" border="1" cellspacing="0">
 				<tr>
 					<td style="text-align:center;">Критерии</td>
 					<td style="text-align:center;">Баллы</td>
@@ -117,7 +163,22 @@
 			<center><input type="submit"></center>
 		</form>
 		</div>
+<!--
+<div class="main">
+	<div class="logo">
+		<img src="<?=$uploads.'/'.$logo;?>" class="logo">
+		
+		<div class="profile">
+			<span>Добро пожаловать, Иван Иванович</span>
+			<br>
+			<a href="#">Настройки</a>
+			<a href="#">Выход</a>
+		</div>
+	</div>
+	
 	</div>
 <div>
+
+-->
 </body>
 </html>
