@@ -109,76 +109,134 @@
 			</div>
 		</div>
 	</div>
-</div>
-<hr>	
-<div class="content">
-		<div class="teams">
-			<center><span>Команды</span></center>
-			<ul>
-				<li><a href="#">ФИТИП</a></li>
-				<li><a href="#">ФЛИСИ</a></li>
-				<li class="active"><a href="#">ФИКТ</a></li>
-			</ul>
-		</div>
-		<div class="rating">
-			<form action="">
-				<table width="100%" border="1" cellspacing="0">
-				<tr>
-					<td style="text-align:center;">Критерии</td>
-					<td style="text-align:center;">Баллы</td>
-				</tr>
-				<tr>
-					<td>Первый критерий</td>
-					<td>
-						<input type="radio" checked="checked" name="rate" id="rate0"/>
-						<label id="r10" for="rate0" class="active" onclick="smena(1,0);">0</label>
-						<input type="radio" name="rate" id="rate1"/>
-						<label id="r11" for="rate1" class="nactive" onclick="smena(1,1);">1</label>
-						<input type="radio" name="rate" id="rate2"/>
-						<label id="r12" for="rate2" class="nactive" onclick="smena(1,2);">2</label>
-						<input type="radio" name="rate" id="rate3"/>
-						<label id="r13" for="rate3" class="nactive" onclick="smena(1,3);">3</label>
-						<input type="radio" name="rate" id="rate4"/>
-						<label id="r14" for="rate4" class="nactive" onclick="smena(1,4);">4</label>
-						<input type="radio" name="rate" id="rate5"/>
-						<label id="r15" for="rate5" class="nactive" OnClick="smena(1,5)">5</label>
-						
-					</td>
-				</tr>
-				<tr>
-					<td>Второй критерий</td>
-					<td><input type="number" name=""></td>
-				</tr>
-				<tr>
-					<td>Третий критерий</td>
-					<td>
-						<select name="">
-							<option selected>0</option>
-							<option>1</option>
-							<option>2</option>
-						</select>
-					</td>
-				</tr>
-			</table><br>
-			<center><input type="submit"></center>
-		</form>
-		</div>
-<!--
-<div class="main">
-	<div class="logo">
-		<img src="<?=$uploads.'/'.$logo;?>" class="logo">
-		
-		<div class="profile">
-			<span>Добро пожаловать, Иван Иванович</span>
-			<br>
-			<a href="#">Настройки</a>
-			<a href="#">Выход</a>
-		</div>
-	</div>
-	
-	</div>
-<div>
+</div>	
+<br>
 
--->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-3">
+			<div class="team_button">
+				Команды
+			</div>
+
+			<br>
+
+			<div class="row">
+				<div class="teams">
+					<ul class="team_list">
+						<li>
+							<a href="">
+								Команда номер №1
+							</a>
+						</li>
+						<li >
+							<a href="">
+								Команда номер №2
+							</a>
+						</li>
+						<li id="add_team">
+							<a>
+								<span class="glyphicon glyphicon-plus"> </span>
+								Добавить команду
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-9 border">
+			Container
+		</div>
+	</div>
+</div>
+
+
+
+<!-- MODAL -->
+<div class="modal fade" id="add_team_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Добавить команду</h4>
+      </div>
+      <div class="modal-body">
+        <form action="">
+        	<div class="form-group">
+        		<label for="">Название команды:</label>
+        		<input type="text" class="form-control input-sm" placeholder="Введите название команды" required>
+        	</div>	
+        	<div class="form-group">
+        		<label for="">Описание команды:</label>
+        		<input type="text" class="form-control input-sm" placeholder="Описание команды" required>
+        	</div>
+        	<div class="form-group">
+        		<label for="">Капитан команды:</label>
+        		<input type="text" class="form-control input-sm" placeholder="ФИО Капитана команды" required>
+        	</div>
+        	<br>
+        	<div class="row">
+        		<div class="col-lg-6">
+        			<label for="">Контакты:</label>
+        			<input type="text" class="form-control input-sm" placeholder="Номер телефона или эл.почта">
+        		</div>
+        		<div class="col-lg-6">
+        			<label for="">Страница в Соц.сетях:</label>
+        			<input type="text" class="form-control input-sm" placeholder="страница в социальных сетях">
+        		</div>
+        	</div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть окно</button>
+        <button type="button" id="save_team" class="btn btn-orange">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL CLOSED -->
+<div class="modal fade" id="closed" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Отмена добавления</h4>
+      </div>
+      <div class="modal-body">
+        Данные которые вы ввели не были сохранены, вам придется все заполнить повторно.	
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-orange">ОК</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+	$(document).ready(function() {
+		$('#add_team').on('click', function() {
+			$('#add_team_modal').modal({
+				keyboard: true
+			});
+		});
+
+
+		$('#save_team').on('click', function() {
+
+			$('#add_team_modal').modal({ keyboard: false }).find('.modal-body').hide(250).delay(1000).queue( function() {
+					$('#add_team_modal .modal-body').html("Обрабатывается...").show(200); }).dequeue();
+		});
+
+		$('#add_team_modal').on('hidden.bs.modal', function (e) {
+
+		  	$('#closed').modal('show')
+		  	setTimeout(function() {
+			    $('#closed').modal('hide');
+			}, 2000);
+		});
+	});
+</script>
 </body>
 </html>
