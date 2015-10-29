@@ -106,3 +106,70 @@ body
 .modal-title {
 	font-weight: bold;
 }
+
+/* NEW Participant */
+.new_participant {
+	list-style: none;
+}
+.new_participant > li {
+	float: left;
+	margin-bottom: 10px;
+}
+
+.added:nth-child(2) {
+	margin-left: 60px;
+}
+.added:nth-child(3n+4) {
+	margin-left: 0;
+}
+.added {
+	margin-left: 35px;
+}
+
+.new_participant_button {
+	width: 120px;
+	height: 120px;
+
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+
+	/*background-image: url('../imgs/11.jpg');
+	background-position: 0% 0%;
+	background-size: 100% 100%;*/
+
+	border: 1px dashed #BDBDBD;
+}
+
+.new_participant_button > i {
+	line-height: 120px;
+	margin-left: 45px;
+}
+
+
+.new_participants {
+	width: 120px;
+	height: 120px;
+
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+
+	border: 1px solid #FFE082;
+	background: #FFE082;
+	
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+.new_participant_button:hover {
+	cursor: pointer;
+	box-shadow: inset 2px 1px 3px rgba(0, 0, 0, .3);
+}
+
+.zaeb {
+	margin: auto;
+}
+.row > input {
+	margin-top: 3px;
+}

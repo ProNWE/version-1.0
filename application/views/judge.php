@@ -2,22 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Мероприятие - Жюри Иван Иванович</title>
+	<title>Мероприятие</title>
 
-	<script type="text/javascript">
-		function smena(line,number)
-		{
-			for(i=0; i<6; i++)
-			{
-				document.getElementById('r'+line+i).className = 'nactive';
-			}
-			document.getElementById('r'+line+number).className = 'active';
-		}
-	</script> <!-- line - номер критерия -->
-	
+	<script src="<?=$assets; ?>js/jquery-1.11.3.js"></script>
 	<script src="<?=$assets;?>js/jquery-1.11.3.min.js"></script>
 	<script src="<?=$assets;?>js/jquery.smartWizard.js"></script>
-	<script src="<?=$assets;?>bootstrap/js/bootstrap.min.js"></script>
+	<script src="<?=$assets;?>bootstrap/js/bootstrap.js"></script>
 	<script src="<?=$assets;?>bootstrap/js/npm.js"></script>
 	<script src="<?=$assets;?>angular/angular.min.js"></script>
 	<script src="<?=$assets;?>js/fakeloader.js"></script>
@@ -35,7 +25,6 @@
 
 	<!--styles -->
 	<link rel="stylesheet" href="<?=$assets; ?>bootstrap/css/bootstrap.css">
-	<link rel="stylesheet" href="<?=$assets; ?>css/smart_wizard.css">
 	<link rel="stylesheet" href="<?=$assets; ?>css/fakeloader.css">
 	<link rel="stylesheet" href="<?=$assets; ?>bootstrap/css/app.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -145,7 +134,6 @@
 			</div>
 		</div>
 		<div class="col-lg-9 border">
-			Container
 		</div>
 	</div>
 </div>
@@ -170,7 +158,7 @@
         		<label for="">Описание команды:</label>
         		<input type="text" class="form-control input-sm" placeholder="Описание команды" required>
         	</div>
-        	<div class="form-group">
+        	<!--<div class="form-group">
         		<label for="">Капитан команды:</label>
         		<input type="text" class="form-control input-sm" placeholder="ФИО Капитана команды" required>
         	</div>
@@ -184,6 +172,19 @@
         			<label for="">Страница в Соц.сетях:</label>
         			<input type="text" class="form-control input-sm" placeholder="страница в социальных сетях">
         		</div>
+        	</div>-->
+        	<hr>
+        	<div class="form-group">
+        		<label for="">Добавить участников:</label>
+        	</div>
+        	<div class="row">
+        		<ul class="new_participant">
+        			<li id="new_participant">
+        				<div class="new_participant_button">
+        					<i class="fa fa-plus fa-3x"></i>
+        				</div>
+        			</li>
+        		</ul>
         	</div>
         </form>
       </div>
@@ -231,10 +232,17 @@
 
 		$('#add_team_modal').on('hidden.bs.modal', function (e) {
 
-		  	$('#closed').modal('show')
-		  	setTimeout(function() {
-			    $('#closed').modal('hide');
-			}, 2000);
+		  	//$('#closed').modal('show')
+		  	//setTimeout(function() {
+			  //  $('#closed').modal('hide');
+			//}, 2000);
+		});
+
+
+		$('#new_participant').on('click', function() {
+			var li = "<li class='added'><div class='new_participants'></div><div class='row'><div class='col-lg-12 zaeb'><form action=''><div class='row'><input type='text' class='form-control input-sm' placeholder='ФИО Участника''></div><div class='row'><input type='text' class='form-control input-sm' placeholder='Роль'></div><div class='row'><input type='text' class='form-control input-sm' placeholder='Email'></div></form></div></div></li>";
+			
+			$('li#new_participant').after(li);
 		});
 	});
 </script>
