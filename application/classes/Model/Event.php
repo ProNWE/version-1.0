@@ -160,4 +160,17 @@ Class Model_Event extends Model {
 
 		return $query->as_array();
 	}
+
+	public function getTeamsByIdEvent($id)
+	{
+		$sql = "SELECT * FROM teams WHERE id_event=:id ORDER BY position";
+
+		$query = DB::query(Database::SELECT, $sql, false)
+				->parameters(array(
+						':id' => $id,
+					))->execute();
+
+		$result = $query->as_array();
+		return $result;
+	}
 }

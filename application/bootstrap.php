@@ -174,6 +174,11 @@ Route::set('events', 'events(/<action>(/<id>))', array('id' => '[0-9]+$'))
 		'action' => 'index',
 	));
 
+Route::set('teams', 'teams(/<action>)')
+	->defaults(array(
+			'controller' => 'teams',
+			'action' => 'index'
+		));
 
 // Temp
 Route::set('judge', 'judge')

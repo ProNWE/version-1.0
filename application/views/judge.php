@@ -11,6 +11,8 @@
 	<script src="<?=$assets;?>bootstrap/js/npm.js"></script>
 	<script src="<?=$assets;?>angular/angular.min.js"></script>
 	<script src="<?=$assets;?>js/fakeloader.js"></script>
+	<script src="<?=$assets; ?>js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+	<!--<script src="<?=$assets;?>js/dropzone.js"></script>-->
 	
 	<script>
     $(document).ready(function(){
@@ -28,7 +30,11 @@
 	<link rel="stylesheet" href="<?=$assets; ?>css/fakeloader.css">
 	<link rel="stylesheet" href="<?=$assets; ?>bootstrap/css/app.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="<?=$assets; ?>css/dropzone.css">
 	<link rel="stylesheet" type="text/css" href="<?=$assets;?>css/judge.css">
+
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	
 </head>
 
 <body>
@@ -107,22 +113,18 @@
 			<div class="team_button">
 				Команды
 			</div>
-
 			<br>
 
 			<div class="row">
 				<div class="teams">
-					<ul class="team_list">
-						<li>
-							<a href="">
-								Команда номер №1
-							</a>
-						</li>
-						<li >
-							<a href="">
-								Команда номер №2
-							</a>
-						</li>
+					<ul id="sortable" class="team_list">
+						<? for($i = 0; $i < count($teams); $i++): ?>
+							<li id="i_<?=$teams[$i]['id']; ?>">
+								<a href="">
+									<?=$teams[$i]['name']; ?>
+								</a>
+							</li>
+						<? endfor ?>
 						<li id="add_team">
 							<a>
 								<span class="glyphicon glyphicon-plus"> </span>
@@ -135,7 +137,6 @@
 		</div>
 		<div class="col-lg-9 border">
 		</div>
-	</div>
 </div>
 
 
@@ -150,29 +151,15 @@
       </div>
       <div class="modal-body">
         <form action="">
+        	<input type="hidden" id="id_event" name="id_event" value="<?=$id_event; ?>">
         	<div class="form-group">
         		<label for="">Название команды:</label>
-        		<input type="text" class="form-control input-sm" placeholder="Введите название команды" required>
+        		<input type="text" class="form-control input-sm" placeholder="Введите название команды" id="team_name" required>
         	</div>	
         	<div class="form-group">
         		<label for="">Описание команды:</label>
-        		<input type="text" class="form-control input-sm" placeholder="Описание команды" required>
+        		<input type="text" class="form-control input-sm" placeholder="Описание команды" id="team_desc" required>
         	</div>
-        	<!--<div class="form-group">
-        		<label for="">Капитан команды:</label>
-        		<input type="text" class="form-control input-sm" placeholder="ФИО Капитана команды" required>
-        	</div>
-        	<br>
-        	<div class="row">
-        		<div class="col-lg-6">
-        			<label for="">Контакты:</label>
-        			<input type="text" class="form-control input-sm" placeholder="Номер телефона или эл.почта">
-        		</div>
-        		<div class="col-lg-6">
-        			<label for="">Страница в Соц.сетях:</label>
-        			<input type="text" class="form-control input-sm" placeholder="страница в социальных сетях">
-        		</div>
-        	</div>-->
         	<hr>
         	<div class="form-group">
         		<label for="">Добавить участников:</label>
@@ -215,19 +202,107 @@
     </div>
   </div>
 </div>
+
+<!-- EXAMPLE -->
+<div class="modal fade" id="example" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Добавить команду</h4>
+      </div>
+      <div class="modal-body">
+        <form action="">
+        	<div class="form-group">
+        		<label for="">Название команды:</label>
+        		<input type="text" class="form-control input-sm" placeholder="Введите название команды" id="team_name" required>
+        	</div>	
+        	<div class="form-group">
+        		<label for="">Описание команды:</label>
+        		<input type="text" class="form-control input-sm" placeholder="Описание команды" id="team_desc" required>
+        	</div>
+        	<!--<div class="form-group">
+        		<label for="">Капитан команды:</label>
+        		<input type="text" class="form-control input-sm" placeholder="ФИО Капитана команды" required>
+        	</div>
+        	<br>
+        	<div class="row">
+        		<div class="col-lg-6">
+        			<label for="">Контакты:</label>
+        			<input type="text" class="form-control input-sm" placeholder="Номер телефона или эл.почта">
+        		</div>
+        		<div class="col-lg-6">
+        			<label for="">Страница в Соц.сетях:</label>
+        			<input type="text" class="form-control input-sm" placeholder="страница в социальных сетях">
+        		</div>
+        	</div>-->
+        	<hr>
+        	<div class="form-group">
+        		<label for="">Добавить участников:</label>
+        	</div>
+        	<div class="row">
+        		<ul class="new_participant">
+        			<li id="new_participant">
+        				<div class="new_participant_button">
+        					<i class="fa fa-plus fa-3x"></i>
+        				</div>
+        			</li>
+        		</ul>
+        	</div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть окно</button>
+        <button type="button" id="save_team" class="btn btn-orange">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
 	$(document).ready(function() {
+		
+		var i = -1;
+		var arr = Array();
+		var ur = location.protocol+'//'+location.hostname+'/proNWE';
+
+		$( "#sortable" ).sortable({
+			change: function(event, ui) {
+				i = -1;
+				arr = [];
+			},
+			update: function(event, ui) {
+				$("#sortable").find("li").each(function() {
+					i ++;
+					arr[i] = $(this).attr('id');
+				});
+				arr[i + 1] = $('#id_event').val();
+				// Send positions;
+				$.ajax({
+					type: "POST",
+					url: ur+'/teams/sort/',
+					data: {
+						'teams': arr,
+					},
+					success: function(result) {
+					}
+				});
+			}
+		});
+
+   		$( "#sortable" ).disableSelection();
+	});
+</script>
+
+
+<!-- WORKING WITH Teams (add) -->
+<script>
+	$(document).ready(function() {
+
 		$('#add_team').on('click', function() {
 			$('#add_team_modal').modal({
 				keyboard: true
 			});
-		});
-
-
-		$('#save_team').on('click', function() {
-
-			$('#add_team_modal').modal({ keyboard: false }).find('.modal-body').hide(250).delay(1000).queue( function() {
-					$('#add_team_modal .modal-body').html("Обрабатывается...").show(200); }).dequeue();
 		});
 
 		$('#add_team_modal').on('hidden.bs.modal', function (e) {
@@ -238,12 +313,102 @@
 			//}, 2000);
 		});
 
+		var id = -1;
+		var new_p = Array();
+		var falses = 0;
 
-		$('#new_participant').on('click', function() {
-			var li = "<li class='added'><div class='new_participants'></div><div class='row'><div class='col-lg-12 zaeb'><form action=''><div class='row'><input type='text' class='form-control input-sm' placeholder='ФИО Участника''></div><div class='row'><input type='text' class='form-control input-sm' placeholder='Роль'></div><div class='row'><input type='text' class='form-control input-sm' placeholder='Email'></div></form></div></div></li>";
+		$('#add_team_modal #new_participant').on('click', function() {
+			id ++;
+			var li = "<li class='added'><div class='new_participants'><img class='default_logo' src='<?=$uploads; ?>unknown.jpg'></div><div class='row'><div class='col-lg-12 zaeb'><form action=''><div class='row'><input type='text' id='p"+id+"' class='form-control input-sm' placeholder='ФИО Участника' ></div><div class='row'><input type='text' class='form-control input-sm' placeholder='Роль' id='r"+id+"'></div><div class='row'><input type='text' id='e"+id+"'class='form-control input-sm' placeholder='Email'></div></form></div></div></li>";
 			
 			$('li#new_participant').after(li);
 		});
+
+		$('#save_team').click(function() {
+
+				falses = 0;
+				validation();
+
+				if (falses != 0) {
+					return false;
+				}
+					
+					//alert(name);
+					// Waiting 
+					//$('#add_team_modal').modal({ keyboard: false }).find('.modal-body').hide(250).delay(400).queue( function() {
+					//$('#add_team_modal .modal-body').html("Обрабатывается...").show(200); }).dequeue();
+					
+					for(var i = 0; i <= id; i++)
+					{
+						new_p[i] = {
+							pname: $('#p'+i).val(),
+							prole: $('#r'+i).val(),
+							pemail: $('#e'+i).val(),
+						};
+					}
+					var team = new Array($('#team_name').val(), $('#team_desc').val(), $('#id_event').val());
+
+					var t_data = team;
+					var p_data = JSON.stringify(new_p);
+					
+
+					var ur = location.protocol+'//'+location.hostname+'/proNWE';
+
+					$.ajax({
+						type: "POST",
+						data: {
+							't_data': t_data,
+							'p_data': p_data,
+						},
+						url: ur+'/teams/addteam/',
+						success: function(result){
+							if (result)
+							{
+								$('#add_team_modal').modal({ keyboard: false }).find('.modal-body').hide(250).delay(400).queue( function() {
+								$('#add_team_modal .modal-body').html("<p style='color: green; font-weight: bold'>ОК! Готово...</p>").show(200); }).dequeue();
+								
+								setTimeout("$('#add_team_modal').modal('hide')", 1300);
+
+								function Goback() {
+									$('#add_team_modal').html($('#example').html());	
+								} 
+								setTimeout(Goback, 2000);
+
+								setTimeout("window.location.reload()", 2000);
+							}
+						}
+					});
+					
+				});
+
+		function validation()
+		{
+			$('input[type=text]').each( function() {
+				var value = $(this).val();
+
+				$('input[type=text]').on("change", function() {
+					if ($(this).val() != '') {
+						falses --;
+						$(this).css('border', '1px solid green');
+					}
+					else {
+						falses++;
+						$(this).css('border', '1px solid red');
+					}
+				});
+
+				if (value == '')
+				{
+					falses++;
+					$(this).css('border', '1px solid red');
+				}
+				else 
+				{
+					falses--;
+					$(this).css('border', '1px solid green');
+				}
+			});
+		}
 	});
 </script>
 </body>

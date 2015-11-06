@@ -51,13 +51,14 @@ class Controller_Events_Events extends FrontController {
 			->set('org_name', $info_organization[0]['org_name'])
 			->set('email', $info_organization[0]['email']);
 
-		// EVENT INFO
-		//$id = $this->request->post('id'); 
 		$id = $this->request->param('id');
 
 		$event = Model_Event::Instance();
-		$info = $event->getEventInfoById($id);
 
+		/* 
+			* INFO ABOUT EVENT
+		*/
+		$info = $event->getEventInfoById($id);
 		$this->template
 			->set('logo', $info[0]['logo'])
 			->set('event', $info[0]['event_name'])
@@ -65,7 +66,17 @@ class Controller_Events_Events extends FrontController {
 			->set('level', $info[0]['level'])
 			->set('start', $info[0]['start_data'])
 			->set('website', $info[0]['website'])
-			->set('start_scores', $info[0]['start_scores']);
+			->set('start_scores', $info[0]['start_scores'])
+			->set('id_event', $id);
+
+		/*
+			** GETTING EVENTS TEAM
+		*/
+		$teams = $event->getTeamsByIdEvent($id);
+		$this->template
+			->set('teams', $teams);
+
+		
 	}
 
 	public function action_teams()
