@@ -1,0 +1,168 @@
+body {
+}
+
+/* TPL */
+.center {
+	text-align: center;
+}
+.relative {
+	position: relative;
+}
+
+.bleft {
+	border-left: 1px solid #E0E0E0;
+}
+.border {
+	border: 1px solid black;
+}
+
+
+
+.header {
+	width: 100%;
+	min-height: 180px;
+	height: 100%;
+}
+
+.organization_logo {
+	width: 100%;
+	height: 100%;
+}
+
+.organization {
+	float: left;
+	padding-top: 20px;
+	padding-left: 35px; 
+
+	margin-left: 50px;
+	
+}
+
+.logo_img {
+	width: 150px;
+	height: 150px;
+}
+
+.slogan {
+	width: 100%;
+	height: 100%;
+	padding-top: 20px;
+}
+
+
+/* NAVIGATION */
+.mright {
+	height: 180px;
+}
+
+.mrightmargin {
+	width: 90%; 
+	position: absolute;
+	left: 10%;
+}
+.top_navigation {
+	margin-top: 25px;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 16px;
+	color: #757575;
+
+
+}
+.top_navigation ul {
+	list-style: none;
+}
+
+.top_navigation li {
+	float: left;
+	margin-left: 15px;
+
+}
+
+
+.mlist {
+	position: absolute;
+	margin-top: 1px;
+	padding-bottom: 45px;
+	border-bottom: 1px solid #E0E0E0;
+	border-collapse: collapse;
+}
+
+.center1 {
+	padding: 10px;
+}
+.center2 {
+	padding: 12px;
+	padding-left: 20px;
+}
+.center3 {
+	padding: 13px;
+}
+
+.mlist ul {
+	list-style: none;
+}
+
+.mlist ul li {
+	float: left;
+
+	background: #E0E0E0;
+}
+
+.mlist li:first-child {
+	margin-left: 0px;
+}
+
+.mlist li {
+	position: relative;
+	width: 55px;
+	height: 55px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-o-border-radius: 25px;
+	border-radius-top: 25px;
+	border: 1px solid #757575;
+
+	margin-left: 25px;
+}
+
+.mlist li:hover {
+	cursor: pointer;
+	box-shadow: inset 1px 1px 3px rgba(0, 0, 0, .7);
+}
+
+/* NAVS */
+.nav-pills > li:hover {
+	background-color: #0091EA;
+}
+
+/* MAIN */
+.table_title {
+	background-color: #40C4FF;
+	color: #fff;
+}
+
+.alert, .alert-info {
+	border-radius: 0px;
+}
+
+.window {
+	width: 100%;
+	
+	border-radius: 10px;
+	border: 2px solid #40C4FF;
+
+}
+
+/* EVENTS TABLE */
+.allevents {
+
+}
+
+.allevents tr:first-child:hover {
+	background: #fff;
+}
+.allevents tr:hover {
+	cursor: pointer;
+	background: #90CAF9 ;
+}

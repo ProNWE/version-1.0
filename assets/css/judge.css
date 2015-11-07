@@ -1,0 +1,185 @@
+body
+{
+	background-color: #FFF3E0;
+	font: normal 12px Verdana,Arial,Helvetica,sans-serif;
+}
+@font-face {
+    font-family: 'Alfa Slab One';
+    src: url('alfaslabone-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* HEADER */
+.logo_img {
+	width: 220px;
+
+	border: 1px solid rgba(0, 0, 0, .2);
+	box-shadow: 1px 2px 5px rgba(0, 0, 0, .4);
+}
+
+/* MY STYLES */
+
+.team_button {
+	
+	width: 80%;
+
+	border: 1px solid black;
+	padding: 10px;
+
+	font-weight: bold;
+	font-stretch: semi-expanded;
+	font-size: 15px;
+
+	text-align: center;
+	margin: 0 auto;
+
+	background: #FFA000;
+}
+
+.teams {
+	margin: 0;
+}
+
+.team_list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.team_list > li {
+	width: 80%;
+	margin: 0 auto;
+
+	background: #FFAB40;
+	border: 2px solid #FB8C00;
+	padding: 10px;
+
+	text-align: center;
+
+	margin-bottom: 5px;
+
+	cursor: pointer;
+}
+
+.team_list > li:hover {
+	background: #FFA000;
+}
+
+.team_list > li > a {
+	font-size: 15px;
+	font-weight: bold;
+	font-family: Verdana;
+	color: #212121;
+}
+
+.team_list > li > a:hover{
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.team_list > li.add_team {
+	border: 1px dashed #FB8C00;
+	opacity: 0.8;
+}
+
+.team_list > li.add_team > a {
+	color: #37474F;
+}
+
+.team_list > li.add_team > a:hover {
+	color: #37474F;
+	text-decoration: none;
+}
+
+/* MODAL */
+.btn-orange {
+	background: #FFB300;
+	color: #000000;
+	font-weight: bold;
+}
+
+.modal-header {
+	background: #FFE082;
+}
+
+.modal-title {
+	font-weight: bold;
+}
+
+/* NEW Participant */
+.new_participant {
+	list-style: none;
+}
+.new_participant > li {
+	float: left;
+	margin-bottom: 10px;
+}
+
+.added:nth-child(2) {
+	margin-left: 60px;
+}
+.added:nth-child(3n+4) {
+	margin-left: 0;
+}
+.added {
+	margin-left: 35px;
+}
+
+.new_participant_button {
+	width: 120px;
+	height: 120px;
+
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+
+	/*background-image: url('../imgs/11.jpg');
+	background-position: 0% 0%;
+	background-size: 100% 100%;*/
+
+	border: 1px dashed #BDBDBD;
+}
+
+.new_participant_button > i {
+	line-height: 120px;
+	margin-left: 45px;
+}
+
+
+.new_participants {
+	position: relative;
+	width: 120px;
+	height: 120px;
+
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+
+	border: 1px solid #FFE082;
+	background: #FFE082;
+	
+	margin: auto;
+	margin-bottom: 10px;
+
+	box-shadow: 0px 1px 5px rgba(0, 0, 0, .5);
+}
+
+.new_participants > .default_logo {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.new_participant_button:hover {
+	cursor: pointer;
+	box-shadow: inset 2px 1px 3px rgba(0, 0, 0, .3);
+}
+
+.zaeb {
+	margin: auto;
+}
+.row > input {
+	margin-top: 3px;
+}

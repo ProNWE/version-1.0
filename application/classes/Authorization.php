@@ -44,7 +44,7 @@ class Authorization {
 		$login = new Model_Auth($login, $password);
 
 		$logged = $login->login();
-
+	
 		if ($logged)
 		{
 			$this->_session = Session::instance();
@@ -58,6 +58,7 @@ class Authorization {
 			$this->_session->set('org_name', $logged[0]['org_name']);
 			$this->_session->set('city', $logged[0]['city']);
 			$this->_session->set('email', $logged[0]['email']);
+			$this->_session->set('logo', $logged[0]['logo']);
 
 			return $logged;
 

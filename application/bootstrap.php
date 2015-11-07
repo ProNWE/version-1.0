@@ -125,7 +125,7 @@ Kohana::modules(array(
 	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
 	 'database'   => MODPATH.'database',   // Database access
-	// 'image'      => MODPATH.'image',      // Image manipulation
+	 'image'      => MODPATH.'image',      // Image manipulation
 	// 'minion'     => MODPATH.'minion',     // CLI Tasks
 	 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
 	// 'unittest'   => MODPATH.'unittest',   // Unit testing
@@ -141,8 +141,48 @@ Kohana::modules(array(
 Cookie::$salt = 'ProNwe';
 
 
-Route::set('default', '(<controller>(/<action>(/<id>)))')
+/*Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
 		'controller' => 'welcome',
 		'action'     => 'index',
+	));
+*/
+
+Route::set('welcome', '(<controller>)', array('controller' => 'welcome'))
+	->defaults(array(
+		'controller' => 'welcome',
+		'action' => 'index',
+	));
+
+
+Route::set('auth', '(<controller>(/<action>))', array('controller' => 'auth|registration'))
+	->defaults(array(
+		'controller' => 'auth',
+		'action' => 'index',
+	));
+
+Route::set('app', 'app(/<action>)')
+	->defaults(array(
+		'controller' => 'app',
+		'action' => 'index',
+	));
+
+Route::set('events', 'events(/<action>(/<id>))', array('id' => '[0-9]+$'))
+	->defaults(array(
+		'directory' => 'events',
+		'controller' => 'events',
+		'action' => 'index',
+	));
+
+Route::set('teams', 'teams(/<action>)')
+	->defaults(array(
+			'controller' => 'teams',
+			'action' => 'index'
+		));
+
+// Temp
+Route::set('judge', 'judge')
+	->defaults(array(
+		'controller' => 'judge',
+		'action' => 'judge'
 	));
