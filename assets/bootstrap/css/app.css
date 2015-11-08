@@ -84,7 +84,10 @@ body {
 	position: absolute;
 	margin-top: 1px;
 	padding-bottom: 45px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbae6a55eff101f6fcd10304c881ebcb984ac7ac
 	border-bottom: 1px solid #E0E0E0;
 	border-collapse: collapse;
 }
@@ -132,6 +135,7 @@ body {
 	box-shadow: inset 1px 1px 3px rgba(0, 0, 0, .7);
 }
 
+<<<<<<< HEAD
 .mlist li .after {
 	
 	width: 100%;
@@ -144,6 +148,8 @@ body {
 }
 
 
+=======
+>>>>>>> cbae6a55eff101f6fcd10304c881ebcb984ac7ac
 /* NAVS */
 .nav-pills > li:hover {
 	background-color: #0091EA;

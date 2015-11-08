@@ -12,9 +12,9 @@
 	<script>
 	function sh(num)
 	{
-		document.getElementById("sp_"+"1").style.display = "none";
-		document.getElementById("sp_"+"2").style.display = "none";
-		document.getElementById("sp_"+num).style.display = "block";
+		document.getElementById("sign_"+"1").style.display = "none";
+		document.getElementById("sign_"+"2").style.display = "none";
+		document.getElementById("sign_"+num).style.display = "block";
 		if (num == 1)
 		{
 			document.getElementById("login").style.fontWeight = "bold";
@@ -65,11 +65,11 @@
 		</div>
 	</div>
 <? endif ?>
-	<div class="main-box">
+	<div id="signinup">
 		<div class="button2" id="login"><a href="javascript:sh('1')"><center>Вход</center></a></div>
 		<div class="button2" id="register"><a href="javascript:sh('2')"><center>Регистрация</center></a></div>
 		
-		<div class="signin" id="sp_1">
+		<div class="signin" id="sign_1">
 			<form action="<?=URL::site('auth/auth'); ?>" method="post">
 				<input type="text" required name="login" id="i1">
 				<div class="label-box" id="lb1">
@@ -83,7 +83,7 @@
 			</form>
 		</div>
 		
-		<div class="signup" id="sp_2">
+		<div class="signup" id="sign_2">
 			<form action="<?=URL::site('registration/add'); ?>" method="post" enctype="multipart/form-data">
 				<input type="text" required name="org_name" id="i3"><br>
 				<div class="label-box" id="lb3">
