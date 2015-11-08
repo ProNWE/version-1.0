@@ -514,4 +514,17 @@
 #1 {main} in file:line
 2015-11-06 22:31:57 --- CRITICAL: ErrorException [ 1 ]: Undefined class constant 'UPDATE' ~ APPPATH\classes\Model\Teams.php [ 123 ] in file:line
 2015-11-06 22:31:57 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+<<<<<<< HEAD
 #1 {main} in file:line
+=======
+#1 {main} in file:line
+2015-11-06 23:35:30 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Controller\Events\Events.php [ 63 ] in D:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Events\Events.php:63
+2015-11-06 23:35:30 --- DEBUG: #0 D:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Events\Events.php(63): Kohana_Core::error_handler(8, 'Undefined offse...', 'D:\\OpenServer\\d...', 63, Array)
+#1 D:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Events_Events->action_index()
+#2 [internal function]: Kohana_Controller->execute()
+#3 D:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Events_Events))
+#4 D:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 D:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 D:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#7 {main} in D:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Events\Events.php:63
+>>>>>>> cbae6a55eff101f6fcd10304c881ebcb984ac7ac

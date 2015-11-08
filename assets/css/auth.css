@@ -1,7 +1,6 @@
 	body
 	{
-		background: fixed url(../imgs/logo.png) center top no-repeat,black;
-		color: #333;
+		background: fixed url(../imgs/main_logo.png) center top no-repeat, black;
 		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 		overflow-y:scroll;
 	}
@@ -17,27 +16,27 @@
 	{
 		cursor:pointer;
 	}
-	.main-box
-	{
-		width:40%;
-		border:1px solid #ccc;
-		border-radius:10px;
-		background-color:white;
-		margin:auto;
-		margin-top:20%;
-		padding: 10px;
-		margin-bottom: 5%;
-	}
-	.button2
+    #signinup {
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:40%;
+        width: 600px;
+    }
+    .button2
 	{
 		display:inline-block;
 		margin: auto;
 		width:200px;
-		margin-left:7%;
-		background-color:#2196F3;
+		margin-left:10%;
 		padding:10px;
-		border:1px dashed #000;
+		border-radius:10px;
+		border: 3px solid white;
 	}
+    .button2:hover{
+        border-radius:10px;
+		border: 1px solid #73a4ff;
+		box-shadow: 0 0 30px 10px #73a4ff;
+    }
 	.button2>a{
 		color:#fff;
 		display:block;

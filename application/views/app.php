@@ -65,22 +65,19 @@
 				<div class="col-lg-4 relative bleft mright">
 					<div class="mrightmargin">
 						<ul class="top_navigation">
-							<p>Добро пожаловать, <br> <?=$username.' '.$surname.' '.$lastname; ?></p>
+							<p>Добро пожаловать, <br> <?=$lastname.' '.$username.' '.$surname; ?></p>
 						</ul>
 						<div class="row" >
 							<div class="col-lg-12 mlist">
 								<ul>
 									<li>
-										<i class="center1 fa fa fa-cogs fa-2x "></i>
-										<div class="after">Настройки</div>
+										<i class="center1 fa fa-cogs fa-2x "></i>
 									</li>
 									<li>
 										<i class="center2 fa fa-info fa-2x"></i>
-										<div class="after">Помощь</div>
 									</li>
 									<li><a href="<?=URL::site('auth/logout'); ?>">
 										<i class="center3 fa fa-sign-out fa-2x"></i>
-										<div class="after">Выход</div>
 									</a></li>
 								</ul>
 							</div>
