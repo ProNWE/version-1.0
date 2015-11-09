@@ -6,7 +6,9 @@
 	
 	<link rel="stylesheet" href="<?=$assets; ?>bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="<?=$assets; ?>css/auth.css">
-	
+	<link rel="stylesheet" type="text/css" href="<?=$assets; ?>css/label-box.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
 	<script src="<?=$assets; ?>js/jquery-1.11.3.min.js"></script>
 	<script src="<?=$assets; ?>bootstrap/js/bootstrap.js"></script>
 	<script>
@@ -65,66 +67,101 @@
 		</div>
 	</div>
 <? endif ?>
+
+	<div id="tomain">
+		<a href="<?=URL::site('#1'); ?>">
+		<i class="position fa fa-home fa-5x"></i>
+	</div>
+	
 	<div id="signinup">
-		<div class="button2" id="login"><a href="javascript:sh('1')"><center>Вход</center></a></div>
-		<div class="button2" id="register"><a href="javascript:sh('2')"><center>Регистрация</center></a></div>
-		
+		<div class="button2" id="login">
+			<a href="javascript:sh('1')">
+				<center>Вход</center>
+			</a>
+		</div>
+		<div class="button2" id="register">
+			<a href="javascript:sh('2')">
+				<center>Регистрация</center>
+			</a>
+		</div>
 		<div class="signin" id="sign_1">
 			<form action="<?=URL::site('auth/auth'); ?>" method="post">
-				<input type="text" required name="login" id="i1">
-				<div class="label-box" id="lb1">
-					<label>E-mail</label>
+				<div>
+					<input type="text" required name="login">
+					<div class="label-box">
+						<label>Email</label>
+					</div>
 				</div>
-				<input type="password" required name="password" id="i2">
-				<div class="label-box" id="lb2">
-					<label>Пароль</label>
+				<div>
+					<input type="password" required name="password">
+					<div class="label-box">
+						<label>Пароль</label>
+					</div>
 				</div>
 				<input type="submit" name="submit" value="Войти">
 			</form>
 		</div>
-		
 		<div class="signup" id="sign_2">
 			<form action="<?=URL::site('registration/add'); ?>" method="post" enctype="multipart/form-data">
-				<input type="text" required name="org_name" id="i3"><br>
-				<div class="label-box" id="lb3">
-					<label>Название организации</label>
+				<div>
+					<input type="text" required name="org_name">
+					<div class="label-box">
+						<label>Название организации</label>
+					</div>
 				</div>
-				<input type="text" required name="lastname" id="i4"><br>
-				<div class="label-box" id="lb4">
-					<label>Фамилия</label>
+				<div>
+					<input type="text" required name="lastname">
+					<div class="label-box">
+						<label>Фамилия</label>
+					</div>
 				</div>
-				<input type="text" required name="name" id="i5"><br>
-				<div class="label-box" id="lb5">
-					<label>Имя</label>
+				<div>
+					<input type="text" required name="name">
+					<div class="label-box">
+						<label>Имя</label>
+					</div>
 				</div>
-				<input type="text" required name="surname" id="i6"><br>
-				<div class="label-box" id="lb6">
-					<label>Отчество</label>
+				<div>
+					<input type="text" required name="surname">
+					<div class="label-box">
+						<label>Отчество</label>
+					</div>
 				</div>
-				<input type="text" required name="city" id="i7"><br>
-				<div class="label-box" id="lb7">
-					<label>Город</label>
+				<div>
+					<input type="text" required name="city">
+					<div class="label-box">
+						<label>Город</label>
+					</div>
 				</div>
-				<input type="hidden" name="address" value="spb">
-				<label>Логотип организации</label>
-				<input type="file" required name="logo"><br>
-				<div class="label-box" id="lb7">
+				<div>
+					<input type="text" required name="email">
+					<div class="label-box">
+						<label>Email</label>
+					</div>
 				</div>
-				<input type="text" required name="email" id="i8"><br>
-				<div class="label-box" id="lb8">
-					<label>Email</label>
+				<div>
+					<input type="password" required name="password">
+					<div class="label-box">
+						<label>Пароль</label>
+					</div>
 				</div>
-				<input type="password" required name="password" id="i9"><br>
-				<div class="label-box" id="lb9">
-					<label>Пароль</label>
+				<div>
+					<input type="password" required name="confirm_password">
+					<div class="label-box">
+						<label>Подтвердите пароль</label>
+					</div>
 				</div>
-				<input type="password" required name="confirm_password" id="i10"><br>
-				<div class="label-box" id="lb10">
-					<label>Подтвердите пароль</label>
+				<div>
+					<input type="text" required name="phone">
+					<div class="label-box">
+						<label>Телефон</label>
+					</div>
 				</div>
-				<input type="text" required name="phone" id="i11"><br>
-				<div class="label-box" id="lb11">
-					<label>Телефон</label>
+				<div>
+					<div class="label-box1">
+						<input type="file" required name="logo">
+						<label>Логотип организации</label>
+					</div>
 				</div>
 				<input type="submit" name="submit" value="Регистрация">
 			</form>

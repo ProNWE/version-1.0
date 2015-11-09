@@ -1,0 +1,64 @@
+input 
+    {
+        box-sizing: border-box;
+		border:none;
+		width: 280px;
+		height:20px;
+		margin-top:25px;
+		color:#757575;	
+		background-color:#fff;
+		font-weight:500;
+    }
+
+    label {
+        font-size:18px;
+		position:absolute;
+		pointer-events:none;
+		color:#757575;
+		top:-25px;
+		font-family:arial;
+        transition: 0.5s ease all;
+    }
+
+    input:focus ~ .label-box label,
+    input:valid ~ .label-box label {
+        font-size: 14px;
+        transform: translateY(-20px);
+		color:#757575;
+		font-weight:bolder;
+    }
+    .label-box {
+        position: relative;
+        width: 280px;
+    }
+    .label-box1 {
+        position: relative;
+        width: 300px;
+    }
+    .label-box::before,
+    .label-box::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        left: 0;
+        width: 20%;
+        bottom: 1px;
+        background-color: #0D47A1;
+    }
+    
+    .label-box::before {
+        right: 100%;
+        transition-property: width;
+        transition-duration: 0.5s;
+    }
+    
+    .label-box::after {
+        right: 100%;
+        transition-property: width;
+        transition-duration: 0.5s;
+    }
+    
+    input:focus ~ .label-box::before,
+    input:focus ~ .label-box::after {
+        width: 100%;
+    }

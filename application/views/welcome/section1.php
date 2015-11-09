@@ -7,7 +7,7 @@
 	<div class="quote"> С нами Ваши мероприятия выходят на новый уровень!<br></div>
         
         <div class="down">
-          <a href="<?=URL::site('#2'); ?>">
+          <a href="#2">
         <i class="center fa fa-angle-double-down fa-5x"></i>
      </a>
    </div>
