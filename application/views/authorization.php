@@ -136,7 +136,7 @@
 				<div>
 					<input type="text" required name="email">
 					<div class="label-box">
-						<label>Email</label>
+						<label>Email:</label>
 					</div>
 				</div>
 				<div>
