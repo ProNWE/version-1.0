@@ -17,7 +17,7 @@
 	<script>
     $(document).ready(function(){
         $(".fakeloader").fakeLoader({
-            timeToHide: 1300,
+            timeToHide: 0,
             bgColor:"#FCC036",
             spinner:"spinner6"
         });
@@ -79,20 +79,16 @@
 								<ul>
 									<li>
 										<i class="center1 fa fa fa-cogs fa-2x "></i>
-										<div class="after">Настройки</div>
 									</li>
 									<li>
 										<i class="center2 fa fa-info fa-2x"></i>
-										<div class="after">Помощь</div>
 									</li>
 									<li><a href="<?=URL::site('app'); ?>">
 										<i class="center3 fa fa-backward fa-2x"></i>
-										<div class="after">Назад</div>
 									</a>
 									</li>
 									<li><a href="<?=URL::site('auth/logout'); ?>">
 										<i class="center3 fa fa-sign-out fa-2x"></i>
-										<div class="after">Выход</div>
 									</a>
 									</li>
 								</ul>
@@ -120,7 +116,7 @@
 					<ul id="sortable" class="team_list">
 						<? for($i = 0; $i < count($teams); $i++): ?>
 							<li id="i_<?=$teams[$i]['id']; ?>">
-								<a href="">
+								<a>
 									<?=$teams[$i]['name']; ?>
 								</a>
 							</li>
@@ -135,7 +131,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-9 border">
+		<div class="col-lg-9">
+			<?=$addCriteria; ?>
 		</div>
 </div>
 
@@ -295,6 +292,7 @@
 </script>
 
 
+<script src="<?=$assets; ?>scripts.js"></script>
 <!-- WORKING WITH Teams (add) -->
 <script>
 	$(document).ready(function() {

@@ -51,7 +51,12 @@ class Controller_Events_Events extends FrontController {
 			->set('org_name', $info_organization[0]['org_name'])
 			->set('email', $info_organization[0]['email']);
 
-		$id = $this->request->param('id');
+		$base64 = $this->request->param('id');
+
+		$decoded_base64 = base64_decode($base64);
+		$list = split('_', $decoded_base64);
+
+		$id = $list[1];
 
 		$event = Model_Event::Instance();
 
@@ -67,7 +72,8 @@ class Controller_Events_Events extends FrontController {
 			->set('start', $info[0]['start_data'])
 			->set('website', $info[0]['website'])
 			->set('start_scores', $info[0]['start_scores'])
-			->set('id_event', $id);
+			->set('id_event', $id)
+			->set('addCriteria', view::factory('test/addCriteria'));
 
 		/*
 			** GETTING EVENTS TEAM

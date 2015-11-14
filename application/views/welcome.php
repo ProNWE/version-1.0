@@ -51,7 +51,7 @@
 
 	
 	<!-- SECTION 1 -->
-	<div class="section " id="section0">
+	<div class="section" id="section0">
 		<?=$section1; ?>
 	</div>
 
@@ -61,7 +61,7 @@
 	</div>
 
 	<!-- SECTION 3 -->
-	<div class="section " id="section0">
+	<div class="section" id="section0">
 		<?=$section3; ?>
 	</div>
 

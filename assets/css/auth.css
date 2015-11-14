@@ -1,6 +1,7 @@
 body
 	{
-		background: fixed url(../imgs/main_logo.png) center top no-repeat, black;
+		background: url(../imgs/main_logo.png) center top no-repeat, black;
+		background-size: 100% 100%;
 		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 		overflow-y:scroll;
 	}
@@ -16,7 +17,7 @@ body
 	{
 		cursor:pointer;
 	}
-    #tomain .position{
+    #tomain .pos{
         margin-top: 10px;
         margin-left: 10px;
         color:white;
@@ -27,28 +28,8 @@ body
         margin-top:35%;
         width: 600px;
     }
-    .button2
+    .signin,.signup
 	{
-		display:inline-block;
-		margin: auto;
-		width:200px;
-		margin-left:10%;
-		padding:10px;
-		border-radius:10px;
-		border: 3px solid white;
-	}
-    .button2:hover{
-        border-radius:10px;
-		border: 1px solid #73a4ff;
-		box-shadow: 0 0 30px 10px #73a4ff;
-    }
-	.button2>a{
-		color:#fff;
-		display:block;
-	}
-	.signin,.signup
-	{
-		transition: 1s 9999999s;
 		margin-top:10px;
 		background:white;
 		border-radius:7px;
@@ -57,10 +38,37 @@ body
 		margin:auto;
 		display:none;
 	}
-    input[type="submit"]
+    .button2
 	{
-		background-color:#0D47A1;
-		border-radius:10px;
-		color:#fff;
-		height:30px;
+		display:inline-block;
+        border-radius:5px;
+        border: 3px solid white;
+        margin-top: 3em;
+        margin-left:10%;
+        width:200px;
+        height:3em;
+        color:white;
+	}
+    .button2:focus{
+        border-radius:5px;
+		border: 3px solid white;
+        width:200px;
+        height:3em;
+		color:white;
+    }
+    .button2:hover{
+        border-radius:10px;
+		border: 4px solid #73a4ff;
+        width:200px;
+        height:3em;
+		box-shadow: 0 0 40px 15px #73a4ff;
+        color:white;
+    }
+	.button2>a{
+        color:white;
+		display:block;
+        text-align:center;
+        width:200px;
+        height:3em;
+        padding-top:0.5em;
 	}

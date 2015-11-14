@@ -6,6 +6,26 @@ class Controller_Teams extends Controller {
 	{
 	}
 
+	public function action_editteam() 
+	{
+		if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest')
+		{   
+			$id = Arr::get($_POST, 'id');
+		    
+			$result = Model_Teams::Instance();
+
+			$team = $result->getTeamInfoById($id);
+			//$team = $result->getCountOfparticipants($id);
+			//echo 'hh';
+			//print_r($team);
+			//var_dump($team);
+			echo json_encode($team);
+		    exit;   
+		}  
+		//Если это не ajax запрос   
+		return $this->request->redirect('welcome');
+	}
+
 	public function action_addteam()
 	{
 		if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest')

@@ -130,4 +130,47 @@ class Model_Teams extends Model {
 
 		echo 'OK';
 	}
+
+
+	public function getTeamInfoById($id) 
+	{
+		$sql = "SELECT * FROM teams JOIN participants WHERE 
+						teams.id=:id AND
+						participants.id_team =:id_team AND
+						participants.role LIKE :pattern";
+
+		$query = DB::query(Database::SELECT, $sql, false)
+			->parameters(array(
+					':id' => $id,
+					':id_team' => $id,
+					':pattern' => '%Капитан%',
+				))->execute();
+		
+		$result = $query->as_array();
+
+		$answer['name'] = $result[0]['name'];
+		$answer['description'] = $result[0]['description'];
+		$answer['username'] = $result[0]['username'];
+		$answer['email'] = $result[0]['email'];
+		$answer['role'] = $result[0]['role'];
+
+		$count = $this->getCountOfparticipants($id);
+
+		$answer['count'] = $count[0]['count(*)'];
+
+		return $answer;
+	}
+
+	public function getCountOfparticipants($id) {
+
+		$sql = "SELECT count(*) FROM participants WHERE
+								id_team = :id_team ";
+
+		$query = DB::query(Database::SELECT, $sql, false)
+					->parameters(array(
+							':id_team' => $id,
+						))->execute();
+
+		return $query->as_array();
+	}
 }

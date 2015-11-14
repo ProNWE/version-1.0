@@ -5,9 +5,8 @@
 <div id="about">
 	<img src="<?=$assets; ?>imgs/main_logo.png" width="650" height="270"><br>
 	<div class="quote"> С нами Ваши мероприятия выходят на новый уровень!<br></div>
-        
-        <div class="down">
-          <a href="#2">
+    <div class="down">
+      <a href="#2">
         <i class="center fa fa-angle-double-down fa-5x"></i>
      </a>
    </div>

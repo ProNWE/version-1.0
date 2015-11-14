@@ -167,7 +167,7 @@ Route::set('app', 'app(/<action>)')
 		'action' => 'index',
 	));
 
-Route::set('events', 'events(/<action>(/<id>))', array('id' => '[0-9]+$'))
+Route::set('events', 'events(/<action>(/<id>))')
 	->defaults(array(
 		'directory' => 'events',
 		'controller' => 'events',

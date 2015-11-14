@@ -88,7 +88,7 @@ body{
 
     .center {
  	    padding: 10px;
-            color:white;
+        color:white;
     }
 
 	.button1{
@@ -96,13 +96,14 @@ body{
 		border: 4px solid white;
 		margin-top: 3em;
 		width: 15em;
+        height:3em;
 	}
 	
 	.button1:hover{
 		border-radius:10px;
 		border: 4px solid #73a4ff;
-		margin-top: 3em;
 		width: 15em;
+        height:3em;
         box-shadow: 0 0 40px 15px #73a4ff;
 	}
 	
@@ -110,7 +111,9 @@ body{
 		color:white;
 		display:block;
 		text-align:center;
-		margin: 3px;
+		width: 15em;
+        height:3em;
+        padding-top:0.5em;
 	}
 
     #myVideo{
