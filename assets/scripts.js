@@ -4,8 +4,15 @@ $(document).ready( function() {
 		//
 	};
 
+	$('#removable').click( function() {
+		alert('asd');
+	});
+
 	$('#t_edit').on('click', function() {
-		
+		$('#edit_team').modal('show');
+
+		$('#editable_name').val($('#t_name').html());
+		$('#editable_desc').val($('#t_desc').html());
 	});
 
   	$('[data-toggle="tooltip"]').tooltip({

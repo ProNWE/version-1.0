@@ -184,6 +184,12 @@ body
 	margin-top: 3px;
 }
 
+#removable {
+	cursor: pointer;
+	padding: 0px;
+
+	z-index: 999;
+}
 
 /* CRITERIA PART */
 .pronwe_teams {

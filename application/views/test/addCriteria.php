@@ -37,3 +37,32 @@
 		
 	</div>
 </div>
+
+
+<!-- MODAL -->
+<div class="modal fade" id="edit_team">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Редактирование команды</h4>
+      </div>
+      <div class="modal-body">
+        <form action="" role="form">
+        	<div class="form-group">
+        		<label for="">Название команды:</label>
+        		<input id="editable_name" class="form-control input-sm" type="text" value="">
+        	</div>
+        	<div class="form-group">
+        		<label for="">Описание команды:</label>
+        		<input id="editable_desc" class="form-control input-sm" type="text">
+        	</div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Сохранить изменения</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
