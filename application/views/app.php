@@ -70,15 +70,18 @@
 						<div class="row" >
 							<div class="col-lg-12 mlist">
 								<ul>
-									<li>
-										<i class="center1 fa fa-cogs fa-2x "></i>
+									<li id="setting" data-toggle="tooltip" data-placement="bottom" title="Настройки">
+										<i class="center1 fa fa-cogs fa-2x"></i>
+	
 									</li>
-									<li>
+									<li id="FAQ" data-toggle="tooltip" data-placement="bottom" title="Помощь">
 										<i class="center2 fa fa-info fa-2x"></i>
 									</li>
-									<li><a href="<?=URL::site('auth/logout'); ?>">
-										<i class="center3 fa fa-sign-out fa-2x"></i>
-									</a></li>
+									<li data-toggle="tooltip" data-placement="bottom" title="Выйти">
+										<a href="<?=URL::site('auth/logout'); ?>">
+											<i class="center3 fa fa-sign-out fa-2x"></i>
+										</a>
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -107,6 +110,38 @@
 	</div>	
 </div>
 
-</body>
+<!-- MODAL SETTING -->
+<div class="modal fade setting" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel3">Настройка персональных данных</h4>
+			</div>
+			<div class="modal-body" id="sign_1">
+				<form>
+				
+				<!-- Add information-->
 
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть окно</button>
+					<button type="submit" class="btn btn-sm btn-primary">Сохранить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<script>
+	$(function () {
+	  $('[data-toggle="tooltip"]').tooltip()
+	})
+
+	$('#setting').on('click', function() {
+		$('.setting').modal('show');
+	});
+</script>
+
+</body>
 </html>
