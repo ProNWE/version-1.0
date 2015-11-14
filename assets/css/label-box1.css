@@ -1,10 +1,9 @@
-/* FOR AUTHORIZATION */
 input 
 {
     box-sizing: border-box;
 	border:none;
-	width: 250px;
-	height:20px;
+	width: 100%;
+	height:25px;
 	margin-top:25px;
 	color:#757575;	
 	background-color:#fff;
@@ -31,12 +30,21 @@ input:valid ~ .label-box label {
 
 .label-box {
     position: relative;
-    width: 250px;
+    width: 100%;
 }
 
 .label-box1 {
     position: relative;
-    width: 250px;
+    width: 100%;
+}
+
+.label-box2 {
+    width:30px;
+    font-size:10px;
+}
+
+.logo{
+    margin-left:220px;
 }
 
 .label-box::before,
