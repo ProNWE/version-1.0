@@ -2,7 +2,7 @@ input
     {
         box-sizing: border-box;
 		border:none;
-		width: 280px;
+		width: 250px;
 		height:20px;
 		margin-top:25px;
 		color:#757575;	
@@ -29,11 +29,11 @@ input
     }
     .label-box {
         position: relative;
-        width: 280px;
+        width: 250px;
     }
     .label-box1 {
         position: relative;
-        width: 300px;
+        width: 250px;
     }
     .label-box::before,
     .label-box::after {

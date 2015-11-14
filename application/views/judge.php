@@ -79,20 +79,16 @@
 								<ul>
 									<li>
 										<i class="center1 fa fa fa-cogs fa-2x "></i>
-										<div class="after">Настройки</div>
 									</li>
 									<li>
 										<i class="center2 fa fa-info fa-2x"></i>
-										<div class="after">Помощь</div>
 									</li>
 									<li><a href="<?=URL::site('app'); ?>">
 										<i class="center3 fa fa-backward fa-2x"></i>
-										<div class="after">Назад</div>
 									</a>
 									</li>
 									<li><a href="<?=URL::site('auth/logout'); ?>">
 										<i class="center3 fa fa-sign-out fa-2x"></i>
-										<div class="after">Выход</div>
 									</a>
 									</li>
 								</ul>

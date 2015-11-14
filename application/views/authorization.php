@@ -11,41 +11,7 @@
 
 	<script src="<?=$assets; ?>js/jquery-1.11.3.min.js"></script>
 	<script src="<?=$assets; ?>bootstrap/js/bootstrap.js"></script>
-	<script>
-	function sh(num)
-	{
-		document.getElementById("sign_"+"1").style.display = "none";
-		document.getElementById("sign_"+"2").style.display = "none";
-		document.getElementById("sign_"+num).style.display = "block";
-		if (num == 1)
-		{
-			document.getElementById("login").style.fontWeight = "bold";
-			document.getElementById("register").style.fontWeight = "400";
-		}
-		else
-		{
-			document.getElementById("register").style.fontWeight = "bold";
-			document.getElementById("login").style.fontWeight = "400";
-		}
-	}
-	$(document).ready(function() {
-	    $('#email').blur(function() {
-	        if($(this).val() != '') {
-	            var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
-	            if(pattern.test($(this).val())){
-	                $(this).css({'border' : '1px solid #569b44'});
-	                $('#valid').text('Верно');
-	            } else {
-	                $(this).css({'border' : '1px solid #ff0000'});
-	                $('#valid').text('Не верно');
-	            }
-	        } else {
-	            $(this).css({'border' : '1px solid #ff0000'});
-	            $('#valid').text('Поле email не должно быть пустым');
-	        }
-	    });
-});
-</script>
+	
 </head>
 <body>
 <? if ($attempt != 0): ?>
@@ -70,102 +36,184 @@
 
 	<div id="tomain">
 		<a href="<?=URL::site('#1'); ?>">
-		<i class="position fa fa-home fa-5x"></i>
+		<i class="pos fa fa-home fa-5x"> </i>
+		</a>
 	</div>
 	
 	<div id="signinup">
-		<div class="button2" id="login">
-			<a href="javascript:sh('1')">
-				<center>Вход</center>
-			</a>
-		</div>
-		<div class="button2" id="register">
-			<a href="javascript:sh('2')">
-				<center>Регистрация</center>
-			</a>
-		</div>
-		<div class="signin" id="sign_1">
-			<form action="<?=URL::site('auth/auth'); ?>" method="post">
-				<div>
-					<input type="text" required name="login">
-					<div class="label-box">
-						<label>Email</label>
-					</div>
+		<button type="button" class="btn-link button2" data-toggle="modal" data-target=".login">Авторизация</button>	
+		<button type="button" class="btn-link button2" data-toggle="modal" data-target=".registration">Регистрация</button>	
+	</div>
+
+	<!-- MODAL LOGIN -->
+	<div class="modal fade login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel1">Авторизация</h4>
 				</div>
-				<div>
-					<input type="password" required name="password">
-					<div class="label-box">
-						<label>Пароль</label>
-					</div>
+				<div class="modal-body" id="sign_1">
+					<form action="<?=URL::site('auth/auth'); ?>" method="post">
+						<div>
+							<input type="text" required name="login">
+							<div class="label-box">
+								<label>Email</label>
+							</div>
+						</div>
+						<div>
+							<input type="password" required name="password">
+							<div class="label-box">
+								<label>Пароль</label>
+							</div>
+						</div>		
+					
 				</div>
-				<input type="submit" name="submit" value="Войти">
-			</form>
-		</div>
-		<div class="signup" id="sign_2">
-			<form action="<?=URL::site('registration/add'); ?>" method="post" enctype="multipart/form-data">
-				<div>
-					<input type="text" required name="org_name">
-					<div class="label-box">
-						<label>Название организации</label>
-					</div>
+				<div class="modal-footer">
+			        <button type="submit" class="btn btn-sm btn-primary col-lg-12">Войти</button>
 				</div>
-				<div>
-					<input type="text" required name="lastname">
-					<div class="label-box">
-						<label>Фамилия</label>
-					</div>
-				</div>
-				<div>
-					<input type="text" required name="name">
-					<div class="label-box">
-						<label>Имя</label>
-					</div>
-				</div>
-				<div>
-					<input type="text" required name="surname">
-					<div class="label-box">
-						<label>Отчество</label>
-					</div>
-				</div>
-				<div>
-					<input type="text" required name="city">
-					<div class="label-box">
-						<label>Город</label>
-					</div>
-				</div>
-				<div>
-					<input type="text" required name="email">
-					<div class="label-box">
-						<label>Email</label>
-					</div>
-				</div>
-				<div>
-					<input type="password" required name="password">
-					<div class="label-box">
-						<label>Пароль</label>
-					</div>
-				</div>
-				<div>
-					<input type="password" required name="confirm_password">
-					<div class="label-box">
-						<label>Подтвердите пароль</label>
-					</div>
-				</div>
-				<div>
-					<input type="text" required name="phone">
-					<div class="label-box">
-						<label>Телефон</label>
-					</div>
-				</div>
-				<div>
-					<div class="label-box1">
-						<input type="file" required name="logo">
-						<label>Логотип организации</label>
-					</div>
-				</div>
-				<input type="submit" name="submit" value="Регистрация">
-			</form>
+					</form>
+			</div>
 		</div>
 	</div>
+
+	<!-- MODAL REGISTRATION -->
+	<div class="modal fade registration" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel2">Регистрация</h4>
+				</div>
+				<div class="modal-body" id="sign_2">
+				<form action="<?=URL::site('registration/add'); ?>" method="post" enctype="multipart/form-data">
+					<div>
+						<input type="text" required name="org_name">
+						<div class="label-box">
+							<label>Название организации</label>
+						</div>
+					</div>
+					<div>
+						<input type="text" required name="lastname">
+						<div class="label-box">
+							<label>Фамилия</label>
+						</div>
+					</div>
+					<div>
+						<input type="text" required name="name">
+						<div class="label-box">
+							<label>Имя</label>
+						</div>
+					</div>
+					<div>
+						<input type="hidden" required name="address" value=" ">
+					</div>
+					<div>
+						<input type="text" required name="surname">
+						<div class="label-box">
+							<label>Отчество</label>
+						</div>
+					</div>
+					<div>
+						<input type="text" required name="city">
+						<div class="label-box">
+							<label>Город</label>
+						</div>
+					</div>
+					<div>
+						<input type="text" required name="email">
+						<div class="label-box">
+							<label>Email</label>
+						</div>
+					</div>
+					<div>
+						<input type="password" required name="password" id="password">
+						<div class="label-box">
+							<label>Пароль</label>
+						</div>
+					</div>
+					<div>
+						<input type="password" required name="confirm_password" id="confirm_password">
+						<div class="label-box">
+							<label>Подтвердите пароль</label>
+						</div>
+					</div>
+					<div>
+						<input type="text" required name="phone">
+						<div class="label-box">
+							<label>Телефон</label>
+						</div>
+					</div>
+					<br>
+					<div>
+						<div class="label-box1">
+							<input type="file" required name="logo">
+							<label>Логотип организации</label>
+						</div>
+					</div>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary" id="confirm_button" disabled>Зарегистрироваться</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- SCRIPT -->
+	<script>
+		function sh(num)
+		{
+			document.getElementById("sign_"+"1").style.display = "none";
+			document.getElementById("sign_"+"2").style.display = "none";
+			document.getElementById("sign_"+num).style.display = "block";
+			if (num == 1)
+			{
+				document.getElementById("login").style.fontWeight = "bold";
+				document.getElementById("register").style.fontWeight = "400";
+			}
+			else
+			{
+				document.getElementById("register").style.fontWeight = "bold";
+				document.getElementById("login").style.fontWeight = "400";
+			}
+		}
+	</script>
+	<script>
+		var button = document.getElementById("confirm_button");
+		$('#confirm_password').on('change', function() {
+			var conf = $(this).val();
+			var pass = $('#password').val();
+
+			if (conf == pass && pass.length > 1)
+			{	
+				$(this).css('background-color', 'rgba(0, 200, 0, 0.3)');
+				button.disabled = false;				
+			}
+			else 
+			{
+				$(this).css('background-color', 'rgba(200, 0, 0, 0.3)');
+				button.disabled = true;
+			}
+		});
+
+		$('#password').on('change', function() {
+			var conf = $('#confirm_password').val();
+			var pass = $(this).val();
+
+			if (conf == pass && conf.length > 1)
+			{	
+				$('#confirm_password').css('background-color', 'rgba(0, 200, 0, 0.3)');
+				button.disabled = false;
+			}
+			else 
+			{
+				$('#confirm_password').css('background-color', 'rgba(200, 0, 0, 0.3)');
+				button.disabled = true;				
+			}
+		});
+		
+	</script>
+
 </body>
 </html>
