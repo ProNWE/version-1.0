@@ -183,3 +183,73 @@ body
 .row > input {
 	margin-top: 3px;
 }
+
+#removable {
+	cursor: pointer;
+	padding: 0px;
+
+	z-index: 999;
+}
+
+/* CRITERIA PART */
+.pronwe_teams {
+	border: 1px solid rgba(0, 0, 0, .2);
+	box-shadow: inset(1px 3px 5px rgba(0, 0, 0, .4)); 
+	padding: 10px;
+}
+
+.pronwe_title {
+	padding: 15px; 
+	border: 1px solid black;
+	background-color: #FFA726;
+}
+
+.teams_edit {
+	border: 1px solid black;
+	padding: 5px;
+	background: #FFA726;
+}
+
+.teams_remove {
+	border: 1px solid black;
+	padding: 5px;
+	background: #FF5722;
+}
+
+.teams_edit:hover {
+	cursor: pointer;
+}
+
+ul.team_info {
+	position: relative;
+	list-style: none;
+}
+
+.team_info li {
+	margin-bottom: 10px;
+}
+
+.team_info li > a {
+	color: black;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.team_info li > a:hover {
+	cursor: pointer;
+}
+
+.team_info .team_context {
+	font-size: 15px;
+}
+
+.teams_edit, .teams_remove {
+	color: #FFF3E0;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+
+
+
+

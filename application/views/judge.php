@@ -17,7 +17,7 @@
 	<script>
     $(document).ready(function(){
         $(".fakeloader").fakeLoader({
-            timeToHide: 1300,
+            timeToHide: 0,
             bgColor:"#FCC036",
             spinner:"spinner6"
         });
@@ -116,7 +116,7 @@
 					<ul id="sortable" class="team_list">
 						<? for($i = 0; $i < count($teams); $i++): ?>
 							<li id="i_<?=$teams[$i]['id']; ?>">
-								<a href="">
+								<a>
 									<?=$teams[$i]['name']; ?>
 								</a>
 							</li>
@@ -131,7 +131,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-9 border">
+		<div class="col-lg-9">
+			<?=$addCriteria; ?>
 		</div>
 </div>
 
@@ -167,6 +168,22 @@
         					<i class="fa fa-plus fa-3x"></i>
         				</div>
         			</li>
+        			<!--<li class='added'>
+	        			<div class='new_participants'>
+	        			<div id="removable" class="pull pull-right glyphicon glyphicon-remove"></div>
+	        			<img class='default_logo' src='<?=$uploads; ?>unknown.jpg'>
+	        			</div>
+	        			<div class='row'>
+	        			<div class='col-lg-12 zaeb'>
+	        			<form action=''>
+	        			<div class='row'>
+	        			<input type='text' id='p"+id+"' class='form-control input-sm' placeholder='ФИО Участника' ></div>
+	        			<div class='row'><input type='text' class='form-control input-sm' placeholder='Роль' id='r"+id+"'></div>
+	        			<div class='row'><input type='text' id='e"+id+"'class='form-control input-sm' placeholder='Email'></div>
+	        			</form>
+	        			</div>
+        			</div>
+        			</li>-->
         		</ul>
         	</div>
         </form>
@@ -291,6 +308,7 @@
 </script>
 
 
+<script src="<?=$assets; ?>scripts.js"></script>
 <!-- WORKING WITH Teams (add) -->
 <script>
 	$(document).ready(function() {
@@ -322,17 +340,11 @@
 
 		$('#save_team').click(function() {
 
-				falses = 0;
+				falses = -2;
 				validation();
-
 				if (falses != 0) {
 					return false;
 				}
-					
-					//alert(name);
-					// Waiting 
-					//$('#add_team_modal').modal({ keyboard: false }).find('.modal-body').hide(250).delay(400).queue( function() {
-					//$('#add_team_modal .modal-body').html("Обрабатывается...").show(200); }).dequeue();
 					
 					for(var i = 0; i <= id; i++)
 					{
@@ -342,7 +354,9 @@
 							pemail: $('#e'+i).val(),
 						};
 					}
+
 					var team = new Array($('#team_name').val(), $('#team_desc').val(), $('#id_event').val());
+
 
 					var t_data = team;
 					var p_data = JSON.stringify(new_p);
