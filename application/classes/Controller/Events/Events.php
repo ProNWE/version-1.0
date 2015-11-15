@@ -27,7 +27,8 @@ class Controller_Events_Events extends FrontController {
 			$event = Model_Event::Instance();
 			$id_event = $event->getDataAndSave($_POST);
 
-			$this->redirect('events/index/'.$id_event);
+			$id = base64_encode('event_'.$id_event);
+			$this->redirect('events/index/'.$id);
 		}
 	}
 

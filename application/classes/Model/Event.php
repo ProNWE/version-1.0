@@ -54,6 +54,9 @@ Class Model_Event extends Model {
 				$filename = $upload->_save_image($_FILES['logo']);
 			
 				$logo = $_FILES['logo']['name'];
+
+				if ($logo == NULL)
+					$logo = 'main_logo.png';
 			}
 		}
 
@@ -104,6 +107,7 @@ Class Model_Event extends Model {
 
 
 		$this->event = $id_event;
+		return $this->event ;
 	}
 
 	public function lastEvent() {
