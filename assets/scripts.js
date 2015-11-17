@@ -4,10 +4,6 @@ $(document).ready( function() {
 		//
 	};
 
-	$('#removable').click( function() {
-		alert('asd');
-	});
-
 	$('#t_edit').on('click', function() {
 		$('#edit_team').modal('show');
 

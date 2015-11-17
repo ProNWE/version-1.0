@@ -1443,3 +1443,303 @@
 #5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
 #6 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
 #7 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Events\Events.php:69
+2015-11-14 22:35:05 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:35:05 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:36:11 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:36:11 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:39:46 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:39:46 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:43:37 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:43:37 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:44:49 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:44:49 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:45:18 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:45:18 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:46:41 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:46:41 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:48:05 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:48:05 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:48:22 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:48:22 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:48:45 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:48:45 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:50:58 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:50:58 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:51:31 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:51:31 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:53:18 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:53:18 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:54:38 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:54:38 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:55:22 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:55:22 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:55:39 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:55:39 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:57:18 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:57:18 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:57:40 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:57:40 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:58:10 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:58:10 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:58:20 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:58:20 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:59:40 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 22:59:40 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 23:01:01 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 23:01:01 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 23:02:07 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 23:02:07 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 23:02:42 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 23:02:42 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 23:08:20 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 23:08:20 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 23:08:24 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 23:08:24 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 23:08:30 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 23:08:30 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 23:08:34 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 23:08:34 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 23:08:42 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 23:08:42 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 23:09:19 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-14 23:09:19 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(17): Model_Teams->getTeamInfoById('team')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151

@@ -37,6 +37,7 @@ body {
 }
 
 .logo_img {
+	width: 300px;
 	height: 150px;
 }
 
@@ -129,7 +130,6 @@ body {
 	box-shadow: inset 1px 1px 3px rgba(0, 0, 0, .7);
 }
 
-<<<<<<< HEAD
 .mlist li .after {
 	
 	width: 100%;
@@ -141,9 +141,6 @@ body {
 	font-size: 10px;
 }
 
-
-=======
->>>>>>> cbae6a55eff101f6fcd10304c881ebcb984ac7ac
 /* NAVS */
 .nav-pills > li:hover {
 	background-color: #0091EA;
@@ -179,3 +176,23 @@ body {
 	cursor: pointer;
 	background: #90CAF9 ;
 }
+
+	.my_topmenu ul li
+	{
+		display:inline-block;
+		border:1px solid #64B5F6;
+		text-align:center;
+		width:50px;
+		padding:10px;
+		border-radius:5px;
+		transition: 0.5s ease all;
+	}
+	.my_topmenu ul li:hover
+	{
+		background-color:#64B5F6;
+		border-color:#1565C0;
+	}
+	.my_topmenu ul li:first-child:hover
+	{
+		cursor:pointer;
+	}

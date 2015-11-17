@@ -189,7 +189,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть окно</button>
+        <button type="button" id="rm_all" class="btn btn-default" data-dismiss="modal">Закрыть окно</button>
         <button type="button" id="save_team" class="btn btn-orange">Сохранить</button>
       </div>
     </div>
@@ -333,10 +333,24 @@
 
 		$('#add_team_modal #new_participant').on('click', function() {
 			id ++;
-			var li = "<li class='added'><div class='new_participants'><img class='default_logo' src='<?=$uploads; ?>unknown.jpg'></div><div class='row'><div class='col-lg-12 zaeb'><form action=''><div class='row'><input type='text' id='p"+id+"' class='form-control input-sm' placeholder='ФИО Участника' ></div><div class='row'><input type='text' class='form-control input-sm' placeholder='Роль' id='r"+id+"'></div><div class='row'><input type='text' id='e"+id+"'class='form-control input-sm' placeholder='Email'></div></form></div></div></li>";
+			var li = "<li class='added'><div class='new_participants'><div id='removable"+id+"' class='pull pull-right glyphicon glyphicon-remove rm_participant'></div><img class='default_logo' src='<?=$uploads; ?>unknown.jpg'></div><div class='row'><div class='col-lg-12 zaeb'><form action=''><div class='row'><input type='text' id='p"+id+"' class='form-control input-sm' placeholder='ФИО Участника' ></div><div class='row'><input type='text' class='form-control input-sm' placeholder='Роль' id='r"+id+"'></div><div class='row'><input type='text' id='e"+id+"'class='form-control input-sm' placeholder='Email'></div></form></div></div></li>";
 			
 			$('li#new_participant').after(li);
+
+			$('.rm_participant').on('click', function() {
+				var rm_id = $(this).attr('id');
+
+				$($('#'+rm_id).parents('li')).remove();
+			});	
+
+			$('#rm_all').on('click', function() {
+				$('.added').each( function() {
+					$(this).remove()
+				});
+			});
 		});
+
+
 
 		$('#save_team').click(function() {
 

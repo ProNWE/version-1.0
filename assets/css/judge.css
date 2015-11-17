@@ -184,7 +184,7 @@ body
 	margin-top: 3px;
 }
 
-#removable {
+.rm_participant {
 	cursor: pointer;
 	padding: 0px;
 

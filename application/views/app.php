@@ -45,7 +45,7 @@
 						<div class="col-lg-5">
 							<div class="organization">
 								<a href="" class="">
-									<img class="logo_img" src="<?=$uploads; ?><?=$logo;?>" alt="">
+									<img style="border:5px solid #1E88E5; border-radius:10px; box-shadow: 5px 5px 15px rgba(0,0,0,0.25);" class="logo_img" src="<?=$uploads; ?><?=$logo;?>" alt="">
 								</a>
 							</div>
 						</div>
@@ -62,26 +62,25 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4 relative bleft mright">
+						<div class="col-lg-4 relative bleft mright">
 					<div class="mrightmargin">
 						<ul class="top_navigation">
 							<p>Добро пожаловать, <br> <?=$lastname.' '.$username.' '.$surname; ?></p>
 						</ul>
 						<div class="row" >
-							<div class="col-lg-12 mlist">
+							<div class="my_topmenu col-lg-12">
 								<ul>
 									<li id="setting" data-toggle="tooltip" data-placement="bottom" title="Настройки">
-										<i class="center1 fa fa-cogs fa-2x"></i>
+										<i class="fa fa-cogs fa-2x"></i>
 	
 									</li>
 									<li id="FAQ" data-toggle="tooltip" data-placement="bottom" title="Помощь">
-										<i class="center2 fa fa-info fa-2x"></i>
+										<i class="fa fa-info fa-2x"></i>
 									</li>
+									<a href="<?=URL::site('auth/logout'); ?>">
 									<li data-toggle="tooltip" data-placement="bottom" title="Выйти">
-										<a href="<?=URL::site('auth/logout'); ?>">
-											<i class="center3 fa fa-sign-out fa-2x"></i>
-										</a>
-									</li>
+											<i class="fa fa-power-off fa-2x"></i>
+									</li></a>
 								</ul>
 							</div>
 						</div>
