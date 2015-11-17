@@ -216,62 +216,6 @@
   </div>
 </div>
 
-<!-- EXAMPLE -->
-<div class="modal fade" id="example" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Добавить команду</h4>
-      </div>
-      <div class="modal-body">
-        <form action="">
-        	<div class="form-group">
-        		<label for="">Название команды:</label>
-        		<input type="text" class="form-control input-sm" placeholder="Введите название команды" id="team_name" required>
-        	</div>	
-        	<div class="form-group">
-        		<label for="">Описание команды:</label>
-        		<input type="text" class="form-control input-sm" placeholder="Описание команды" id="team_desc" required>
-        	</div>
-        	<!--<div class="form-group">
-        		<label for="">Капитан команды:</label>
-        		<input type="text" class="form-control input-sm" placeholder="ФИО Капитана команды" required>
-        	</div>
-        	<br>
-        	<div class="row">
-        		<div class="col-lg-6">
-        			<label for="">Контакты:</label>
-        			<input type="text" class="form-control input-sm" placeholder="Номер телефона или эл.почта">
-        		</div>
-        		<div class="col-lg-6">
-        			<label for="">Страница в Соц.сетях:</label>
-        			<input type="text" class="form-control input-sm" placeholder="страница в социальных сетях">
-        		</div>
-        	</div>-->
-        	<hr>
-        	<div class="form-group">
-        		<label for="">Добавить участников:</label>
-        	</div>
-        	<div class="row">
-        		<ul class="new_participant">
-        			<li id="new_participant">
-        				<div class="new_participant_button">
-        					<i class="fa fa-plus fa-3x"></i>
-        				</div>
-        			</li>
-        		</ul>
-        	</div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть окно</button>
-        <button type="button" id="save_team" class="btn btn-orange">Сохранить</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <script>
 	$(document).ready(function() {
 		
@@ -335,6 +279,7 @@
 			id ++;
 			var li = "<li class='added'><div class='new_participants'><div id='removable"+id+"' class='pull pull-right glyphicon glyphicon-remove rm_participant'></div><img class='default_logo' src='<?=$uploads; ?>unknown.jpg'></div><div class='row'><div class='col-lg-12 zaeb'><form action=''><div class='row'><input type='text' id='p"+id+"' class='form-control input-sm' placeholder='ФИО Участника' ></div><div class='row'><input type='text' class='form-control input-sm' placeholder='Роль' id='r"+id+"'></div><div class='row'><input type='text' id='e"+id+"'class='form-control input-sm' placeholder='Email'></div></form></div></div></li>";
 			
+			alert(li);
 			$('li#new_participant').after(li);
 
 			$('.rm_participant').on('click', function() {
@@ -352,9 +297,9 @@
 
 
 
-		$('#save_team').click(function() {
+		$('#save_team').on('click', function() {
 
-				falses = -2;
+				falses = 0;
 				validation();
 				if (falses != 0) {
 					return false;
@@ -363,9 +308,9 @@
 					for(var i = 0; i <= id; i++)
 					{
 						new_p[i] = {
-							pname: $('#p'+i).val(),
-							prole: $('#r'+i).val(),
-							pemail: $('#e'+i).val(),
+							pname: $('#add_team_modal #p'+i).val(),
+							prole: $('#add_team_modal #r'+i).val(),
+							pemail: $('#add_team_modal #e'+i).val(),
 						};
 					}
 
@@ -374,7 +319,6 @@
 
 					var t_data = team;
 					var p_data = JSON.stringify(new_p);
-					
 
 					var ur = location.protocol+'//'+location.hostname+'/proNWE';
 
@@ -407,16 +351,16 @@
 
 		function validation()
 		{
-			$('input[type=text]').each( function() {
+			$('#add_team_modal input[type=text]').each( function() {
 				var value = $(this).val();
 
-				$('input[type=text]').on("change", function() {
+				$('#add_team_modal input[type=text]').on("change", function() {
 					if ($(this).val() != '') {
-						falses --;
+						//falses --;
 						$(this).css('border', '1px solid green');
 					}
 					else {
-						falses++;
+						//falses++;
 						$(this).css('border', '1px solid red');
 					}
 				});
@@ -428,7 +372,7 @@
 				}
 				else 
 				{
-					falses--;
+					//falses--;
 					$(this).css('border', '1px solid green');
 				}
 			});
