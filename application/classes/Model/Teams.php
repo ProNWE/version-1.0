@@ -173,6 +173,11 @@ class Model_Teams extends Model {
 		return $query->as_array();
 	}
 
+	public function getCountOfTeams($id) {
+		$select = DB::select('*')->from('teams')->where('id_event', '=', $id)->execute();
+		return count($select->as_array());
+	}
+
 	public function getCountOfparticipants($id) {
 
 		$sql = "SELECT count(*) FROM participants WHERE
@@ -249,5 +254,18 @@ class Model_Teams extends Model {
 				))->execute();
 
 		return $query;
+	}
+
+	public function newparticipant($id_team)
+	{
+		$insert = DB::insert('participants', array('id_team', 'username','email','role'))
+			->values(array($id_team, 'undefined','undefined','undefined'))->execute();		
+		
+		$select = DB::select('id')->from('participants')->limit(1)->order_by('id', 'DESC')->execute();
+
+		$select = $select->as_array();
+
+		//print_r($select);
+		return $select[0]['id'];
 	}
 }

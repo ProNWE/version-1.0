@@ -31,8 +31,11 @@ class Controller_App extends FrontController {
 		$events = Model_Event::Instance();
 		$allevents = $events->getEventsByOrgId($info[0]['id']);
 
+		$teams = Model_Teams::Instance();
+
 		$this->template->table = View::factory('tables/allevents')
-											->set('events', $allevents);
+											->set('events', $allevents)
+											->set('teams', $teams);
 	}
 
 	public function action_newevent()

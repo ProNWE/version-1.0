@@ -152,15 +152,18 @@ body {
 	color: #fff;
 }
 
-.alert, .alert-info {
+.alert {
 	border-radius: 0px;
+	background: #2196F3;
+}
+.alert-info {
+	background: #2196F3;
 }
 
 .window {
 	width: 100%;
-	
-	border-radius: 10px;
-	border: 2px solid #40C4FF;
+	border-radius: 0px;
+	border: 2px solid #2196F3;
 
 }
 

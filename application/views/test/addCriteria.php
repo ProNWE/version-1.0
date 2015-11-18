@@ -74,8 +74,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" id="rm_all" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-        <button type="button" class="btn btn-primary">Сохранить изменения</button>
+        <button id="edit_ready" type="button" class="btn btn-pronwe-orange">Сохранить изменения</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

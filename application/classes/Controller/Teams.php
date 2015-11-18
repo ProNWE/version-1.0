@@ -6,6 +6,23 @@ class Controller_Teams extends Controller {
 	{
 	}
 
+	public function action_newparticipants()
+	{
+		if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest')
+		{   
+			$id = Arr::get($_POST, 'id');
+		    
+			$result = Model_Teams::Instance();
+			$row = $result->newparticipant($id);
+			
+			echo $row;
+		    
+		    exit;   
+		}  
+		//Если это не ajax запрос   
+		return $this->redirect('welcome');	
+	}
+
 	public function action_deleteparticipants()
 	{
 		if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest')
@@ -18,7 +35,7 @@ class Controller_Teams extends Controller {
 		    exit;   
 		}  
 		//Если это не ajax запрос   
-		return $this->request->redirect('welcome');	
+		return $this->redirect('welcome');	
 	}
 	public function action_updateparticipants()
 	{
@@ -34,7 +51,7 @@ class Controller_Teams extends Controller {
 		    exit;   
 		}  
 		//Если это не ajax запрос   
-		return $this->request->redirect('welcome');
+		return $this->redirect('welcome');
 	}
 	public function action_getparticipants()
 	{
@@ -49,7 +66,7 @@ class Controller_Teams extends Controller {
 		    exit;   
 		}  
 		//Если это не ajax запрос   
-		return $this->request->redirect('welcome');
+		return $this->redirect('welcome');
 	}
 	public function action_delete()
 	{
@@ -64,7 +81,7 @@ class Controller_Teams extends Controller {
 		    exit;   
 		}  
 		//Если это не ajax запрос   
-		return $this->request->redirect('welcome');
+		return $this->redirect('welcome');
 	}
 	public function action_setname()
 	{
@@ -79,7 +96,7 @@ class Controller_Teams extends Controller {
 		    exit;   
 		}  
 		//Если это не ajax запрос   
-		return $this->request->redirect('welcome');
+		return $this->redirect('welcome');
 	}
 
 	public function action_setdesc()
@@ -95,7 +112,7 @@ class Controller_Teams extends Controller {
 		    exit;   
 		}  
 		//Если это не ajax запрос   
-		return $this->request->redirect('welcome');
+		return $this->redirect('welcome');
 	}
 
 	public function action_editteam() 
@@ -111,7 +128,7 @@ class Controller_Teams extends Controller {
 		    exit;   
 		}  
 		//Если это не ajax запрос   
-		return $this->request->redirect('welcome');
+		return $this->redirect('welcome');
 	}
 
 	public function action_addteam()
@@ -129,7 +146,7 @@ class Controller_Teams extends Controller {
 		    exit;   
 		}  
 		//Если это не ajax запрос   
-		return $this->request->redirect('welcome');
+		return $this->redirect('welcome');
 	}
 
 	public function action_sort() {
@@ -147,6 +164,6 @@ class Controller_Teams extends Controller {
 		    exit;   
 		}  
 		//Если это не ajax запрос   
-		return $this->request->redirect('welcome');
+		return $this->redirect('welcome');
 	}
 }

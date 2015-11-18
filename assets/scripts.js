@@ -1,5 +1,8 @@
 $(document).ready( function() {
 
+	var url = location.protocol+'//'+location.hostname+'/proNWE';
+	var uploads = location.protocol+'//'+location.hostname+'/proNWE/uploads';
+	
 	function validate_judges() {
 		//
 	};
@@ -10,7 +13,6 @@ $(document).ready( function() {
 		attrId = $(this).attr('id');
 		var id_ = attrId.split('_');
 		var id ;
-		var ur = location.protocol+'//'+location.hostname+'/proNWE';
 		id = id_[1];
 
 		$('.pronwe_teams').show();
@@ -19,10 +21,9 @@ $(document).ready( function() {
 			$('.pronwe_teams').hide();
 		});
 		
-
 		$.ajax({ 
 			type: "POST",
-			url: ur+'/teams/editteam/',
+			url: url+'/teams/editteam/',
 			data: {
 				'id': id,
 			},
@@ -56,22 +57,23 @@ $(document).ready( function() {
 
 		var id_ = attrId.split('_');
 		var id ;
-		var ur = location.protocol+'//'+location.hostname+'/proNWE';
 		id = id_[1];
-		
+
+		$('#edit_team .added').each( function() {
+			$(this).remove();
+		});
+
 		$.ajax({
 			type: "POST",
-			url: ur+'/teams/getparticipants/',
+			url: url+'/teams/getparticipants/',
 			data: {
 				'id':id,
 			},
 			success: function(result) {
 				var rows = JSON.parse(result);
-
 				for(var i = 0; i < rows.length; i++)
 				{
-					var uploads = 'http://localhost/proNWE/uploads/'
-					var li = "<li id='rm_"+rows[i].id+"' class='added'><div class='new_participants'><div id='removable"+rows[i].id+"' class='pull pull-right glyphicon glyphicon-remove rm_participant'></div><img class='default_logo' src='"+uploads+"/unknown.jpg'></div><div class='row'><div class='col-lg-12 zaeb'><form action=''><div class='row'><input type='text' id='p_"+rows[i].id+"' class='form-control input-sm' placeholder='ФИО Участника' value='"+rows[i].id+rows[i].username+"'></div><div class='row'><input type='text' class='form-control input-sm' placeholder='Роль' id='r_"+rows[i].id+"' value='"+rows[i].role+"'></div><div class='row'><input type='text' id='e_"+rows[i].id+"' class='form-control input-sm' placeholder='Email' value='"+rows[i].email+"'></div></form></div></div></li>";
+					var li = "<li id='rm_"+rows[i].id+"' class='added'><div class='new_participants'><div id='removable"+rows[i].id+"' class='pull pull-right glyphicon glyphicon-remove rm_participant'></div><img class='default_logo' src='"+uploads+"/unknown.jpg'></div><div class='row'><div class='col-lg-12 zaeb'><form action=''><div class='row'><input type='text' id='p_"+rows[i].id+"' class='form-control input-sm' placeholder='ФИО Участника' value='"+rows[i].username+"'></div><div class='row'><input type='text' class='form-control input-sm' placeholder='Роль' id='r_"+rows[i].id+"' value='"+rows[i].role+"'></div><div class='row'><input type='text' id='e_"+rows[i].id+"' class='form-control input-sm' placeholder='Email' value='"+rows[i].email+"'></div></form></div></div></li>";
 					$('#edit_team li#new_participant').after(li);
 
 					$('#edit_team .rm_participant').on('click', function() {
@@ -79,24 +81,25 @@ $(document).ready( function() {
 						
 						if (!confirmation)
 							return false;
+						else  {
+							var li = $(this).parents('li').attr('id');
 
-						var li = $(this).parents('li').attr('id');
+							li = li.split('_');
 
-						li = li.split('_');
+							$($(this).parents('li')).remove();
 
-						$($(this).parents('li')).remove();
-
-						pid = li[1];
-						$.ajax({
-							type: "POST",
-							url: ur+'/teams/deleteparticipants/',
-							data: {
-								'id':pid,
-							},
-							success: function(result) {
-								//alert(result);
-							},
-						});
+							pid = li[1];
+							$.ajax({
+								type: "POST",
+								url: url+'/teams/deleteparticipants/',
+								data: {
+									'id':pid,
+								},
+								success: function(result) {
+									//alert(result);
+								},
+							});
+						}
 					});
 				}
 
@@ -110,7 +113,7 @@ $(document).ready( function() {
 
 					$.ajax({
 						type: "POST",
-						url: ur+'/teams/updateparticipants/',
+						url: url+'/teams/updateparticipants/',
 						data: {
 							input: pInput,
 							id: pId,
@@ -124,21 +127,61 @@ $(document).ready( function() {
 			},
 		});
 
-		var id = -1;
+		var idn = -1;
+		var lastParticipantId;
 
 		$('#edit_team #new_participant').on('click', function() {
-			id ++;
-			var ur = 'http://localhost/proNWE/uploads/';
-			var li = "<li class='added'><div class='new_participants'><div id='removable"+id+"' class='pull pull-right glyphicon glyphicon-remove rm_participant'></div><img class='default_logo' src='"+ur+"unknown.jpg'></div><div class='row'><div class='col-lg-12 zaeb'><form action=''><div class='row'><input type='text' id='p"+id+"' class='form-control input-sm' placeholder='ФИО Участника' ></div><div class='row'><input type='text' class='form-control input-sm' placeholder='Роль' id='r"+id+"'></div><div class='row'><input type='text' id='e"+id+"'class='form-control input-sm' placeholder='Email'></div></form></div></div></li>";
-			
+
+			idn ++;
+			var id_ = attrId.split('_');
+			var id_team = id_[1];
+			var li = "<li class='added df'><div class='new_participants'><div id='removable"+idn+"' class='pull pull-right glyphicon glyphicon-remove rm_participant'></div><img class='default_logo' src='"+uploads+"/unknown.jpg'></div><div class='row'><div class='col-lg-12 zaeb'><form action=''><div class='row'><input type='text' id='p__"+idn+"' class='form-control input-sm' placeholder='ФИО Участника' ></div><div class='row'><input type='text' class='form-control input-sm' placeholder='Роль' id='r__"+idn+"'></div><div class='row'><input type='text' id='e__"+idn+"'class='form-control input-sm' placeholder='Email'></div></form></div></div></li>";
 			$('#edit_team li#new_participant').after(li);
-			
-			$('$edit_team #rm_all').on('click', function() {
-				//$('#edit_team .added').each( function() {
-				//	$(this).remove()
-				//});
-			alert('asd');
+
+			$.ajax({
+				type: "POST",
+				url: url+'/teams/newparticipants/',
+				data: {
+					'id': id_team,
+				},
+				success: function(result) {
+					lastParticipantId = result;
+				},
 			});
+
+			$('#edit_team li .rm_participant').on('click', function() {
+				
+				$.ajax({
+					type: "POST",
+					url: url+'/teams/delete/',
+					data: {
+						'id':lastParticipantId,
+					},
+				});
+				$($(this).parents("li")).remove();
+			});
+
+			$('#edit_team input[type=text]').on('change', function(){
+					var pId = $(this).attr('id');
+					var newvalue = $(this).val();
+					pId = pId.split('_');
+
+					pInput = pId[0];
+					pId = pId[1];
+
+					$.ajax({
+						type: "POST",
+						url: url+'/teams/updateparticipants/',
+						data: {
+							input: pInput,
+							id: pId,
+							value: newvalue,
+						},
+						success: function(result) {
+							//alert(result);
+						},
+					});
+				});
 		});
 	});
 
@@ -151,7 +194,6 @@ $(document).ready( function() {
 		$('#t_remove').on('click', function() {
 			var id_ = attrId.split('_');
 			var id ;
-			var ur = location.protocol+'//'+location.hostname+'/proNWE';
 			id = id_[1];
 			var result = confirm("Вы точно хотите удалить команду?");
 			if (!result)
@@ -159,7 +201,7 @@ $(document).ready( function() {
 
 			$.ajax({
 				type: "POST",
-				url: ur+'/teams/delete/',
+				url: url+'/teams/delete/',
 				data: {
 					'id':id,
 				},
@@ -174,14 +216,13 @@ $(document).ready( function() {
 	$('#editable_name').on('change', function() {
 		var id_ = attrId.split('_');
 		var id ;
-		var ur = location.protocol+'//'+location.hostname+'/proNWE';
 		id = id_[1];
 
 		var newname = $(this).val();
 
 		$.ajax({
 			type: "POST",
-			url: ur+'/teams/setname/',
+			url: url+'/teams/setname/',
 			data: {
 				'id': id,
 				'newname': newname,
@@ -194,14 +235,13 @@ $(document).ready( function() {
 	$('#editable_desc').on('change', function() {
 		var id_ = attrId.split('_');
 		var id ;
-		var ur = location.protocol+'//'+location.hostname+'/proNWE';
 		id = id_[1];
 
 		var newdesc = $(this).val();
 
 		$.ajax({
 			type: "POST",
-			url: ur+'/teams/setdesc/',
+			url: url+'/teams/setdesc/',
 			data: {
 				'id': id,
 				'newdesc': newdesc,
@@ -209,6 +249,11 @@ $(document).ready( function() {
 			success: function(result) {
 			},
 		});
+	});
+
+	$('#edit_ready').on('click', function() {
+		
+		$('#edit_team').modal('hide');
 	});
 
 });

@@ -206,6 +206,14 @@ body
 	background-color: #FFA726;
 }
 
+.btn {
+	background: #FFB300;
+}
+.btn-pronwe-orange {
+	font-weight: bold;
+	background: #FFB300;
+}
+
 .teams_edit {
 	border: 1px solid black;
 	padding: 5px;

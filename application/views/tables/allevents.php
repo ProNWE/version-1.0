@@ -10,11 +10,14 @@
 					</tr>
 					<? for($i = 0; $i < count($events); $i++) { 
 							$url_decoded = base64_encode('event_'.$events[$i]['id']); 
+							$event_id = $events[$i]['id'];
+							$count = $teams->getCountOfTeams($event_id);
+
 					?>
 						<tr>
 							<td><b><?=$i+1; ?></b></td>
 							<td><b><a href="<?=URL::site("events/index/$url_decoded") ?>"><?=$events[$i]['event_name']; ?></a></b></td>
-							<td><b>0</b></td>
+							<td><b><?=$count; ?></b></td>
 							<td><b><?=$events[$i]['start_data']; ?></b></td>
 							<td><b>Не оплачен</b></td>
 						</tr>
