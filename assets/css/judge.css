@@ -108,7 +108,7 @@ body
 }
 
 /* NEW Participant */
-.new_participant {
+.new_participant  {
 	list-style: none;
 }
 .new_participant > li {
@@ -184,7 +184,7 @@ body
 	margin-top: 3px;
 }
 
-#removable {
+.rm_participant, .rm_participant1 {
 	cursor: pointer;
 	padding: 0px;
 
@@ -196,12 +196,22 @@ body
 	border: 1px solid rgba(0, 0, 0, .2);
 	box-shadow: inset(1px 3px 5px rgba(0, 0, 0, .4)); 
 	padding: 10px;
+
+	display: none;
 }
 
 .pronwe_title {
 	padding: 15px; 
 	border: 1px solid black;
 	background-color: #FFA726;
+}
+
+.btn {
+	background: #FFB300;
+}
+.btn-pronwe-orange {
+	font-weight: bold;
+	background: #FFB300;
 }
 
 .teams_edit {
@@ -247,6 +257,11 @@ ul.team_info {
 	color: #FFF3E0;
 	font-weight: bold;
 	font-size: 13px;
+}
+
+/*==========*/
+#t_edit, #t_remove {
+	cursor: pointer;
 }
 
 

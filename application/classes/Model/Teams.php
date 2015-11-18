@@ -160,6 +160,23 @@ class Model_Teams extends Model {
 
 		return $answer;
 	}
+	public function getParticipantsInfo($id) {
+
+		$sql = "SELECT * FROM participants WHERE
+								id_team = :id_team ";
+
+		$query = DB::query(Database::SELECT, $sql, false)
+					->parameters(array(
+							':id_team' => $id,
+						))->execute();
+
+		return $query->as_array();
+	}
+
+	public function getCountOfTeams($id) {
+		$select = DB::select('*')->from('teams')->where('id_event', '=', $id)->execute();
+		return count($select->as_array());
+	}
 
 	public function getCountOfparticipants($id) {
 
@@ -172,5 +189,83 @@ class Model_Teams extends Model {
 						))->execute();
 
 		return $query->as_array();
+	}
+
+	public function delete($id) {
+		$sql = "DELETE FROM teams WHERE id=:id";
+		$query = DB::query(Database::DELETE, $sql, false)
+			->parameters(array(
+					':id' => $id,
+				))->execute();
+
+		return 'OK';
+	}
+	public function setname($id, $name)
+	{
+		$sql = "UPDATE teams SET name=:name WHERE id=:id";
+
+		$query = DB::query(Database::UPDATE, $sql, false)
+			->parameters(array(
+					':name' => $name,
+					':id' => $id,
+				))->execute();
+		
+		return 'OK';
+	}
+
+	public function setdesc($id, $desc)
+	{
+		$sql = "UPDATE teams SET description=:description WHERE id=:id";
+
+		$query = DB::query(Database::UPDATE, $sql, false)
+			->parameters(array(
+					':description' => $desc,
+					':id' => $id,
+				))->execute();
+		
+		return 'OK';
+	}
+
+	public function updateparticipants($input, $id, $value)
+	{
+		if ($input == 'r')
+			$sql = "UPDATE participants SET role=:value WHERE id=:id";
+		else if ($input == 'p')
+			$sql = "UPDATE participants SET username=:value WHERE id=:id";
+		else if ($input == 'e')
+			$sql = "UPDATE participants SET email=:value WHERE id=:id";
+
+		$query = DB::query(Database::UPDATE, $sql, false)
+			->parameters(array(
+				':value' => $value,
+				':id' => $id,
+			))->execute();
+
+		echo $query;
+	}
+
+	public function deleteparticipants($id)
+	{
+		$sql = "DELETE FROM participants WHERE id=:id";
+
+		$query = DB::query(Database::DELETE, $sql, false)
+			->parameters(array(
+					':id' => $id,
+				))->execute();
+
+		return $query;
+	}
+
+	public function newparticipant($id_team)
+	{
+		$insert = DB::insert('participants', array('id_team', 'username','email','role'))
+			->values(array($id_team, 'undefined','undefined','undefined'))->execute();		
+		
+		$select = DB::select('id')->from('participants')->limit(1)->order_by('id', 'DESC')->execute();
+
+		$select = $select->as_array();
+
+		//print_r($select);
+		return $select[0]['id'];
 	}
 }

@@ -64,7 +64,7 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4 relative bleft mright">
+						<div class="col-lg-4 relative bleft mright">
 					<div class="mrightmargin">
 						<ul class="top_navigation">
 							<p>Добро пожаловать, <br> <?=$lastname.' '.$username.' '.$surname; ?></p>

@@ -40,7 +40,7 @@
 
 
 <!-- MODAL -->
-<div class="modal fade" id="edit_team">
+<div class="modal fade" id="edit_team" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -57,11 +57,24 @@
         		<label for="">Описание команды:</label>
         		<input id="editable_desc" class="form-control input-sm" type="text">
         	</div>
+        	<hr>
+        	<div class="form-group">
+        		<label for="">Добавить участников:</label>
+        	</div>
+        	<div class="row">
+        		<ul class="new_participant">
+        			<li id="new_participant">
+        				<div class="new_participant_button">
+        					<i class="fa fa-plus fa-3x"></i>
+        				</div>
+        			</li>
+        			
+        		</ul>
+        	</div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-        <button type="button" class="btn btn-primary">Сохранить изменения</button>
+        <button id="edit_ready" type="button" class="btn btn-pronwe-orange">Сохранить изменения</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
