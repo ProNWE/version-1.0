@@ -38,12 +38,12 @@ class Controller_Auth extends Front {
 		$result = $auth->login($login, $password);
 		$user = $result[0];
 
-		if ($auth->logged_in() && SESSION::Instance()->get('attempt') <= 3)
+		if ($auth->logged_in() && Session::Instance()->get('attempt') <= 3)
 		{
-			SESSION::Instance()->set('attempt', '0');
+			Session::Instance()->set('attempt', '0');
 			$this->redirect('app');
 		}
-		else if (SESSION::Instance()->get('attempt') >= 3)
+		else if (Session::Instance()->get('attempt') >= 3)
 		{
 			$this->redirect('welcome');
 		}

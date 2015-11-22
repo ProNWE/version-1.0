@@ -206,6 +206,25 @@ body
 	background-color: #FFA726;
 }
 
+.judge_button {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	position: relative;
+}
+.addJudge {
+	width: 87%;
+	position: absolute;
+	top: 100%;
+	left: calc(50% - 125px);
+	padding: 10px 30px 10px 30px;
+	color: black;
+	font-weight: bold;
+	text-align: center;
+	border: 2px solid #FFA000;
+	background: #FFE082;
+}
+
 .btn {
 	background: #FFB300;
 }

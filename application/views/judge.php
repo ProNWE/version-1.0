@@ -130,10 +130,17 @@
 					</ul>
 				</div>
 			</div>
+			
+			<div class="judge_button">
+				<div class="addJudge">
+					Добавить жюри
+				</div>
+			</div>
 		</div>
 		<div class="col-lg-9">
 			<?=$addCriteria; ?>
 		</div>
+	</div>
 </div>
 
 
@@ -195,7 +202,46 @@
     </div>
   </div>
 </div>
+<!-- MODAL FOR Judges -->
+<div class="modal fade" id="addjudges" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Добавить жюри</h4>
+      </div>
+      <div class="modal-body">
+       	<form action="">
+	       	<div class="form-group">
+	       		<label for=""></label>
+	       		<input type="text" class="input-sm form-control" placeholder="Фамилия" name="lastname">
+	       		<label for=""></label>
+	       		<input type="text" class="input-sm form-control" placeholder="Имя" name="name">
+	       		<label for=""></label>
+	       		<input type="text" class="input-sm form-control" placeholder="Отчество" name="surname">
+	       		<label for=""></label>
+	       		<input type="text" class="input-sm form-control" placeholder="Мобильный телефон (Рабочий)" name="phone">
+	       		<label for=""></label>
+	       		<input type="text" class="input-sm form-control" placeholder="Город" name="city">
+	       		<label for=""></label>
+	       		<input type="text" class="input-sm form-control" placeholder="Email" name="email">
+	       		<label for=""></label>
+	       		<input type="text" class="input-sm form-control" placeholder="Login" name="login">
+	       		<label for=""></label>
+	       		<input type="text" class="input-sm form-control" placeholder="Password" name="password">
 
+	       		<input type="hidden" name="id_organization" value="<?=$id_organization; ?>">
+	       		<input type="hidden" name="id_event" value="<?=$id_event; ?>">
+	       	</div>
+	    </form>	
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-pronwe-orange" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-orange" id="addjudge">ОК</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- MODAL CLOSED -->
 <div class="modal fade" id="closed" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

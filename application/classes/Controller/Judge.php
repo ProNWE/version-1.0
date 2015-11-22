@@ -1,56 +1,28 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Judge extends FrontController {
+class Controller_Judge extends Controller {
 
-	public $template = 'judge';
-
-	public function action_index()
-	{
-		$session = Session::Instance();
-
-		$this->template
-			->set('assets', $this->assets)
-			->set('id', $session->get('id_user'))
-			->set('username', $session->get('username'))
-			->set('lastname', $session->get('lastname'))
-			->set('surname', $session->get('surname'));
-
-		$this->template
-			->set('org_name', 'Университет ИТМО')
-			->set('information', 'zlsjhgjkhzbdkfjhbkjzhbdfkvkzjdhfbzbkjhbvzahbfhjvdbkfjbhvskjhdb')
-			->set('email', 'moscow@mail.ru')
-			->set('event', 'Miss ITMO University');	
-
-		$this->template
-			->set('tables', '<div class="row">
-			<div class="marks">	
-			</div>
-		</div>');
-
+	public function action_index() {
+		echo 'Index File';
 	}
 
-	public function action_judge()
+
+	public function action_add()
 	{
-		$session = Session::Instance();
+		if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest')
+		{   
+			$data = json_decode(Arr::get($_POST, 'data'));
+		    
+			$result = Model_Judge::Instance();
+			$result->setData($data);
 
-		$this->template
-			->set('assets', $this->assets)
-			->set('id', $session->get('id_user'))
-			->set('username', $session->get('username'))
-			->set('lastname', $session->get('lastname'))
-			->set('surname', $session->get('surname'));
-
-		$this->template
-			->set('org_name', 'Университет ИТМО')
-			->set('information', 'zlsjhgjkhzbdkfjhbkjzhbdfkvkzjdhfbzbkjhbvzahbfhjvdbkfjbhvskjhdb')
-			->set('email', 'moscow@mail.ru')
-			->set('event', 'Miss ITMO University');	
-
-
-		$this->template
-			->set('tables', '<div class="row">
-			<div class="marks">	
-			</div>
-		</div>');
+			$result->save();
+			
+			//echo 'here';
+		    exit;   
+		}  
+		//Если это не ajax запрос   
+		return $this->redirect('welcome');	
 	}
+	
 }

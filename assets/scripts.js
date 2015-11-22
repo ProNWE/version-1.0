@@ -29,7 +29,7 @@ $(document).ready( function() {
 			},
 			success: function(result) {
 				var t = JSON.parse(result);
-			
+				
 				$('#t_name').html(t.name);
 				$('#t_desc').html(t.description);
 				$('#t_count').html(t.count);
@@ -256,4 +256,72 @@ $(document).ready( function() {
 		$('#edit_team').modal('hide');
 	});
 
+});
+
+// Judges
+
+$(document).ready( function() {
+
+
+	$('.judge_button').on('click', function() {
+		$('#addjudges').modal('show');
+	});
+	
+	var url = location.protocol+'//'+location.hostname+'/proNWE';
+	var lastname = null;
+	var name = null;
+	var surname = null;
+	var phone = null;
+	var city = null;
+	var email = null;
+	var login = null;
+	var password = null;
+	var id_organization = null;
+	var id_event = null ;
+
+	function getJudgesInfo() {
+		lastname = $('#addjudges input[name=lastname]').val();
+		name = $('#addjudges input[name=name]').val();
+		surname = $('#addjudges input[name=surname]').val();
+		phone = $('#addjudges input[name=phone]').val();
+		city = $('#addjudges input[name=city]').val();
+		email = $('#addjudges input[name=email]').val();
+		login = $('#addjudges input[name=login]').val();
+		password = $('#addjudges input[name=password]').val();
+		id_organization = $('#addjudges input[name=id_organization]').val();
+		id_event = $('#addjudges input[name=id_event]').val();
+	
+		var judge = Array();
+
+		judge[0] = {
+			lastname: lastname,
+			name: name,
+			surname: surname,
+			phone: phone,
+			city: city,
+			email: email,
+			login: login,
+			password: password,
+			id_organization: id_organization,
+			id_event: id_event,
+		}
+
+		return judge[0];
+	};	
+
+	$('#addjudge').click( function() {
+		var jsondata = JSON.stringify(getJudgesInfo());
+
+		$.ajax({
+			type: "POST",
+			url: url+'/judge/add/',
+			data: {
+				data: jsondata,
+			},
+			success: function(result) {
+				$(this).modal('hide');
+			},
+		});
+	});
+	
 });

@@ -74,6 +74,7 @@ class Controller_Events_Events extends FrontController {
 			->set('website', $info[0]['website'])
 			->set('start_scores', $info[0]['start_scores'])
 			->set('id_event', $id)
+			->set('id_organization', $info_organization[0]['id'])
 			->set('addCriteria', view::factory('test/addCriteria'));
 
 		/*

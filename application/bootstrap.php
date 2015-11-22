@@ -147,7 +147,6 @@ Cookie::$salt = 'ProNwe';
 		'action'     => 'index',
 	));
 */
-
 Route::set('welcome', '(<controller>)', array('controller' => 'welcome'))
 	->defaults(array(
 		'controller' => 'welcome',
@@ -180,9 +179,9 @@ Route::set('teams', 'teams(/<action>)')
 			'action' => 'index'
 		));
 
-// Temp
-Route::set('judge', 'judge')
+Route::set('jugde', 'judge(/<action>)')
 	->defaults(array(
-		'controller' => 'judge',
-		'action' => 'judge'
-	));
+			'controller' => 'judge',
+			'action' => 'index'
+		));
+
