@@ -40,8 +40,17 @@ class Controller_Auth extends Front {
 
 		if ($auth->logged_in() && Session::Instance()->get('attempt') <= 3)
 		{
-			Session::Instance()->set('attempt', '0');
+			$session = Session::Instance()->set('attempt', '0');
+
+			if ($session->get('role') == 2) {
+				$judge = Model_Judge::Instance();
+				$event = $judge->getEvent($session->get('id_user'));
+				$this->redirect('evaluate/'.$session->get('id_user').'/'.base64_encode('event_'.$event));
+			}
+
 			$this->redirect('app');
+
+			echo $session->get('role');
 		}
 		else if (Session::Instance()->get('attempt') >= 3)
 		{

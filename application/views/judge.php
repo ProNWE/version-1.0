@@ -346,6 +346,8 @@
 
 				falses = 0;
 				validation();
+
+				//alert(falses);
 				if (falses != 0) {
 					return false;
 				}

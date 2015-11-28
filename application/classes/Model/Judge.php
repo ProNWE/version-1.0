@@ -58,9 +58,15 @@ Class Model_Judge extends Model {
 		$insert = DB::insert('judges', array('id_user', 'id_event'))
 					->values(array($id, $now->id_event))->execute();
 
-		$insert = DB::insert('user_role', array('id_user', 'role'))
-					->values(array($id, '2'));
+		$insert = DB::insert('users_role', array('id_user', 'role'))
+					->values(array($id, '2'))->execute();
 
 		return 'OK';
+	}
+
+	public function getEvent($id)
+	{
+		$select = DB::select('*')->from('judges')->where('id_user', '=', $id)->execute()->as_array();
+		return $select[0]['id_event'];
 	}
 }

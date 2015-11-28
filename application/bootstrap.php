@@ -185,3 +185,21 @@ Route::set('jugde', 'judge(/<action>)')
 			'action' => 'index'
 		));
 
+Route::set('evaluate', 'evaluate(/<judge>(/<event>))')
+	->defaults(array(
+			'controller' => 'evaluate',
+			'action' => 'index'
+		));
+
+Route::set('countscores', 'Countscores(/<action>)')
+	->defaults(array(
+			'controller' => 'countscores',
+			'action' => 'index'
+		));
+
+Route::set('rating', 'rating(/<event>)')
+	->defaults(array(
+			'controller' => 'rating',
+			'action' => 'index'
+		));	
+

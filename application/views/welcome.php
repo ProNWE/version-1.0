@@ -21,8 +21,10 @@
 		</script>
 	<![endif]-->
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>-->
+	<script src="<?=$assets; ?>/js/jquery-1.11.3.js"></script>
+	<script src="<?=$assets; ?>/js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
 	<script src="<?=$assets; ?>bootstrap/js/bootstrap.js"></script>
 	<script type="text/javascript" src="<?=$assets; ?>js/jquery.fullPage.js"></script>
 	<script type="text/javascript" src="<?=$assets; ?>js/examples.js"></script>

@@ -319,7 +319,8 @@ $(document).ready( function() {
 				data: jsondata,
 			},
 			success: function(result) {
-				$(this).modal('hide');
+				$('#addjudges').modal('hide');
+				//alert(result);
 			},
 		});
 	});
