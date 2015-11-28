@@ -31,7 +31,8 @@
 	<link rel="stylesheet" href="<?=$assets; ?>css/dropzone.css">
 	<link rel="stylesheet" href="<?=$assets;?>css/judge.css">
 	<link rel="stylesheet" href="<?=$assets;?>css/pronwe.css">
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jqu-ery-ui.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 
 <body class="pronwe-background-judge">
@@ -61,11 +62,15 @@
 				</div>
 				<div class="uk-width-1-1 uk-text-center">
 					<div class=" pronwe-my_topmenu">
-						<a href="#Judge_FAQ" data-uk-modal class="uk-icon-info uk-icon-medium"></a>
+						<a href="#Judge_FAQ" data-uk-modal>
+							<i class="fa fa-info fa-2x"></i>
+						</a>
 					</div>
 					<div class="pronwe-my_topmenu">
-						<a href="<?=URL::site('auth/logout'); ?>" class="uk-icon-sign-out uk-icon-medium"></a>
-					</div>
+						<a href="<?=URL::site('auth/logout'); ?>">
+							<i class="fa fa-power-off fa-2x"></i>
+						</a>
+					</div>	
 				</div>
 			</div>
 		</div>
