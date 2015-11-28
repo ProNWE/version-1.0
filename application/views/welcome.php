@@ -3,10 +3,10 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Noteworthy event - События, заслуживающие внимания</title>
-	<meta name="author" content="Noteworty event" />
-	<meta name="description" content="Сайт, который помогает организаторам обслуживать мероприятия" />
-	<meta name="keywords"  content="event,событие,встреча,мероприятие" />
+	<title>NoteWorthyEvent - События, заслуживающие внимания</title>
+	<meta name="author" content="NoteWortyEvent" />
+	<meta name="description" content="Сайт, который помогает организаторам проводить мероприятия на престижном уровне" />
+	<meta name="keywords"  content="noteworthy,noteworthyevent,event,событие,встреча,мероприятие,участники,жюри,организаторы,рейтинг,выставления баллов,сайт мероприятия" />
 	<meta name="Resource-type" content="Document" />
 
 	<link rel="stylesheet" href="<?=$assets; ?>bootstrap/css/bootstrap.css">
@@ -57,10 +57,10 @@
 		<?=$section1; ?>
 	</div>
 
-	<!-- SECTION 2 -->
+	<!-- SECTION 2 
 	<div class="section" id="section0">
 		<?=$section2; ?>
-	</div>
+	</div>-->
 
 	<!-- SECTION 3 -->
 	<div class="section" id="section0">
@@ -72,8 +72,8 @@
 		<?=$section4; ?>
 	</div>
 
-	<!-- /// SECTION 4 -->
 </div>
 
 </body>
+
 </html>
