@@ -253,10 +253,11 @@
 		var url = location.protocol+'//'+location.hostname+'/proNWE';
 		var id_judge = $('#id_judge').val();
 		var id_event = $('#id_event').val();
+		var value = 0;
 
 
 		$('#form1 input').on('change', function() {
-			var value = $('input[name="criteria1"]:checked', '#form1').val();
+			value = $('input[name="criteria1"]:checked', '#form1').val();
 			var data = $('input[name="criteria1"]:checked', '#form1').parents("div").parents("div").attr("id");
 			var list = data.split('_');
 
@@ -287,7 +288,7 @@
 
 		// FORM 2
 		$('#form2 input').on('change', function() {
-			var value = $('input[name="criteria2"]:checked', '#form2').val();
+			value = $('input[name="criteria2"]:checked', '#form2').val();
 			var data = $('input[name="criteria2"]:checked', '#form2').parents("div").parents("div").attr("id");
 			
 			var list = data.split('_');
@@ -316,7 +317,7 @@
 
 		// FORM 3
 		$('#form3 input').on('change', function() {
-			var value = $('input[name="criteria3"]:checked', '#form3').val();
+			value = $('input[name="criteria3"]:checked', '#form3').val();
 			var data = $('input[name="criteria3"]:checked', '#form3').parents("div").parents("div").attr("id");
 			
 			var list = data.split('_');

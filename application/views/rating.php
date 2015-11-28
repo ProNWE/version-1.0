@@ -122,4 +122,15 @@
 	</div>
 
 </body>
+
+<script>
+	$(document).ready( {
+		function update()
+		{
+			
+		}
+	});
+</script>
+
+
 </html>
