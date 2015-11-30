@@ -203,3 +203,7 @@ Route::set('rating', 'rating(/<event>)')
 			'action' => 'index'
 		));	
 
+Route::set('misteritmo', 'misteritmo')
+	->defaults(array(
+		));	
+

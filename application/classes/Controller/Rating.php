@@ -26,11 +26,10 @@ class Controller_Rating extends FrontController {
 
 		$base64 = $this->request->param('event');
 
-		//$decoded_base64 = base64_decode($base64);
-		//$list = split('_', $decoded_base64);
-		//$id = $list[1];
+		$decoded_base64 = base64_decode($base64);
+		$list = split('_', $decoded_base64);
+		$id = $list[1];
 		
-		$id = 4;
 		$event = Model_Event::Instance();
 
 		/* 

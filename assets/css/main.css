@@ -151,6 +151,7 @@
 		height: 15em;
 		right:1em;
 		top:6em;
+		z-index:999;
 	}
 	
 	#about

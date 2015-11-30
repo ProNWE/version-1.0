@@ -145,3 +145,49 @@
 #6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
 #7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
 #8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-29 01:49:28 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Model\Teams.php [ 151 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-29 01:49:28 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php(151): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 151, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Teams.php(125): Model_Teams->getTeamInfoById('42')
+#2 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Teams->action_editteam()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Teams))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Model\Teams.php:151
+2015-11-29 01:54:23 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Controller\Rating.php [ 41 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Rating.php:41
+2015-11-29 01:54:23 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Rating.php(41): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 41, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Rating->action_index()
+#2 [internal function]: Kohana_Controller->execute()
+#3 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Rating))
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#7 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Rating.php:41
+2015-11-29 01:55:16 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Controller\Rating.php [ 42 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Rating.php:42
+2015-11-29 01:55:16 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Rating.php(42): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 42, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Rating->action_index()
+#2 [internal function]: Kohana_Controller->execute()
+#3 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Rating))
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#7 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Rating.php:42
+2015-11-29 01:55:33 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Controller\Rating.php [ 42 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Rating.php:42
+2015-11-29 01:55:33 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Rating.php(42): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 42, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Rating->action_index()
+#2 [internal function]: Kohana_Controller->execute()
+#3 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Rating))
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#7 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Rating.php:42
+2015-11-29 01:55:34 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\Controller\Rating.php [ 42 ] in C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Rating.php:42
+2015-11-29 01:55:34 --- DEBUG: #0 C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Rating.php(42): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\OpenServer\\d...', 42, Array)
+#1 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Controller.php(84): Controller_Rating->action_index()
+#2 [internal function]: Kohana_Controller->execute()
+#3 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Rating))
+#4 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 C:\OpenServer\domains\localhost\proNWE\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 C:\OpenServer\domains\localhost\proNWE\index.php(118): Kohana_Request->execute()
+#7 {main} in C:\OpenServer\domains\localhost\proNWE\application\classes\Controller\Rating.php:42

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Результаты Мистер ИТМО 2015</title>
+	<title>Результаты <?=$event; ?></title>
 
 	<!-- scripts -->
 	<script src="<?=$assets; ?>js/jquery-1.11.3.js"></script>
@@ -32,7 +32,7 @@
 			</div>
 			<div class="col-lg-offset-2">
 				<h2>Результаты конкурса</h2>
-				<h1>МИСТЕР ИТМО</h1>
+				<h1><?=$event; ?></h1>
 			</div>
 		</div>
 	</header>
@@ -46,12 +46,12 @@
 		$stage2 = $scores->getScore($teams[$i]['id'], 2);
 		$stage3 = $scores->getScore($teams[$i]['id'], 3);
 
-		$percentage1 = ($stage1 / 5) * 100;
-		$percentage2 = ($stage2 / 6) * 100;
-		$percentage3 = ($stage3 / 7) * 100;
+		$percentage1 = ($stage1 / 35) * 100;
+		$percentage2 = ($stage2 / 42) * 100;
+		$percentage3 = ($stage3 / 56) * 100;
 
 		$sum = $stage1 + $stage2 + $stage3;
-		$percentage = ($sum / 18) * 100;
+		$percentage = ($sum / 133) * 100;
 
 	?>
 	<div class="participant-rating-item">
@@ -72,7 +72,7 @@
 						</div>
 					</div>
 					<div class="col-lg-1 rating-score">
-						<span style="color: green;"><?=$stage1; ?></span>/5
+						<span style="color: green;"><?=$stage1; ?></span>/35
 					</div>
 				</div>
 				<div class="row">
@@ -85,7 +85,7 @@
 						</div>
 					</div>
 					<div class="col-lg-1 rating-score">
-						<span style="color: green;"><?=$stage2; ?></span>/6
+						<span style="color: green;"><?=$stage2; ?></span>/42
 					</div>
 				</div>
 				<div class="row">
@@ -98,7 +98,7 @@
 						</div>
 					</div>
 					<div class="col-lg-1 rating-score">
-						<span style="color: green;"><?=$stage3; ?></span>/7
+						<span style="color: green;"><?=$stage3; ?></span>/56
 					</div>
 				</div>
 			</div>
@@ -114,7 +114,7 @@
 					</div>
 				</div>
 				<div class="col-lg-1 rating-score">
-					<span style="color: green;"><?=$sum; ?></span>/18
+					<span style="color: green;"><?=$sum; ?></span>/133
 				</div>
 		</div>
 		</div>
@@ -127,7 +127,7 @@
 	$(document).ready( {
 		function update()
 		{
-			
+
 		}
 	});
 </script>

@@ -63,12 +63,12 @@
 	</div>-->
 
 	<!-- SECTION 3 -->
-	<div class="section" id="section0">
+	<div class="section" id="section3">
 		<?=$section3; ?>
 	</div>
 
 	<!-- SECTION 4 -->
-	<div class="section moveDown" id="section3">
+	<div class="section moveDown" id="section4">
 		<?=$section4; ?>
 	</div>
 

@@ -21,20 +21,23 @@
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 	<link rel="stylesheet" href="<?=$assets; ?>bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="<?=$assets; ?>css/mister.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 </head>
 <body>
 	<header>
-		<a href="" class="btn1 hidden-xs"></a>
+		<a href="<?=URL::site('auth'); ?>" class="btn1 hidden-xs">
+			<i class="fa fa-sign-out fa-2x logout-position"></i>
+		</a>
 		<div class="row">
-			<div class="col-lg-3 col-md-4 col-xs-4 col-sm-4">
+			<div class="col-lg-2 col-md-3 col-xs-4 col-sm-3">
 				<div class="logo">
 					<img src="<?=$uploads; ?>/flat_gold.png" alt="" class="event_logo">
 				</div>
 			</div>
 			<div class="col-lg-8 col-xs-8">
 				<h1 class="organization">Университет ИТМО </h1>
-				<h2 class="event">Мистер ИТМО</h2>
+				<h2 class="event"><?=$event; ?></h2>
 				<input type="hidden" name="judge" value="<?=$id; ?>" id="id_judge">
 				<input type="hidden" name="event" value="<?=$id_event; ?>" id="id_event">
 			</div>
@@ -150,6 +153,9 @@
 										  <label class="btn btn-primary">
 										    <input type="radio" name="criteria2" id="option3" autocomplete="off" value="5"> 5 
 										  </label>
+										  <label class="btn btn-primary">
+										    <input type="radio" name="criteria2" id="option3" autocomplete="off" value="6"> 6 
+										  </label>
 										</div>
 					  				</div>
 					  			</div>
@@ -183,7 +189,7 @@
 					  				<div class="col-lg-2 col-md-3 col-xs-4">
 					  					<img src="<?=$uploads; ?>/unknown.jpg" alt="" class="participant-img img-thumbnail">
 					  				</div>
-					  				<div id="e3_p_<?=$teams[$i]['id'];?>" class="col-lg-6 col-md-6 col-xs-8 criteria">
+					  				<div id="e3_p_<?=$teams[$i]['id'];?>" class="col-lg-6 col-md-9 col-xs-12 criteria">
 					  					<label for="">ФИО УЧАСТНИКА:</label>
 										<p><b><?=$teams[$i]['name']; ?></b></p>
 										<p><?=$teams[$i]['description']; ?></p>
@@ -206,6 +212,15 @@
 										  <label class="btn btn-primary">
 										    <input type="radio" name="criteria3" id="option3 tt" autocomplete="off" value="5"> 5 
 										  </label>
+										  <label class="btn btn-primary">
+										    <input type="radio" name="criteria3" id="option3 tt" autocomplete="off" value="6"> 6 
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="radio" name="criteria3" id="option3 tt" autocomplete="off" value="7"> 7 
+										  </label>
+										  <label class="btn btn-primary">
+										    <input type="radio" name="criteria3" id="option3 tt" autocomplete="off" value="8"> 8 
+										  </label>
 										</div>
 					  				</div>
 					  			</div>
@@ -216,7 +231,7 @@
 					  	<div class="row-fluid">
 					  		<div class="col-lg-11">
 					  			<div class="pull pull-right">
-					  				<a class="btn btn-primary" id="Toresult">Посмотреть результаты</a>
+					  				<a href="<?=URL::site('rating/'.base64_encode('event_'.$id_event)); ?>" class="btn btn-primary" id="Toresult">Посмотреть результаты</a>
 					  			</div>
 					  		</div>
 					  	</div>
@@ -300,6 +315,7 @@
 					id_criteria: 2,
 					score: value, 
 				};	
+
 			if (value != 0)
 			{
 				$.ajax({
@@ -329,6 +345,7 @@
 					id_criteria: 3,
 					score: value, 
 				};	
+
 			if (value != 0)
 			{
 				$.ajax({
