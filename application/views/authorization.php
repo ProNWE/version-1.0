@@ -41,8 +41,8 @@
 	</div>
 	
 	<div id="signinup">
-		<button type="button" class="btn-link button2" data-toggle="modal" data-target=".login">Авторизация</button>	
-		<button type="button" class="btn-link button2" data-toggle="modal" data-target=".registration">Регистрация</button>	
+		<button type="button" class="button2" data-toggle="modal" data-target=".login">Авторизация</button>	
+		<button type="button" class="button2" data-toggle="modal" data-target=".registration">Регистрация</button>	
 	</div>
 
 	<!-- MODAL LOGIN -->

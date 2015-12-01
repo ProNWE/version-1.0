@@ -77,7 +77,6 @@
 					  					<img src="<?=$uploads; ?>/unknown.jpg" alt="" class="participant-img img-thumbnail">
 					  				</div>
 					  				<div id="e1_p_<?=$teams[$i]['id'];?>" class="col-lg-6 col-md-6 col-xs-8 criteria">
-					  					<label for="">ФИО УЧАСТНИКА:</label>
 										<p><b><?=$teams[$i]['name']; ?></b></p>
 										<p><?=$teams[$i]['description']; ?></p>
 					  					<div class="btn-group" data-toggle="buttons">

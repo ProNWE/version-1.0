@@ -24,7 +24,7 @@
 	<div class="mistermenu uk-width-2-10" style="margin-top:-20px; padding:10px;">
 		<div class="uk-panel uk-text-center misters">
 			<ul>
-				<li><img src="assest/imgs/misteritmo.png"></li>
+				<li><a href=""><img src="assest/imgs/misteritmo.png"></li>
 				<li><a href="#partisipant1" data-uk-modal><img src="assest/imgs/participants/1.jpg"><span>ФХКТиК</span></a></li>
 				<li><a href="#partisipant2" data-uk-modal><img src="assest/imgs/participants/2.jpg"><span>ФТМиИ</span></a></li>
 				<li><a href="#partisipant3" data-uk-modal><img src="assest/imgs/participants/3.jpg"><span>ФЛиСИ</span></a></li>
@@ -42,7 +42,7 @@
 	<div class="uk-width-8-10">
 		<div class="uk-panel">
 			<div style="text-align:center;">
-				<a href="<?=$url.'auth/';?>">
+				<a href="http://pronwe.ru/evaluate/28/ZXZlbnRfMTE=">
 					<div class="enter ">
 						<img src=""><span>Вход</span>
 					</div>
@@ -63,147 +63,175 @@
 					</div>
 					<div class="uk-panel">
 						<div class="uk-grid">
-							<div class="uk-width-1-3">
+							<div class="uk-width-1-2">
 								<div class="uk-panel uk-text-center part">
-									<a href="">
+									<a href="http://cartonlab.ru/">
 										<img src="assest/imgs/friends/9.png">
 									</a>
 								</div>
 							</div>
-							<div class="uk-width-1-3">
+							<div class="uk-width-1-2">
 								<div class="uk-panel uk-text-center part">
-									<a href="">
+									<a href="https://ginza.ru/spb/restaurant/foodpark">
 										<img src="assest/imgs/friends/10.jpg">
 									</a>
 								</div>
 							</div>
-							<div class="uk-width-1-3">
+							<div class="uk-width-1-2">
 								<div class="uk-panel uk-text-center part">
-									<a href="">
+									<a href="http://www.ponchkoff.ru/">
 										<img src="assest/imgs/friends/11.png">
 									</a>
 								</div>
 							</div>
-							<div class="uk-width-1-3">
+							<div class="uk-width-1-2">
 								<div class="uk-panel uk-text-center part">
-									<a href="">
+									<a href="http://ipanemadance.ru/">
 										<img src="assest/imgs/friends/7.jpg">
 									</a>
 								</div>
 							</div>
-							<div class="uk-width-1-3">
+							<div class="uk-width-1-2">
 								<div class="uk-panel uk-text-center part">
-									<a href="">
+									<a href="http://annakms.ru/">
 										<img src="assest/imgs/friends/5.jpg">
 									</a>
 								</div>
 							</div>
-							<div class="uk-width-1-3">
+							<div class="uk-width-1-2">
 								<div class="uk-panel uk-text-center part">
-									<a href="">
+									<a href="http://piterstory.com/">
 										<img src="assest/imgs/friends/17.jpg">
 									</a>
 								</div>
 							</div>
-							<div class="uk-width-1-3">
+							<div class="uk-width-1-2">
 								<div class="uk-panel uk-text-center part">
-									<a href="">
-										<img src="assest/imgs/friends/18.png">
-									</a>
-								</div>
-							</div>
-							<div class="uk-width-1-3">
-								<div class="uk-panel uk-text-center part">
-									<a href="">
-										<img src="assest/imgs/friends/6.jpg">
-									</a>
-								</div>
-							</div>
-							<div class="uk-width-1-3">
-								<div class="uk-panel uk-text-center part">
-									<a href="">
-										<img src="assest/imgs/friends/20.png">
-									</a>
-								</div>
-							</div>
-						
-						
-							<div class="uk-width-1-4">
-								<div class="uk-panel uk-text-center part">
-									<a href="">
-										<img src="assest/imgs/friends/1.jpg">
-									</a>
-								</div>
-							</div>
-							<div class="uk-width-1-4">
-								<div class="uk-panel uk-text-center part">
-									<a href="">
-										<img src="assest/imgs/friends/2.jpg">
-									</a>
-								</div>
-							</div>
-							<div class="uk-width-1-4">
-								<div class="uk-panel uk-text-center part">
-									<a href="">
-										<img src="assest/imgs/friends/3.png">
-									</a>
-								</div>
-							</div>
-							<div class="uk-width-1-4">
-								<div class="uk-panel uk-text-center part">
-									<a href="">
-										<img src="assest/imgs/friends/4.jpg">
-									</a>
-								</div>
-							</div>
-							<div class="uk-width-1-4">
-								<div class="uk-panel uk-text-center part">
-									<a href="">
-										<img src="assest/imgs/friends/15.png">
-									</a>
-								</div>
-							</div>
-							<div class="uk-width-1-4">
-								<div class="uk-panel uk-text-center part">
-									<a href="">
-										<img src="assest/imgs/friends/19.jpg">
-									</a>
-								</div>
-							</div>
-							<div class="uk-width-1-4">
-								<div class="uk-panel uk-text-center part">
-									<a href="">
+									<a href="http://www.podrygka.ru/">
 										<img src="assest/imgs/friends/13.jpg">
 									</a>
 								</div>
 							</div>
-							<div class="uk-width-1-4">
+							<div class="uk-width-1-2">
 								<div class="uk-panel uk-text-center part">
-									<a href="">
+									<a href="http://skillset.ru/">
+										<img src="assest/imgs/friends/6.jpg">
+									</a>
+								</div>
+							</div>
+							<div class="uk-width-1-2">
+								<div class="uk-panel uk-text-center part">
+									<a href="http://xn----ptbkbv6d.xn--p1ai/">
+										<img src="assest/imgs/friends/20.png">
+									</a>
+								</div>
+							</div>
+							<div class="uk-width-1-2">
+								<div class="uk-panel uk-text-center part">
+									<a href="http://never-sleep.ru/">
+										<img src="assest/imgs/friends/3.jpg">
+									</a>
+								</div>
+							</div>
+							<div class="uk-width-1-2">
+								<div class="uk-panel uk-text-center part">
+									<a href="https://vk.com/sabotage_school/">
+										<img src="assest/imgs/friends/18.png">
+									</a>
+								</div>
+							</div>
+							<div class="uk-width-1-2">
+								<div class="uk-panel uk-text-center part">
+									<a href="http://pronwe.ru/">
+										<img src="assest/imgs/friends/jpg">
+									</a>
+								</div>
+							</div>
+						
+							<div class="uk-width-1-3">
+								<div class="uk-panel uk-text-center part">
+									<a href="http://bump-club.ru/">
+										<img src="assest/imgs/friends/1.jpg">
+									</a>
+								</div>
+							</div>
+							<div class="uk-width-1-3">
+								<div class="uk-panel uk-text-center part">
+									<a href="http://mazapark.ru/http://rapt-team.ru/">
+										<img src="assest/imgs/friends/2.jpg">
+									</a>
+								</div>
+							</div>
+							<div class="uk-width-1-3">
+								<div class="uk-panel uk-text-center part">
+									<a href="http://rapt-team.ru/">
+										<img src="assest/imgs/friends/3.png">
+									</a>
+								</div>
+							</div>
+							<div class="uk-width-1-3">
+								<div class="uk-panel uk-text-center part">
+									<a href="http://spb.lazertag-portal.ru/">
+										<img src="assest/imgs/friends/4.jpg">
+									</a>
+								</div>
+							</div>
+							<div class="uk-width-1-3">
+								<div class="uk-panel uk-text-center part">
+									<a href="http://ddspb.com/">
+										<img src="assest/imgs/friends/15.png">
+									</a>
+								</div>
+							</div>
+							<div class="uk-width-1-3">
+								<div class="uk-panel uk-text-center part">
+									<a href="https://vk.com/anticafe_ps">
+										<img src="assest/imgs/friends/19.jpg">
+									</a>
+								</div>
+							</div>
+							<div class="uk-width-1-3">
+								<div class="uk-panel uk-text-center part">
+									<a href="http://karting-spb.ru/ru/">
 										<img src="assest/imgs/friends/8.png">
 									</a>
 								</div>
 							</div>
-							
-							
-							
-							<div class="uk-width-1-4"></div>
-							<div class="uk-width-1-4">
+							<div class="uk-width-1-3">
 								<div class="uk-panel uk-text-center part">
-									<a href="">
+									<a href="http://www.peterburg.ru/">
 										<img src="assest/imgs/friends/21.jpg">
 									</a>
 								</div>
 							</div>
-							<div class="uk-width-1-4">
+							<div class="uk-width-1-3">
 								<div class="uk-panel uk-text-center part">
-									<a href="">
+									<a href="http://kinopik.info/">
 										<img src="assest/imgs/friends/22.jpg">
 									</a>
 								</div>
 							</div>
-							<div class="uk-width-1-4"></div>
-							
+							<div class="uk-width-1-3">
+								<div class="uk-panel uk-text-center part">
+									<a href="http://adini.ru/">
+										<img src="assest/imgs/friends/8.jpg">
+									</a>
+								</div>
+							</div>
+							<div class="uk-width-1-3">
+								<div class="uk-panel uk-text-center part">
+									<a href="http://mbradio.ru//">
+										<img src="assest/imgs/friends/9.jpg">
+									</a>
+								</div>
+							</div>
+							<div class="uk-width-1-3">
+								<div class="uk-panel uk-text-center part">
+									<a href="https://vk.com/profcom_itmo/">
+										<img src="assest/imgs/friends/11.jpg">
+									</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
